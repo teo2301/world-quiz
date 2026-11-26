@@ -1,0 +1,2810 @@
+[
+{
+"iso2": "dz",
+"name": "Algeria",
+"aliases": [],
+"capital": "Algiers",
+"continent": "Africa",
+"pop_m": 46.8,
+"pop_year": 2024,
+"area_km2": 2382000,
+"tier": 2,
+"facts": [
+"Africa's largest country by area.",
+"Most of it lies in the Sahara."
+]
+},
+{
+"iso2": "ao",
+"name": "Angola",
+"aliases": [],
+"capital": "Luanda",
+"continent": "Africa",
+"pop_m": 37.9,
+"pop_year": 2024,
+"area_km2": 1247000,
+"tier": 2,
+"facts": [
+"A former Portuguese colony; Portuguese is the official language."
+]
+},
+{
+"iso2": "bj",
+"name": "Benin",
+"aliases": [],
+"capital": "Porto-Novo",
+"continent": "Africa",
+"pop_m": 14.5,
+"pop_year": 2024,
+"area_km2": 115000,
+"tier": 3,
+"facts": [
+"The historic Kingdom of Dahomey was in what is now Benin."
+],
+"capital_note": "Porto-Novo is the official capital; Cotonou is the seat of government."
+},
+{
+"iso2": "bw",
+"name": "Botswana",
+"aliases": [],
+"capital": "Gaborone",
+"continent": "Africa",
+"pop_m": 2.5,
+"pop_year": 2024,
+"area_km2": 582000,
+"tier": 3,
+"facts": [
+"Home to the Okavango Delta.",
+"One of the world's biggest diamond producers."
+]
+},
+{
+"iso2": "bf",
+"name": "Burkina Faso",
+"aliases": [],
+"capital": "Ouagadougou",
+"continent": "Africa",
+"pop_m": 23.5,
+"pop_year": 2024,
+"area_km2": 274000,
+"tier": 3,
+"facts": [
+"Known as Upper Volta until 1984."
+]
+},
+{
+"iso2": "bi",
+"name": "Burundi",
+"aliases": [],
+"capital": "Gitega",
+"continent": "Africa",
+"pop_m": 14.0,
+"pop_year": 2024,
+"area_km2": 27800,
+"tier": 3,
+"facts": [
+"A small landlocked country on Lake Tanganyika."
+],
+"capital_note": "Gitega is the political capital since 2019; Bujumbura is the economic capital."
+},
+{
+"iso2": "cv",
+"name": "Cape Verde",
+"aliases": [
+"Cabo Verde"
+],
+"capital": "Praia",
+"continent": "Africa",
+"pop_m": 0.52,
+"pop_year": 2024,
+"area_km2": 4000,
+"tier": 3,
+"facts": [
+"An island nation in the Atlantic off West Africa."
+]
+},
+{
+"iso2": "cm",
+"name": "Cameroon",
+"aliases": [],
+"capital": "Yaoundé",
+"continent": "Africa",
+"pop_m": 29.1,
+"pop_year": 2024,
+"area_km2": 475000,
+"tier": 2,
+"facts": [
+"Both French and English are official languages."
+]
+},
+{
+"iso2": "cf",
+"name": "Central African Republic",
+"aliases": [],
+"capital": "Bangui",
+"continent": "Africa",
+"pop_m": 5.3,
+"pop_year": 2024,
+"area_km2": 623000,
+"tier": 3,
+"facts": [
+"Landlocked, in the very middle of Africa."
+]
+},
+{
+"iso2": "td",
+"name": "Chad",
+"aliases": [],
+"capital": "N'Djamena",
+"continent": "Africa",
+"pop_m": 20.3,
+"pop_year": 2024,
+"area_km2": 1284000,
+"tier": 3,
+"facts": [
+"Named after Lake Chad."
+]
+},
+{
+"iso2": "km",
+"name": "Comoros",
+"aliases": [],
+"capital": "Moroni",
+"continent": "Africa",
+"pop_m": 0.87,
+"pop_year": 2024,
+"area_km2": 1900,
+"tier": 3,
+"facts": [
+"Volcanic islands in the Indian Ocean between Mozambique and Madagascar."
+]
+},
+{
+"iso2": "cd",
+"name": "DR Congo",
+"aliases": [
+"Democratic Republic of the Congo",
+"Congo-Kinshasa"
+],
+"capital": "Kinshasa",
+"continent": "Africa",
+"pop_m": 109,
+"pop_year": 2024,
+"area_km2": 2345000,
+"tier": 2,
+"facts": [
+"The second-largest country in Africa by area.",
+"The Congo River flows through it."
+]
+},
+{
+"iso2": "cg",
+"name": "Republic of the Congo",
+"aliases": [
+"Congo-Brazzaville",
+"Congo"
+],
+"capital": "Brazzaville",
+"continent": "Africa",
+"pop_m": 6.3,
+"pop_year": 2024,
+"area_km2": 342000,
+"tier": 3,
+"facts": [
+"Its capital faces Kinshasa across the Congo River."
+]
+},
+{
+"iso2": "dj",
+"name": "Djibouti",
+"aliases": [],
+"capital": "Djibouti",
+"continent": "Africa",
+"pop_m": 1.2,
+"pop_year": 2024,
+"area_km2": 23200,
+"tier": 3,
+"facts": [
+"Sits at the entrance to the Red Sea."
+]
+},
+{
+"iso2": "eg",
+"name": "Egypt",
+"aliases": [],
+"capital": "Cairo",
+"continent": "Africa",
+"pop_m": 116,
+"pop_year": 2024,
+"area_km2": 1002000,
+"tier": 1,
+"facts": [
+"Home of the Pyramids of Giza.",
+"The Nile runs the length of the country."
+]
+},
+{
+"iso2": "gq",
+"name": "Equatorial Guinea",
+"aliases": [],
+"capital": "Ciudad de la Paz",
+"continent": "Africa",
+"pop_m": 1.9,
+"pop_year": 2024,
+"area_km2": 28100,
+"tier": 3,
+"facts": [
+"The only African country with Spanish as an official language."
+],
+"capital_note": "Ciudad de la Paz became the official capital in January 2026 while still being built; Malabo was the capital before. No capital question while it settles."
+},
+{
+"iso2": "er",
+"name": "Eritrea",
+"aliases": [],
+"capital": "Asmara",
+"continent": "Africa",
+"pop_m": 3.5,
+"pop_year": 2024,
+"area_km2": 121000,
+"tier": 3,
+"facts": [
+"Has a long Red Sea coastline."
+]
+},
+{
+"iso2": "sz",
+"name": "Eswatini",
+"aliases": [
+"Swaziland"
+],
+"capital": "Mbabane",
+"continent": "Africa",
+"pop_m": 1.2,
+"pop_year": 2024,
+"area_km2": 17400,
+"tier": 3,
+"facts": [
+"Called Swaziland until 2018.",
+"One of the world's last absolute monarchies."
+],
+"capital_note": "Mbabane is the administrative capital; Lobamba the royal and legislative capital."
+},
+{
+"iso2": "et",
+"name": "Ethiopia",
+"aliases": [],
+"capital": "Addis Ababa",
+"continent": "Africa",
+"pop_m": 132,
+"pop_year": 2024,
+"area_km2": 1104000,
+"tier": 2,
+"facts": [
+"Africa's most populous landlocked country.",
+"Widely seen as the birthplace of coffee."
+]
+},
+{
+"iso2": "ga",
+"name": "Gabon",
+"aliases": [],
+"capital": "Libreville",
+"continent": "Africa",
+"pop_m": 2.5,
+"pop_year": 2024,
+"area_km2": 268000,
+"tier": 3,
+"facts": [
+"Most of the country is covered in rainforest."
+]
+},
+{
+"iso2": "gm",
+"name": "Gambia",
+"aliases": [
+"The Gambia"
+],
+"capital": "Banjul",
+"continent": "Africa",
+"pop_m": 2.8,
+"pop_year": 2024,
+"area_km2": 11300,
+"tier": 3,
+"facts": [
+"Mainland Africa's smallest country, almost surrounded by Senegal."
+]
+},
+{
+"iso2": "gh",
+"name": "Ghana",
+"aliases": [],
+"capital": "Accra",
+"continent": "Africa",
+"pop_m": 34.4,
+"pop_year": 2024,
+"area_km2": 239000,
+"tier": 2,
+"facts": [
+"Became independent from Britain in 1957, led by Kwame Nkrumah.",
+"A leading cocoa producer."
+]
+},
+{
+"iso2": "gn",
+"name": "Guinea",
+"aliases": [],
+"capital": "Conakry",
+"continent": "Africa",
+"pop_m": 14.8,
+"pop_year": 2024,
+"area_km2": 246000,
+"tier": 3,
+"facts": [
+"The Niger River rises in its highlands."
+]
+},
+{
+"iso2": "gw",
+"name": "Guinea-Bissau",
+"aliases": [],
+"capital": "Bissau",
+"continent": "Africa",
+"pop_m": 2.2,
+"pop_year": 2024,
+"area_km2": 36100,
+"tier": 3,
+"facts": [
+"A former Portuguese colony on the West African coast."
+]
+},
+{
+"iso2": "ci",
+"name": "Côte d'Ivoire",
+"aliases": [
+"Ivory Coast"
+],
+"capital": "Yamoussoukro",
+"continent": "Africa",
+"pop_m": 31.9,
+"pop_year": 2024,
+"area_km2": 322000,
+"tier": 2,
+"facts": [
+"The world's largest producer of cocoa beans."
+],
+"capital_note": "Yamoussoukro is the official capital; Abidjan the economic capital."
+},
+{
+"iso2": "ke",
+"name": "Kenya",
+"aliases": [],
+"capital": "Nairobi",
+"continent": "Africa",
+"pop_m": 56.4,
+"pop_year": 2024,
+"area_km2": 580000,
+"tier": 1,
+"facts": [
+"Famous for safaris in the Maasai Mara.",
+"Its runners dominate long-distance races."
+]
+},
+{
+"iso2": "ls",
+"name": "Lesotho",
+"aliases": [],
+"capital": "Maseru",
+"continent": "Africa",
+"pop_m": 2.3,
+"pop_year": 2024,
+"area_km2": 30400,
+"tier": 3,
+"facts": [
+"Completely surrounded by South Africa.",
+"Its entire territory is over 1,000 m above sea level."
+]
+},
+{
+"iso2": "lr",
+"name": "Liberia",
+"aliases": [],
+"capital": "Monrovia",
+"continent": "Africa",
+"pop_m": 5.6,
+"pop_year": 2024,
+"area_km2": 111000,
+"tier": 3,
+"facts": [
+"Founded as a settlement for freed African-American slaves; independent since 1847."
+]
+},
+{
+"iso2": "ly",
+"name": "Libya",
+"aliases": [],
+"capital": "Tripoli",
+"continent": "Africa",
+"pop_m": 7.4,
+"pop_year": 2024,
+"area_km2": 1760000,
+"tier": 2,
+"facts": [
+"Most of the country is Sahara Desert."
+]
+},
+{
+"iso2": "mg",
+"name": "Madagascar",
+"aliases": [],
+"capital": "Antananarivo",
+"continent": "Africa",
+"pop_m": 31.9,
+"pop_year": 2024,
+"area_km2": 587000,
+"tier": 2,
+"facts": [
+"The world's fourth-largest island.",
+"Almost all of the world's wild lemurs live here."
+]
+},
+{
+"iso2": "mw",
+"name": "Malawi",
+"aliases": [],
+"capital": "Lilongwe",
+"continent": "Africa",
+"pop_m": 21.7,
+"pop_year": 2024,
+"area_km2": 118000,
+"tier": 3,
+"facts": [
+"Lake Malawi covers about a fifth of the country."
+]
+},
+{
+"iso2": "ml",
+"name": "Mali",
+"aliases": [],
+"capital": "Bamako",
+"continent": "Africa",
+"pop_m": 24.5,
+"pop_year": 2024,
+"area_km2": 1240000,
+"tier": 3,
+"facts": [
+"Home to the historic city of Timbuktu."
+]
+},
+{
+"iso2": "mr",
+"name": "Mauritania",
+"aliases": [],
+"capital": "Nouakchott",
+"continent": "Africa",
+"pop_m": 5.2,
+"pop_year": 2024,
+"area_km2": 1031000,
+"tier": 3,
+"facts": [
+"Mostly Sahara Desert."
+]
+},
+{
+"iso2": "mu",
+"name": "Mauritius",
+"aliases": [],
+"capital": "Port Louis",
+"continent": "Africa",
+"pop_m": 1.3,
+"pop_year": 2024,
+"area_km2": 2040,
+"tier": 3,
+"facts": [
+"The dodo lived only here before it died out."
+]
+},
+{
+"iso2": "ma",
+"name": "Morocco",
+"aliases": [],
+"capital": "Rabat",
+"continent": "Africa",
+"pop_m": 38.1,
+"pop_year": 2024,
+"area_km2": null,
+"tier": 2,
+"facts": [
+"Famous for Marrakesh and the Atlas Mountains."
+]
+},
+{
+"iso2": "mz",
+"name": "Mozambique",
+"aliases": [],
+"capital": "Maputo",
+"continent": "Africa",
+"pop_m": 34.6,
+"pop_year": 2024,
+"area_km2": 802000,
+"tier": 2,
+"facts": [
+"Its flag shows an AK-47 rifle."
+]
+},
+{
+"iso2": "na",
+"name": "Namibia",
+"aliases": [],
+"capital": "Windhoek",
+"continent": "Africa",
+"pop_m": 3.0,
+"pop_year": 2024,
+"area_km2": 824000,
+"tier": 3,
+"facts": [
+"Home to the Namib, one of the oldest deserts on Earth."
+]
+},
+{
+"iso2": "ne",
+"name": "Niger",
+"aliases": [],
+"capital": "Niamey",
+"continent": "Africa",
+"pop_m": 27.0,
+"pop_year": 2024,
+"area_km2": 1267000,
+"tier": 3,
+"facts": [
+"Named after the Niger River."
+]
+},
+{
+"iso2": "ng",
+"name": "Nigeria",
+"aliases": [],
+"capital": "Abuja",
+"continent": "Africa",
+"pop_m": 233,
+"pop_year": 2024,
+"area_km2": 924000,
+"tier": 1,
+"facts": [
+"Africa's most populous country.",
+"Its film industry is nicknamed Nollywood."
+]
+},
+{
+"iso2": "rw",
+"name": "Rwanda",
+"aliases": [],
+"capital": "Kigali",
+"continent": "Africa",
+"pop_m": 14.3,
+"pop_year": 2024,
+"area_km2": 26300,
+"tier": 2,
+"facts": [
+"Known as the land of a thousand hills.",
+"Home to mountain gorillas."
+]
+},
+{
+"iso2": "st",
+"name": "São Tomé and Príncipe",
+"aliases": [
+"Sao Tome and Principe"
+],
+"capital": "São Tomé",
+"continent": "Africa",
+"pop_m": 0.24,
+"pop_year": 2024,
+"area_km2": 960,
+"tier": 3,
+"facts": [
+"Africa's second-smallest country by area, two islands in the Gulf of Guinea."
+]
+},
+{
+"iso2": "sn",
+"name": "Senegal",
+"aliases": [],
+"capital": "Dakar",
+"continent": "Africa",
+"pop_m": 18.5,
+"pop_year": 2024,
+"area_km2": 197000,
+"tier": 2,
+"facts": [
+"Its capital is the westernmost city of mainland Africa."
+]
+},
+{
+"iso2": "sc",
+"name": "Seychelles",
+"aliases": [],
+"capital": "Victoria",
+"continent": "Africa",
+"pop_m": 0.13,
+"pop_year": 2024,
+"area_km2": 460,
+"tier": 3,
+"facts": [
+"Africa's smallest country by population."
+]
+},
+{
+"iso2": "sl",
+"name": "Sierra Leone",
+"aliases": [],
+"capital": "Freetown",
+"continent": "Africa",
+"pop_m": 8.6,
+"pop_year": 2024,
+"area_km2": 72300,
+"tier": 3,
+"facts": [
+"Its capital was founded as a home for freed slaves."
+]
+},
+{
+"iso2": "so",
+"name": "Somalia",
+"aliases": [],
+"capital": "Mogadishu",
+"continent": "Africa",
+"pop_m": 19.0,
+"pop_year": 2024,
+"area_km2": null,
+"tier": 2,
+"facts": [
+"Has the longest coastline in mainland Africa."
+]
+},
+{
+"iso2": "za",
+"name": "South Africa",
+"aliases": [],
+"capital": "Pretoria",
+"continent": "Africa",
+"pop_m": 64.0,
+"pop_year": 2024,
+"area_km2": 1221000,
+"tier": 1,
+"facts": [
+"Has three capital cities.",
+"Table Mountain overlooks Cape Town."
+],
+"capital_note": "Three capitals: Pretoria (executive), Cape Town (legislative), Bloemfontein (judicial)."
+},
+{
+"iso2": "ss",
+"name": "South Sudan",
+"aliases": [],
+"capital": "Juba",
+"continent": "Africa",
+"pop_m": 11.9,
+"pop_year": 2024,
+"area_km2": 620000,
+"tier": 3,
+"facts": [
+"The newest UN member state (as of 2025), independent since 2011."
+]
+},
+{
+"iso2": "sd",
+"name": "Sudan",
+"aliases": [],
+"capital": "Khartoum",
+"continent": "Africa",
+"pop_m": 50.4,
+"pop_year": 2024,
+"area_km2": 1886000,
+"tier": 2,
+"facts": [
+"The Blue and White Nile meet at its capital."
+]
+},
+{
+"iso2": "tz",
+"name": "Tanzania",
+"aliases": [],
+"capital": "Dodoma",
+"continent": "Africa",
+"pop_m": 68.6,
+"pop_year": 2024,
+"area_km2": 945000,
+"tier": 2,
+"facts": [
+"Home to Mount Kilimanjaro and the Serengeti."
+]
+},
+{
+"iso2": "tg",
+"name": "Togo",
+"aliases": [],
+"capital": "Lomé",
+"continent": "Africa",
+"pop_m": 9.5,
+"pop_year": 2024,
+"area_km2": 56800,
+"tier": 3,
+"facts": [
+"A narrow country with a coastline only about 56 km long."
+]
+},
+{
+"iso2": "tn",
+"name": "Tunisia",
+"aliases": [],
+"capital": "Tunis",
+"continent": "Africa",
+"pop_m": 12.3,
+"pop_year": 2024,
+"area_km2": 164000,
+"tier": 2,
+"facts": [
+"The ruins of ancient Carthage are near its capital."
+]
+},
+{
+"iso2": "ug",
+"name": "Uganda",
+"aliases": [],
+"capital": "Kampala",
+"continent": "Africa",
+"pop_m": 50.0,
+"pop_year": 2024,
+"area_km2": 241000,
+"tier": 2,
+"facts": [
+"Lake Victoria is on its southern edge."
+]
+},
+{
+"iso2": "zm",
+"name": "Zambia",
+"aliases": [],
+"capital": "Lusaka",
+"continent": "Africa",
+"pop_m": 21.3,
+"pop_year": 2024,
+"area_km2": 753000,
+"tier": 2,
+"facts": [
+"Shares Victoria Falls with Zimbabwe."
+]
+},
+{
+"iso2": "zw",
+"name": "Zimbabwe",
+"aliases": [],
+"capital": "Harare",
+"continent": "Africa",
+"pop_m": 16.6,
+"pop_year": 2024,
+"area_km2": 391000,
+"tier": 2,
+"facts": [
+"Named after the medieval stone city of Great Zimbabwe."
+]
+},
+{
+"iso2": "af",
+"name": "Afghanistan",
+"aliases": [],
+"capital": "Kabul",
+"continent": "Asia",
+"pop_m": 42.6,
+"pop_year": 2024,
+"area_km2": 653000,
+"tier": 2,
+"facts": [
+"A landlocked, mountainous country crossed by the Hindu Kush."
+]
+},
+{
+"iso2": "am",
+"name": "Armenia",
+"aliases": [],
+"capital": "Yerevan",
+"continent": "Asia",
+"pop_m": 2.9,
+"pop_year": 2024,
+"area_km2": 29700,
+"tier": 3,
+"facts": [
+"Mount Ararat can be seen from its capital."
+]
+},
+{
+"iso2": "az",
+"name": "Azerbaijan",
+"aliases": [],
+"capital": "Baku",
+"continent": "Asia",
+"pop_m": 10.3,
+"pop_year": 2024,
+"area_km2": 86600,
+"tier": 3,
+"facts": [
+"Lies on the Caspian Sea."
+]
+},
+{
+"iso2": "bh",
+"name": "Bahrain",
+"aliases": [],
+"capital": "Manama",
+"continent": "Asia",
+"pop_m": 1.6,
+"pop_year": 2024,
+"area_km2": 780,
+"tier": 3,
+"facts": [
+"An island country in the Persian Gulf."
+]
+},
+{
+"iso2": "bd",
+"name": "Bangladesh",
+"aliases": [],
+"capital": "Dhaka",
+"continent": "Asia",
+"pop_m": 174,
+"pop_year": 2024,
+"area_km2": 148000,
+"tier": 2,
+"facts": [
+"One of the most densely populated countries on Earth."
+]
+},
+{
+"iso2": "bt",
+"name": "Bhutan",
+"aliases": [],
+"capital": "Thimphu",
+"continent": "Asia",
+"pop_m": 0.79,
+"pop_year": 2024,
+"area_km2": 38400,
+"tier": 3,
+"facts": [
+"Measures Gross National Happiness."
+]
+},
+{
+"iso2": "bn",
+"name": "Brunei",
+"aliases": [],
+"capital": "Bandar Seri Begawan",
+"continent": "Asia",
+"pop_m": 0.46,
+"pop_year": 2024,
+"area_km2": 5770,
+"tier": 3,
+"facts": [
+"A sultanate on the island of Borneo."
+]
+},
+{
+"iso2": "kh",
+"name": "Cambodia",
+"aliases": [],
+"capital": "Phnom Penh",
+"continent": "Asia",
+"pop_m": 17.6,
+"pop_year": 2024,
+"area_km2": 181000,
+"tier": 2,
+"facts": [
+"Home to Angkor Wat, which appears on its flag."
+]
+},
+{
+"iso2": "cn",
+"name": "China",
+"aliases": [],
+"capital": "Beijing",
+"continent": "Asia",
+"pop_m": 1419,
+"pop_year": 2024,
+"area_km2": null,
+"tier": 1,
+"facts": [
+"Home to the Great Wall.",
+"Shares borders with 14 countries."
+]
+},
+{
+"iso2": "cy",
+"name": "Cyprus",
+"aliases": [],
+"capital": "Nicosia",
+"continent": "Europe",
+"pop_m": 1.4,
+"pop_year": 2024,
+"area_km2": 9250,
+"tier": 3,
+"facts": [
+"The third-largest island in the Mediterranean."
+]
+},
+{
+"iso2": "ge",
+"name": "Georgia",
+"aliases": [],
+"capital": "Tbilisi",
+"continent": "Asia",
+"pop_m": 3.8,
+"pop_year": 2024,
+"area_km2": null,
+"tier": 2,
+"facts": [
+"Often called one of the oldest wine-making regions in the world."
+]
+},
+{
+"iso2": "in",
+"name": "India",
+"aliases": [],
+"capital": "New Delhi",
+"continent": "Asia",
+"pop_m": 1451,
+"pop_year": 2024,
+"area_km2": null,
+"tier": 1,
+"facts": [
+"The world's most populous country since 2023.",
+"Home to the Taj Mahal."
+]
+},
+{
+"iso2": "id",
+"name": "Indonesia",
+"aliases": [],
+"capital": "Jakarta",
+"continent": "Asia",
+"pop_m": 283,
+"pop_year": 2024,
+"area_km2": 1905000,
+"tier": 1,
+"facts": [
+"Made up of more than 17,000 islands.",
+"The world's most populous island country."
+],
+"capital_note": "Jakarta as of 2025; a new capital, Nusantara, is under construction."
+},
+{
+"iso2": "ir",
+"name": "Iran",
+"aliases": [],
+"capital": "Tehran",
+"continent": "Asia",
+"pop_m": 91.6,
+"pop_year": 2024,
+"area_km2": 1648000,
+"tier": 2,
+"facts": [
+"Known as Persia until 1935.",
+"The ruins of Persepolis are here."
+]
+},
+{
+"iso2": "iq",
+"name": "Iraq",
+"aliases": [],
+"capital": "Baghdad",
+"continent": "Asia",
+"pop_m": 46.0,
+"pop_year": 2024,
+"area_km2": 438000,
+"tier": 2,
+"facts": [
+"The Tigris and Euphrates flow through it, the heart of ancient Mesopotamia."
+]
+},
+{
+"iso2": "il",
+"name": "Israel",
+"aliases": [],
+"capital": null,
+"continent": "Asia",
+"pop_m": 9.4,
+"pop_year": 2024,
+"area_km2": null,
+"tier": 2,
+"facts": [
+"Borders the Dead Sea, the lowest point on land."
+],
+"capital_note": "Capital status is disputed internationally; no capital question."
+},
+{
+"iso2": "jp",
+"name": "Japan",
+"aliases": [],
+"capital": "Tokyo",
+"continent": "Asia",
+"pop_m": 124,
+"pop_year": 2024,
+"area_km2": 378000,
+"tier": 1,
+"facts": [
+"Mount Fuji is its highest peak."
+]
+},
+{
+"iso2": "jo",
+"name": "Jordan",
+"aliases": [],
+"capital": "Amman",
+"continent": "Asia",
+"pop_m": 11.6,
+"pop_year": 2024,
+"area_km2": 89300,
+"tier": 2,
+"facts": [
+"Home to the ancient city of Petra."
+]
+},
+{
+"iso2": "kz",
+"name": "Kazakhstan",
+"aliases": [],
+"capital": "Astana",
+"continent": "Asia",
+"pop_m": 20.6,
+"pop_year": 2024,
+"area_km2": 2725000,
+"tier": 2,
+"facts": [
+"The world's largest landlocked country.",
+"Home of the Baikonur Cosmodrome."
+]
+},
+{
+"iso2": "kw",
+"name": "Kuwait",
+"aliases": [],
+"capital": "Kuwait City",
+"continent": "Asia",
+"pop_m": 4.9,
+"pop_year": 2024,
+"area_km2": 17800,
+"tier": 3,
+"facts": [
+"A small, oil-rich country at the head of the Persian Gulf."
+]
+},
+{
+"iso2": "kg",
+"name": "Kyrgyzstan",
+"aliases": [],
+"capital": "Bishkek",
+"continent": "Asia",
+"pop_m": 7.2,
+"pop_year": 2024,
+"area_km2": 200000,
+"tier": 3,
+"facts": [
+"Most of the country is mountains."
+]
+},
+{
+"iso2": "la",
+"name": "Laos",
+"aliases": [],
+"capital": "Vientiane",
+"continent": "Asia",
+"pop_m": 7.8,
+"pop_year": 2024,
+"area_km2": 237000,
+"tier": 3,
+"facts": [
+"South-east Asia's only landlocked country."
+]
+},
+{
+"iso2": "lb",
+"name": "Lebanon",
+"aliases": [],
+"capital": "Beirut",
+"continent": "Asia",
+"pop_m": 5.8,
+"pop_year": 2024,
+"area_km2": 10450,
+"tier": 2,
+"facts": [
+"A cedar tree is on its flag."
+]
+},
+{
+"iso2": "my",
+"name": "Malaysia",
+"aliases": [],
+"capital": "Kuala Lumpur",
+"continent": "Asia",
+"pop_m": 35.6,
+"pop_year": 2024,
+"area_km2": 330000,
+"tier": 2,
+"facts": [
+"Home to the Petronas Twin Towers."
+],
+"capital_note": "Kuala Lumpur is the official capital; Putrajaya is the administrative centre."
+},
+{
+"iso2": "mv",
+"name": "Maldives",
+"aliases": [],
+"capital": "Malé",
+"continent": "Asia",
+"pop_m": 0.53,
+"pop_year": 2024,
+"area_km2": 300,
+"tier": 3,
+"facts": [
+"The lowest-lying country in the world."
+]
+},
+{
+"iso2": "mn",
+"name": "Mongolia",
+"aliases": [],
+"capital": "Ulaanbaatar",
+"continent": "Asia",
+"pop_m": 3.5,
+"pop_year": 2024,
+"area_km2": 1564000,
+"tier": 2,
+"facts": [
+"The most sparsely populated sovereign country.",
+"Genghis Khan's homeland."
+]
+},
+{
+"iso2": "mm",
+"name": "Myanmar",
+"aliases": [
+"Burma"
+],
+"capital": "Naypyidaw",
+"continent": "Asia",
+"pop_m": 54.5,
+"pop_year": 2024,
+"area_km2": 677000,
+"tier": 2,
+"facts": [
+"Formerly known as Burma."
+]
+},
+{
+"iso2": "np",
+"name": "Nepal",
+"aliases": [],
+"capital": "Kathmandu",
+"continent": "Asia",
+"pop_m": 29.7,
+"pop_year": 2024,
+"area_km2": 147000,
+"tier": 2,
+"facts": [
+"Home to Mount Everest, shared with China.",
+"Its flag is the only national flag that isn't a rectangle or square."
+]
+},
+{
+"iso2": "kp",
+"name": "North Korea",
+"aliases": [],
+"capital": "Pyongyang",
+"continent": "Asia",
+"pop_m": 26.5,
+"pop_year": 2024,
+"area_km2": 121000,
+"tier": 2,
+"facts": [
+"Shares the Korean Peninsula with South Korea."
+]
+},
+{
+"iso2": "om",
+"name": "Oman",
+"aliases": [],
+"capital": "Muscat",
+"continent": "Asia",
+"pop_m": 5.3,
+"pop_year": 2024,
+"area_km2": 310000,
+"tier": 3,
+"facts": [
+"Sits at the south-eastern corner of the Arabian Peninsula."
+]
+},
+{
+"iso2": "pk",
+"name": "Pakistan",
+"aliases": [],
+"capital": "Islamabad",
+"continent": "Asia",
+"pop_m": 251,
+"pop_year": 2024,
+"area_km2": 796000,
+"tier": 1,
+"facts": [
+"Its largest city, Karachi, is a major port on the Arabian Sea."
+]
+},
+{
+"iso2": "ph",
+"name": "Philippines",
+"aliases": [],
+"capital": "Manila",
+"continent": "Asia",
+"pop_m": 116,
+"pop_year": 2024,
+"area_km2": 300000,
+"tier": 2,
+"facts": [
+"An archipelago of more than 7,000 islands."
+]
+},
+{
+"iso2": "qa",
+"name": "Qatar",
+"aliases": [],
+"capital": "Doha",
+"continent": "Asia",
+"pop_m": 3.0,
+"pop_year": 2024,
+"area_km2": 11600,
+"tier": 2,
+"facts": [
+"Hosted the 2022 FIFA World Cup."
+]
+},
+{
+"iso2": "sa",
+"name": "Saudi Arabia",
+"aliases": [],
+"capital": "Riyadh",
+"continent": "Asia",
+"pop_m": 33.9,
+"pop_year": 2024,
+"area_km2": 2150000,
+"tier": 1,
+"facts": [
+"The largest country in the Middle East."
+]
+},
+{
+"iso2": "sg",
+"name": "Singapore",
+"aliases": [],
+"capital": "Singapore",
+"continent": "Asia",
+"pop_m": 5.9,
+"pop_year": 2024,
+"area_km2": 730,
+"tier": 2,
+"facts": [
+"A city-state at the tip of the Malay Peninsula."
+]
+},
+{
+"iso2": "kr",
+"name": "South Korea",
+"aliases": [],
+"capital": "Seoul",
+"continent": "Asia",
+"pop_m": 51.7,
+"pop_year": 2024,
+"area_km2": 100400,
+"tier": 1,
+"facts": [
+"Home of K-pop.",
+"Hosted the 1988 Summer and 2018 Winter Olympics."
+]
+},
+{
+"iso2": "lk",
+"name": "Sri Lanka",
+"aliases": [
+"Ceylon"
+],
+"capital": "Sri Jayawardenepura Kotte",
+"continent": "Asia",
+"pop_m": 21.9,
+"pop_year": 2024,
+"area_km2": 65600,
+"tier": 3,
+"facts": [
+"Known as Ceylon until 1972.",
+"Famous for its tea."
+],
+"capital_note": "Sri Jayawardenepura Kotte is the legislative capital; Colombo the commercial capital."
+},
+{
+"iso2": "sy",
+"name": "Syria",
+"aliases": [],
+"capital": "Damascus",
+"continent": "Asia",
+"pop_m": 24.7,
+"pop_year": 2024,
+"area_km2": 185000,
+"tier": 2,
+"facts": [
+"Damascus is one of the oldest continuously inhabited cities in the world."
+]
+},
+{
+"iso2": "tj",
+"name": "Tajikistan",
+"aliases": [],
+"capital": "Dushanbe",
+"continent": "Asia",
+"pop_m": 10.6,
+"pop_year": 2024,
+"area_km2": 143000,
+"tier": 3,
+"facts": [
+"More than 90% of it is mountains."
+]
+},
+{
+"iso2": "th",
+"name": "Thailand",
+"aliases": [],
+"capital": "Bangkok",
+"continent": "Asia",
+"pop_m": 71.7,
+"pop_year": 2024,
+"area_km2": 513000,
+"tier": 1,
+"facts": [
+"The only South-east Asian country never colonised by a European power."
+]
+},
+{
+"iso2": "tl",
+"name": "Timor-Leste",
+"aliases": [
+"East Timor"
+],
+"capital": "Dili",
+"continent": "Asia",
+"pop_m": 1.4,
+"pop_year": 2024,
+"area_km2": 14900,
+"tier": 3,
+"facts": [
+"Became independent in 2002."
+]
+},
+{
+"iso2": "tr",
+"name": "Turkey",
+"aliases": [
+"Türkiye"
+],
+"capital": "Ankara",
+"continent": "Asia",
+"pop_m": 87.5,
+"pop_year": 2024,
+"area_km2": 784000,
+"tier": 1,
+"facts": [
+"Istanbul spans two continents.",
+"Famous for Cappadocia's 'fairy chimneys'."
+]
+},
+{
+"iso2": "tm",
+"name": "Turkmenistan",
+"aliases": [],
+"capital": "Ashgabat",
+"continent": "Asia",
+"pop_m": 7.5,
+"pop_year": 2024,
+"area_km2": 488000,
+"tier": 3,
+"facts": [
+"Most of it is covered by the Karakum Desert."
+]
+},
+{
+"iso2": "ae",
+"name": "United Arab Emirates",
+"aliases": [
+"UAE"
+],
+"capital": "Abu Dhabi",
+"continent": "Asia",
+"pop_m": 11.0,
+"pop_year": 2024,
+"area_km2": 83600,
+"tier": 2,
+"facts": [
+"Home to the Burj Khalifa in Dubai.",
+"A federation of seven emirates."
+]
+},
+{
+"iso2": "uz",
+"name": "Uzbekistan",
+"aliases": [],
+"capital": "Tashkent",
+"continent": "Asia",
+"pop_m": 36.4,
+"pop_year": 2024,
+"area_km2": 449000,
+"tier": 3,
+"facts": [
+"Samarkand and Bukhara were great Silk Road cities."
+]
+},
+{
+"iso2": "vn",
+"name": "Vietnam",
+"aliases": [],
+"capital": "Hanoi",
+"continent": "Asia",
+"pop_m": 101,
+"pop_year": 2024,
+"area_km2": 331000,
+"tier": 1,
+"facts": [
+"Famous for Ha Long Bay."
+]
+},
+{
+"iso2": "ye",
+"name": "Yemen",
+"aliases": [],
+"capital": null,
+"continent": "Asia",
+"pop_m": 40.6,
+"pop_year": 2024,
+"area_km2": 528000,
+"tier": 3,
+"facts": [
+"The old city of Sana'a has distinctive mud-brick tower houses."
+],
+"capital_note": "Capital contested during the civil war; no capital question."
+},
+{
+"iso2": "al",
+"name": "Albania",
+"aliases": [],
+"capital": "Tirana",
+"continent": "Europe",
+"pop_m": 2.8,
+"pop_year": 2024,
+"area_km2": 28700,
+"tier": 2,
+"facts": [
+"Its flag shows a black double-headed eagle."
+]
+},
+{
+"iso2": "ad",
+"name": "Andorra",
+"aliases": [],
+"capital": "Andorra la Vella",
+"continent": "Europe",
+"pop_m": 0.08,
+"pop_year": 2024,
+"area_km2": 470,
+"tier": 3,
+"facts": [
+"A tiny country in the Pyrenees between France and Spain."
+]
+},
+{
+"iso2": "at",
+"name": "Austria",
+"aliases": [],
+"capital": "Vienna",
+"continent": "Europe",
+"pop_m": 9.1,
+"pop_year": 2024,
+"area_km2": 83900,
+"tier": 1,
+"facts": [
+"Birthplace of Mozart."
+]
+},
+{
+"iso2": "by",
+"name": "Belarus",
+"aliases": [],
+"capital": "Minsk",
+"continent": "Europe",
+"pop_m": 9.1,
+"pop_year": 2024,
+"area_km2": 207600,
+"tier": 2,
+"facts": [
+"Shares the ancient Białowieża Forest with Poland."
+]
+},
+{
+"iso2": "be",
+"name": "Belgium",
+"aliases": [],
+"capital": "Brussels",
+"continent": "Europe",
+"pop_m": 11.8,
+"pop_year": 2024,
+"area_km2": 30700,
+"tier": 1,
+"facts": [
+"Famous for chocolate, waffles and comic strips.",
+"Brussels hosts the main EU institutions."
+]
+},
+{
+"iso2": "ba",
+"name": "Bosnia and Herzegovina",
+"aliases": [],
+"capital": "Sarajevo",
+"continent": "Europe",
+"pop_m": 3.2,
+"pop_year": 2024,
+"area_km2": 51200,
+"tier": 2,
+"facts": [
+"Mostar's Old Bridge is its best-known landmark."
+]
+},
+{
+"iso2": "bg",
+"name": "Bulgaria",
+"aliases": [],
+"capital": "Sofia",
+"continent": "Europe",
+"pop_m": 6.7,
+"pop_year": 2024,
+"area_km2": 111000,
+"tier": 2,
+"facts": [
+"Famous for rose oil from its Valley of Roses."
+]
+},
+{
+"iso2": "hr",
+"name": "Croatia",
+"aliases": [],
+"capital": "Zagreb",
+"continent": "Europe",
+"pop_m": 3.9,
+"pop_year": 2024,
+"area_km2": 56600,
+"tier": 2,
+"facts": [
+"Its Adriatic coast has more than a thousand islands."
+]
+},
+{
+"iso2": "cz",
+"name": "Czechia",
+"aliases": [
+"Czech Republic"
+],
+"capital": "Prague",
+"continent": "Europe",
+"pop_m": 10.7,
+"pop_year": 2024,
+"area_km2": 78900,
+"tier": 1,
+"facts": [
+"Has one of the highest beer consumptions per person in the world."
+]
+},
+{
+"iso2": "dk",
+"name": "Denmark",
+"aliases": [],
+"capital": "Copenhagen",
+"continent": "Europe",
+"pop_m": 6.0,
+"pop_year": 2024,
+"area_km2": 43100,
+"tier": 1,
+"facts": [
+"The birthplace of LEGO."
+]
+},
+{
+"iso2": "ee",
+"name": "Estonia",
+"aliases": [],
+"capital": "Tallinn",
+"continent": "Europe",
+"pop_m": 1.4,
+"pop_year": 2024,
+"area_km2": 45300,
+"tier": 2,
+"facts": [
+"A world leader in digital government; Skype was developed here."
+]
+},
+{
+"iso2": "fi",
+"name": "Finland",
+"aliases": [],
+"capital": "Helsinki",
+"continent": "Europe",
+"pop_m": 5.6,
+"pop_year": 2024,
+"area_km2": 338000,
+"tier": 1,
+"facts": [
+"Often called the land of a thousand lakes."
+]
+},
+{
+"iso2": "fr",
+"name": "France",
+"aliases": [],
+"capital": "Paris",
+"continent": "Europe",
+"pop_m": 66,
+"pop_year": 2024,
+"area_km2": 552000,
+"tier": 1,
+"facts": [
+"The world's most visited country by tourist arrivals."
+]
+},
+{
+"iso2": "de",
+"name": "Germany",
+"aliases": [],
+"capital": "Berlin",
+"continent": "Europe",
+"pop_m": 84.6,
+"pop_year": 2024,
+"area_km2": 357600,
+"tier": 1,
+"facts": [
+"The EU's most populous country."
+]
+},
+{
+"iso2": "gr",
+"name": "Greece",
+"aliases": [],
+"capital": "Athens",
+"continent": "Europe",
+"pop_m": 10.0,
+"pop_year": 2024,
+"area_km2": 132000,
+"tier": 1,
+"facts": [
+"Birthplace of the ancient Olympic Games."
+]
+},
+{
+"iso2": "hu",
+"name": "Hungary",
+"aliases": [],
+"capital": "Budapest",
+"continent": "Europe",
+"pop_m": 9.7,
+"pop_year": 2024,
+"area_km2": 93000,
+"tier": 1,
+"facts": [
+"The Danube splits its capital into Buda and Pest."
+]
+},
+{
+"iso2": "is",
+"name": "Iceland",
+"aliases": [],
+"capital": "Reykjavík",
+"continent": "Europe",
+"pop_m": 0.39,
+"pop_year": 2024,
+"area_km2": 103000,
+"tier": 2,
+"facts": [
+"Land of glaciers, geysers and volcanoes."
+]
+},
+{
+"iso2": "ie",
+"name": "Ireland",
+"aliases": [],
+"capital": "Dublin",
+"continent": "Europe",
+"pop_m": 5.3,
+"pop_year": 2024,
+"area_km2": 70300,
+"tier": 1,
+"facts": [
+"The harp is its national symbol."
+]
+},
+{
+"iso2": "it",
+"name": "Italy",
+"aliases": [],
+"capital": "Rome",
+"continent": "Europe",
+"pop_m": 59.3,
+"pop_year": 2024,
+"area_km2": 302000,
+"tier": 1,
+"facts": [
+"Has more than 50 UNESCO World Heritage Sites (as of 2025)."
+]
+},
+{
+"iso2": "lv",
+"name": "Latvia",
+"aliases": [],
+"capital": "Riga",
+"continent": "Europe",
+"pop_m": 1.9,
+"pop_year": 2024,
+"area_km2": 64600,
+"tier": 2,
+"facts": [
+"The middle of the three Baltic states."
+]
+},
+{
+"iso2": "li",
+"name": "Liechtenstein",
+"aliases": [],
+"capital": "Vaduz",
+"continent": "Europe",
+"pop_m": 0.04,
+"pop_year": 2024,
+"area_km2": 160,
+"tier": 3,
+"facts": [
+"A doubly landlocked country between Switzerland and Austria."
+]
+},
+{
+"iso2": "lt",
+"name": "Lithuania",
+"aliases": [],
+"capital": "Vilnius",
+"continent": "Europe",
+"pop_m": 2.9,
+"pop_year": 2024,
+"area_km2": 65300,
+"tier": 2,
+"facts": [
+"The southernmost of the three Baltic states."
+]
+},
+{
+"iso2": "lu",
+"name": "Luxembourg",
+"aliases": [],
+"capital": "Luxembourg",
+"continent": "Europe",
+"pop_m": 0.67,
+"pop_year": 2024,
+"area_km2": 2590,
+"tier": 2,
+"facts": [
+"The world's last grand duchy."
+]
+},
+{
+"iso2": "mt",
+"name": "Malta",
+"aliases": [],
+"capital": "Valletta",
+"continent": "Europe",
+"pop_m": 0.54,
+"pop_year": 2024,
+"area_km2": 316,
+"tier": 2,
+"facts": [
+"The EU's smallest member state."
+]
+},
+{
+"iso2": "md",
+"name": "Moldova",
+"aliases": [],
+"capital": "Chișinău",
+"continent": "Europe",
+"pop_m": 3.0,
+"pop_year": 2024,
+"area_km2": 33800,
+"tier": 3,
+"facts": [
+"Lies between Romania and Ukraine."
+]
+},
+{
+"iso2": "mc",
+"name": "Monaco",
+"aliases": [],
+"capital": "Monaco",
+"continent": "Europe",
+"pop_m": 0.04,
+"pop_year": 2024,
+"area_km2": 2,
+"tier": 2,
+"facts": [
+"Hosts a famous Formula 1 street race."
+]
+},
+{
+"iso2": "me",
+"name": "Montenegro",
+"aliases": [],
+"capital": "Podgorica",
+"continent": "Europe",
+"pop_m": 0.63,
+"pop_year": 2024,
+"area_km2": 13800,
+"tier": 3,
+"facts": [
+"Its name means 'black mountain'."
+]
+},
+{
+"iso2": "nl",
+"name": "Netherlands",
+"aliases": [
+"Holland"
+],
+"capital": "Amsterdam",
+"continent": "Europe",
+"pop_m": 18.0,
+"pop_year": 2024,
+"area_km2": 41900,
+"tier": 1,
+"facts": [
+"About a quarter of it lies below sea level.",
+"Famous for tulips and windmills."
+],
+"capital_note": "Amsterdam is the constitutional capital; The Hague is the seat of government."
+},
+{
+"iso2": "mk",
+"name": "North Macedonia",
+"aliases": [],
+"capital": "Skopje",
+"continent": "Europe",
+"pop_m": 1.8,
+"pop_year": 2024,
+"area_km2": 25700,
+"tier": 3,
+"facts": [
+"Lake Ohrid is one of Europe's oldest lakes."
+]
+},
+{
+"iso2": "no",
+"name": "Norway",
+"aliases": [],
+"capital": "Oslo",
+"continent": "Europe",
+"pop_m": 5.6,
+"pop_year": 2024,
+"area_km2": 385000,
+"tier": 1,
+"facts": [
+"Famous for its fjords."
+]
+},
+{
+"iso2": "pl",
+"name": "Poland",
+"aliases": [],
+"capital": "Warsaw",
+"continent": "Europe",
+"pop_m": 38.5,
+"pop_year": 2024,
+"area_km2": 312700,
+"tier": 1,
+"facts": [
+"Birthplace of Marie Curie and Chopin."
+]
+},
+{
+"iso2": "pt",
+"name": "Portugal",
+"aliases": [],
+"capital": "Lisbon",
+"continent": "Europe",
+"pop_m": 10.4,
+"pop_year": 2024,
+"area_km2": 92200,
+"tier": 1,
+"facts": [
+"Its capital is the westernmost capital of mainland Europe."
+]
+},
+{
+"iso2": "ro",
+"name": "Romania",
+"aliases": [],
+"capital": "Bucharest",
+"continent": "Europe",
+"pop_m": 19.0,
+"pop_year": 2024,
+"area_km2": 238400,
+"tier": 2,
+"facts": [
+"Transylvania's Bran Castle is linked to the Dracula legend."
+]
+},
+{
+"iso2": "ru",
+"name": "Russia",
+"aliases": [],
+"capital": "Moscow",
+"continent": "Europe",
+"pop_m": 145,
+"pop_year": 2024,
+"area_km2": 17098000,
+"tier": 1,
+"facts": [
+"The largest country in the world by area.",
+"Spans 11 time zones."
+]
+},
+{
+"iso2": "sm",
+"name": "San Marino",
+"aliases": [],
+"capital": "San Marino",
+"continent": "Europe",
+"pop_m": 0.03,
+"pop_year": 2024,
+"area_km2": 61,
+"tier": 3,
+"facts": [
+"One of the world's oldest republics, surrounded by Italy."
+]
+},
+{
+"iso2": "rs",
+"name": "Serbia",
+"aliases": [],
+"capital": "Belgrade",
+"continent": "Europe",
+"pop_m": 6.7,
+"pop_year": 2024,
+"area_km2": null,
+"tier": 2,
+"facts": [
+"Belgrade sits where the Sava meets the Danube."
+]
+},
+{
+"iso2": "sk",
+"name": "Slovakia",
+"aliases": [],
+"capital": "Bratislava",
+"continent": "Europe",
+"pop_m": 5.5,
+"pop_year": 2024,
+"area_km2": 49000,
+"tier": 2,
+"facts": [
+"Its capital borders both Austria and Hungary."
+]
+},
+{
+"iso2": "si",
+"name": "Slovenia",
+"aliases": [],
+"capital": "Ljubljana",
+"continent": "Europe",
+"pop_m": 2.1,
+"pop_year": 2024,
+"area_km2": 20300,
+"tier": 2,
+"facts": [
+"Lake Bled, with its island church, is its most famous sight."
+]
+},
+{
+"iso2": "es",
+"name": "Spain",
+"aliases": [],
+"capital": "Madrid",
+"continent": "Europe",
+"pop_m": 47.9,
+"pop_year": 2024,
+"area_km2": 506000,
+"tier": 1,
+"facts": [
+"Famous for flamenco and paella."
+]
+},
+{
+"iso2": "se",
+"name": "Sweden",
+"aliases": [],
+"capital": "Stockholm",
+"continent": "Europe",
+"pop_m": 10.6,
+"pop_year": 2024,
+"area_km2": 450000,
+"tier": 1,
+"facts": [
+"The Nobel Prizes, except the Peace Prize, are awarded in Stockholm."
+]
+},
+{
+"iso2": "ch",
+"name": "Switzerland",
+"aliases": [],
+"capital": "Bern",
+"continent": "Europe",
+"pop_m": 8.9,
+"pop_year": 2024,
+"area_km2": 41300,
+"tier": 1,
+"facts": [
+"Has four national languages."
+],
+"capital_note": "Officially the 'federal city', the de facto capital."
+},
+{
+"iso2": "ua",
+"name": "Ukraine",
+"aliases": [],
+"capital": "Kyiv",
+"continent": "Europe",
+"pop_m": null,
+"pop_year": null,
+"area_km2": null,
+"tier": 1,
+"facts": [
+"Europe's second-largest country by area, after Russia."
+]
+},
+{
+"iso2": "gb",
+"name": "United Kingdom",
+"aliases": [
+"UK",
+"Britain",
+"Great Britain"
+],
+"capital": "London",
+"continent": "Europe",
+"pop_m": 69,
+"pop_year": 2024,
+"area_km2": 243600,
+"tier": 1,
+"facts": [
+"Made up of England, Scotland, Wales and Northern Ireland."
+]
+},
+{
+"iso2": "va",
+"name": "Vatican City",
+"aliases": [
+"Holy See"
+],
+"capital": "Vatican City",
+"continent": "Europe",
+"pop_m": 0.0008,
+"pop_year": 2024,
+"area_km2": 0.44,
+"tier": 2,
+"facts": [
+"The smallest country in the world.",
+"Home of St Peter's Basilica."
+]
+},
+{
+"iso2": "ag",
+"name": "Antigua and Barbuda",
+"aliases": [],
+"capital": "St. John's",
+"continent": "North America",
+"pop_m": 0.09,
+"pop_year": 2024,
+"area_km2": 440,
+"tier": 3,
+"facts": [
+"Said to have a beach for every day of the year."
+]
+},
+{
+"iso2": "bs",
+"name": "Bahamas",
+"aliases": [
+"The Bahamas"
+],
+"capital": "Nassau",
+"continent": "North America",
+"pop_m": 0.4,
+"pop_year": 2024,
+"area_km2": 13900,
+"tier": 2,
+"facts": [
+"An archipelago of about 700 islands."
+]
+},
+{
+"iso2": "bb",
+"name": "Barbados",
+"aliases": [],
+"capital": "Bridgetown",
+"continent": "North America",
+"pop_m": 0.28,
+"pop_year": 2024,
+"area_km2": 430,
+"tier": 3,
+"facts": [
+"Birthplace of Rihanna."
+]
+},
+{
+"iso2": "bz",
+"name": "Belize",
+"aliases": [],
+"capital": "Belmopan",
+"continent": "North America",
+"pop_m": 0.42,
+"pop_year": 2024,
+"area_km2": 23000,
+"tier": 3,
+"facts": [
+"The only Central American country with English as its official language."
+]
+},
+{
+"iso2": "ca",
+"name": "Canada",
+"aliases": [],
+"capital": "Ottawa",
+"continent": "North America",
+"pop_m": 40,
+"pop_year": 2024,
+"area_km2": 9985000,
+"tier": 1,
+"facts": [
+"The second-largest country in the world by area."
+]
+},
+{
+"iso2": "cr",
+"name": "Costa Rica",
+"aliases": [],
+"capital": "San José",
+"continent": "North America",
+"pop_m": 5.1,
+"pop_year": 2024,
+"area_km2": 51100,
+"tier": 2,
+"facts": [
+"Abolished its army in 1948."
+]
+},
+{
+"iso2": "cu",
+"name": "Cuba",
+"aliases": [],
+"capital": "Havana",
+"continent": "North America",
+"pop_m": 11.0,
+"pop_year": 2024,
+"area_km2": 110000,
+"tier": 1,
+"facts": [
+"The largest island in the Caribbean."
+]
+},
+{
+"iso2": "dm",
+"name": "Dominica",
+"aliases": [],
+"capital": "Roseau",
+"continent": "North America",
+"pop_m": 0.07,
+"pop_year": 2024,
+"area_km2": 750,
+"tier": 3,
+"facts": [
+"Called the 'Nature Island' of the Caribbean."
+]
+},
+{
+"iso2": "do",
+"name": "Dominican Republic",
+"aliases": [],
+"capital": "Santo Domingo",
+"continent": "North America",
+"pop_m": 11.4,
+"pop_year": 2024,
+"area_km2": 48700,
+"tier": 2,
+"facts": [
+"Shares the island of Hispaniola with Haiti."
+]
+},
+{
+"iso2": "sv",
+"name": "El Salvador",
+"aliases": [],
+"capital": "San Salvador",
+"continent": "North America",
+"pop_m": 6.3,
+"pop_year": 2024,
+"area_km2": 21000,
+"tier": 3,
+"facts": [
+"The smallest country in Central America."
+]
+},
+{
+"iso2": "gd",
+"name": "Grenada",
+"aliases": [],
+"capital": "St. George's",
+"continent": "North America",
+"pop_m": 0.12,
+"pop_year": 2024,
+"area_km2": 345,
+"tier": 3,
+"facts": [
+"Known as the 'Spice Isle' for its nutmeg."
+]
+},
+{
+"iso2": "gt",
+"name": "Guatemala",
+"aliases": [],
+"capital": "Guatemala City",
+"continent": "North America",
+"pop_m": 18.4,
+"pop_year": 2024,
+"area_km2": 108900,
+"tier": 2,
+"facts": [
+"Home to the Maya ruins of Tikal."
+]
+},
+{
+"iso2": "ht",
+"name": "Haiti",
+"aliases": [],
+"capital": "Port-au-Prince",
+"continent": "North America",
+"pop_m": 11.8,
+"pop_year": 2024,
+"area_km2": 27750,
+"tier": 2,
+"facts": [
+"Became independent from France in 1804."
+]
+},
+{
+"iso2": "hn",
+"name": "Honduras",
+"aliases": [],
+"capital": "Tegucigalpa",
+"continent": "North America",
+"pop_m": 10.8,
+"pop_year": 2024,
+"area_km2": 112500,
+"tier": 3,
+"facts": [
+"Home to the Maya site of Copán."
+]
+},
+{
+"iso2": "jm",
+"name": "Jamaica",
+"aliases": [],
+"capital": "Kingston",
+"continent": "North America",
+"pop_m": 2.8,
+"pop_year": 2024,
+"area_km2": 11000,
+"tier": 1,
+"facts": [
+"Birthplace of reggae and Bob Marley.",
+"Home of sprinter Usain Bolt."
+]
+},
+{
+"iso2": "mx",
+"name": "Mexico",
+"aliases": [],
+"capital": "Mexico City",
+"continent": "North America",
+"pop_m": 131,
+"pop_year": 2024,
+"area_km2": 1964000,
+"tier": 1,
+"facts": [
+"The country with the most Spanish speakers."
+]
+},
+{
+"iso2": "ni",
+"name": "Nicaragua",
+"aliases": [],
+"capital": "Managua",
+"continent": "North America",
+"pop_m": 7.0,
+"pop_year": 2024,
+"area_km2": 130400,
+"tier": 3,
+"facts": [
+"The largest country in Central America by area."
+]
+},
+{
+"iso2": "pa",
+"name": "Panama",
+"aliases": [],
+"capital": "Panama City",
+"continent": "North America",
+"pop_m": 4.5,
+"pop_year": 2024,
+"area_km2": 75400,
+"tier": 2,
+"facts": [
+"The Panama Canal links the Atlantic and the Pacific."
+]
+},
+{
+"iso2": "kn",
+"name": "Saint Kitts and Nevis",
+"aliases": [],
+"capital": "Basseterre",
+"continent": "North America",
+"pop_m": 0.05,
+"pop_year": 2024,
+"area_km2": 261,
+"tier": 3,
+"facts": [
+"The smallest country in the Americas."
+]
+},
+{
+"iso2": "lc",
+"name": "Saint Lucia",
+"aliases": [],
+"capital": "Castries",
+"continent": "North America",
+"pop_m": 0.18,
+"pop_year": 2024,
+"area_km2": 617,
+"tier": 3,
+"facts": [
+"Famous for the twin volcanic peaks called the Pitons."
+]
+},
+{
+"iso2": "vc",
+"name": "Saint Vincent and the Grenadines",
+"aliases": [],
+"capital": "Kingstown",
+"continent": "North America",
+"pop_m": 0.1,
+"pop_year": 2024,
+"area_km2": 389,
+"tier": 3,
+"facts": [
+"Made up of a main island and a chain of small islands."
+]
+},
+{
+"iso2": "tt",
+"name": "Trinidad and Tobago",
+"aliases": [],
+"capital": "Port of Spain",
+"continent": "North America",
+"pop_m": 1.5,
+"pop_year": 2024,
+"area_km2": 5130,
+"tier": 2,
+"facts": [
+"The birthplace of the steelpan drum."
+]
+},
+{
+"iso2": "us",
+"name": "United States",
+"aliases": [
+"USA",
+"United States of America",
+"America"
+],
+"capital": "Washington, D.C.",
+"continent": "North America",
+"pop_m": 345,
+"pop_year": 2024,
+"area_km2": 9834000,
+"tier": 1,
+"facts": [
+"Made up of 50 states."
+]
+},
+{
+"iso2": "ar",
+"name": "Argentina",
+"aliases": [],
+"capital": "Buenos Aires",
+"continent": "South America",
+"pop_m": 45.7,
+"pop_year": 2024,
+"area_km2": 2780000,
+"tier": 1,
+"facts": [
+"Famous for the tango.",
+"Aconcagua, the highest mountain in the Americas, is here."
+]
+},
+{
+"iso2": "bo",
+"name": "Bolivia",
+"aliases": [],
+"capital": "Sucre",
+"continent": "South America",
+"pop_m": 12.4,
+"pop_year": 2024,
+"area_km2": 1099000,
+"tier": 2,
+"facts": [
+"Salar de Uyuni is the world's largest salt flat."
+],
+"capital_note": "Sucre is the constitutional capital; La Paz the seat of government."
+},
+{
+"iso2": "br",
+"name": "Brazil",
+"aliases": [],
+"capital": "Brasília",
+"continent": "South America",
+"pop_m": 212,
+"pop_year": 2024,
+"area_km2": 8516000,
+"tier": 1,
+"facts": [
+"The largest country in South America.",
+"Most of the Amazon rainforest is here."
+]
+},
+{
+"iso2": "cl",
+"name": "Chile",
+"aliases": [],
+"capital": "Santiago",
+"continent": "South America",
+"pop_m": 19.8,
+"pop_year": 2024,
+"area_km2": 756000,
+"tier": 1,
+"facts": [
+"About 4,300 km long but on average only about 175 km wide."
+]
+},
+{
+"iso2": "co",
+"name": "Colombia",
+"aliases": [],
+"capital": "Bogotá",
+"continent": "South America",
+"pop_m": 52.9,
+"pop_year": 2024,
+"area_km2": 1142000,
+"tier": 1,
+"facts": [
+"The only South American country with coasts on both the Pacific and the Caribbean."
+]
+},
+{
+"iso2": "ec",
+"name": "Ecuador",
+"aliases": [],
+"capital": "Quito",
+"continent": "South America",
+"pop_m": 18.1,
+"pop_year": 2024,
+"area_km2": 256000,
+"tier": 2,
+"facts": [
+"Named after the Equator.",
+"The Galápagos Islands belong to it."
+]
+},
+{
+"iso2": "gy",
+"name": "Guyana",
+"aliases": [],
+"capital": "Georgetown",
+"continent": "South America",
+"pop_m": 0.83,
+"pop_year": 2024,
+"area_km2": 215000,
+"tier": 3,
+"facts": [
+"The only South American country with English as its official language."
+]
+},
+{
+"iso2": "py",
+"name": "Paraguay",
+"aliases": [],
+"capital": "Asunción",
+"continent": "South America",
+"pop_m": 6.9,
+"pop_year": 2024,
+"area_km2": 407000,
+"tier": 2,
+"facts": [
+"Its flag has different designs on the front and back."
+]
+},
+{
+"iso2": "pe",
+"name": "Peru",
+"aliases": [],
+"capital": "Lima",
+"continent": "South America",
+"pop_m": 34.2,
+"pop_year": 2024,
+"area_km2": 1285000,
+"tier": 1,
+"facts": [
+"Home to Machu Picchu."
+]
+},
+{
+"iso2": "sr",
+"name": "Suriname",
+"aliases": [],
+"capital": "Paramaribo",
+"continent": "South America",
+"pop_m": 0.63,
+"pop_year": 2024,
+"area_km2": 164000,
+"tier": 3,
+"facts": [
+"The smallest country in South America; Dutch is its official language."
+]
+},
+{
+"iso2": "uy",
+"name": "Uruguay",
+"aliases": [],
+"capital": "Montevideo",
+"continent": "South America",
+"pop_m": 3.4,
+"pop_year": 2024,
+"area_km2": 176000,
+"tier": 2,
+"facts": [
+"Won the first FIFA World Cup, in 1930."
+]
+},
+{
+"iso2": "ve",
+"name": "Venezuela",
+"aliases": [],
+"capital": "Caracas",
+"continent": "South America",
+"pop_m": 28.4,
+"pop_year": 2024,
+"area_km2": 916000,
+"tier": 2,
+"facts": [
+"Angel Falls, the world's highest uninterrupted waterfall, is here."
+]
+},
+{
+"iso2": "au",
+"name": "Australia",
+"aliases": [],
+"capital": "Canberra",
+"continent": "Oceania",
+"pop_m": 26.7,
+"pop_year": 2024,
+"area_km2": 7692000,
+"tier": 1,
+"facts": [
+"The only country that is also a whole continent.",
+"Home to the Great Barrier Reef."
+]
+},
+{
+"iso2": "fj",
+"name": "Fiji",
+"aliases": [],
+"capital": "Suva",
+"continent": "Oceania",
+"pop_m": 0.93,
+"pop_year": 2024,
+"area_km2": 18300,
+"tier": 2,
+"facts": [
+"Made up of more than 300 islands."
+]
+},
+{
+"iso2": "ki",
+"name": "Kiribati",
+"aliases": [],
+"capital": "South Tarawa",
+"continent": "Oceania",
+"pop_m": 0.13,
+"pop_year": 2024,
+"area_km2": 810,
+"tier": 3,
+"facts": [
+"The only country with islands in all four hemispheres."
+]
+},
+{
+"iso2": "mh",
+"name": "Marshall Islands",
+"aliases": [],
+"capital": "Majuro",
+"continent": "Oceania",
+"pop_m": 0.04,
+"pop_year": 2024,
+"area_km2": 181,
+"tier": 3,
+"facts": [
+"Bikini Atoll, scene of US nuclear tests, is part of it."
+]
+},
+{
+"iso2": "fm",
+"name": "Micronesia",
+"aliases": [
+"Federated States of Micronesia"
+],
+"capital": "Palikir",
+"continent": "Oceania",
+"pop_m": 0.11,
+"pop_year": 2024,
+"area_km2": 702,
+"tier": 3,
+"facts": [
+"Made up of more than 600 islands in the western Pacific."
+]
+},
+{
+"iso2": "nr",
+"name": "Nauru",
+"aliases": [],
+"capital": null,
+"continent": "Oceania",
+"pop_m": 0.012,
+"pop_year": 2024,
+"area_km2": 21,
+"tier": 3,
+"facts": [
+"The world's smallest island country."
+],
+"capital_note": "No official capital; government offices are in Yaren District."
+},
+{
+"iso2": "nz",
+"name": "New Zealand",
+"aliases": [],
+"capital": "Wellington",
+"continent": "Oceania",
+"pop_m": 5.2,
+"pop_year": 2024,
+"area_km2": 268000,
+"tier": 1,
+"facts": [
+"The first country to give women the vote in national elections, in 1893."
+]
+},
+{
+"iso2": "pw",
+"name": "Palau",
+"aliases": [],
+"capital": "Ngerulmud",
+"continent": "Oceania",
+"pop_m": 0.018,
+"pop_year": 2024,
+"area_km2": 459,
+"tier": 3,
+"facts": [
+"Famous for its jellyfish lake."
+]
+},
+{
+"iso2": "pg",
+"name": "Papua New Guinea",
+"aliases": [],
+"capital": "Port Moresby",
+"continent": "Oceania",
+"pop_m": 10.3,
+"pop_year": 2024,
+"area_km2": 462800,
+"tier": 2,
+"facts": [
+"More than 800 languages are spoken there."
+]
+},
+{
+"iso2": "ws",
+"name": "Samoa",
+"aliases": [],
+"capital": "Apia",
+"continent": "Oceania",
+"pop_m": 0.22,
+"pop_year": 2024,
+"area_km2": 2840,
+"tier": 3,
+"facts": [
+"A Pacific island nation known for rugby."
+]
+},
+{
+"iso2": "sb",
+"name": "Solomon Islands",
+"aliases": [],
+"capital": "Honiara",
+"continent": "Oceania",
+"pop_m": 0.82,
+"pop_year": 2024,
+"area_km2": 28900,
+"tier": 3,
+"facts": [
+"Scene of the Battle of Guadalcanal in the Second World War."
+]
+},
+{
+"iso2": "to",
+"name": "Tonga",
+"aliases": [],
+"capital": "Nuku'alofa",
+"continent": "Oceania",
+"pop_m": 0.1,
+"pop_year": 2024,
+"area_km2": 750,
+"tier": 3,
+"facts": [
+"The only Pacific island kingdom."
+]
+},
+{
+"iso2": "tv",
+"name": "Tuvalu",
+"aliases": [],
+"capital": "Funafuti",
+"continent": "Oceania",
+"pop_m": 0.01,
+"pop_year": 2024,
+"area_km2": 26,
+"tier": 3,
+"facts": [
+"One of the smallest countries by population."
+]
+},
+{
+"iso2": "vu",
+"name": "Vanuatu",
+"aliases": [],
+"capital": "Port Vila",
+"continent": "Oceania",
+"pop_m": 0.33,
+"pop_year": 2024,
+"area_km2": 12200,
+"tier": 3,
+"facts": [
+"An archipelago of about 80 islands."
+]
+}
+]

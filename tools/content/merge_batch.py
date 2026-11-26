@@ -18,7 +18,9 @@ qs = json.load(open(P, encoding="utf-8")) if os.path.exists(P) else []
 have = {q["q"] for q in qs}
 top = {t: 0 for t in ("cap", "flg", "geo", "pop", "lmk", "gk")}
 for q in qs:
-    top[q["l"]] = max(top[q["l"]], int(re.sub(r"^[a-z]+", "", q["id"])))
+    num = q["id"][len(q["l"]):]
+    if num.isdigit():           # generated ids (capfr, flgfr) don't take part in the numbering
+        top[q["l"]] = max(top[q["l"]], int(num))
 added = 0
 for n in new:
     if n["q"] in have:
