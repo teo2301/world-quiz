@@ -1,31 +1,33 @@
-# Football Quiz. Start/update: docker compose up -d
+# World Knowledge Quiz. PREPARED, NOT STARTED: Matteo approves publishing first.
+# Start/update later with: docker compose up -d   (from this folder)
 services:
-  # The quiz itself (the public copy is GitHub Pages; this is the home copy)
-  football-quiz:
+  # Home copy of the site (the public copy will be GitHub Pages at teo2301.github.io/world-quiz/)
+  world-quiz:
     image: nginx:alpine
-    container_name: football-quiz
+    container_name: world-quiz
     restart: unless-stopped
     ports:
-      - "8097:80"
+      - "127.0.0.1:8090:80"
     volumes:
       - ./docs:/usr/share/nginx/html:ro
       - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
 
-  # Leaderboard API. Localhost only; public via `tailscale funnel --https=10000`.
-  # Since Phase 6 it's built from server/Dockerfile (python:3.13-alpine + pywebpush):
-  #   docker compose build football-quiz-scores && docker compose up -d football-quiz-scores
-  football-quiz-scores:
+  # Leaderboard API. Localhost only; to be published under the existing Funnel :10000 at path /wq
+  # (e.g. tailscale funnel --bg --https=10000 --set-path=/wq http://127.0.0.1:8195) - never a new Funnel port.
+  # Built from server/Dockerfile (python:3.13-alpine + pywebpush):
+  #   docker compose build world-quiz-scores && docker compose up -d world-quiz-scores
+  world-quiz-scores:
     build: ./server
-    image: football-quiz-scores:v2
-    container_name: football-quiz-scores
+    image: world-quiz-scores:v1
+    container_name: world-quiz-scores
     restart: unless-stopped
     user: "1000:1000"
     command: ["python", "-u", "/app/leaderboard.py"]
     ports:
-      - "127.0.0.1:8093:8000"
+      - "127.0.0.1:8195:8000"
     volumes:
       - ./server:/app:ro
-      - ./data:/data
-      - ./docs:/docs:ro   # questions.json, for server-side marking and the daily quiz
+      - ./data:/data          # world-quiz.db (gitignored)
+      - ./docs:/docs:ro       # questions.json, stats.json, clues.json for server-side marking
       # VAPID keypair for push notifications - outside git, chmod 600 (uid 1000 can read it)
-      - /home/riccioserver/keys/football-quiz-vapid.json:/keys/vapid.json:ro
+      - /home/riccioserver/keys/world-quiz-vapid.json:/keys/vapid.json:ro

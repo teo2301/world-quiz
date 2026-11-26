@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """Synthesise the app's three sound effects (no recordings, nothing downloaded).
 
-    python3 tools/make_sounds.py      -> docs/sounds/{cheer,groan,whistle}.mp3
+    python3 tools/make_sounds.py      -> docs/sounds/{right,wrong,finish}.mp3
 
-cheer   ~1.4 s  crowd roar: many detuned "voices" + shaped noise + a few claps
-groan   ~1.3 s  crowd "ohhh": low voices sliding down through an "oh" formant
-whistle ~1.9 s  referee's final whistle: two short blasts and a long one (pea trill)
+right   ~0.7 s  bright two-note chime (bell partials, a fifth apart going up)
+wrong   ~0.5 s  soft low "bonk" sliding down, no harshness
+finish  ~1.3 s  short rising arpeggio (C-E-G-C) with a bell tail
 
-Needs numpy and ffmpeg (libmp3lame). Seeded, so reruns give the same files.
+Needs numpy and ffmpeg (libmp3lame). Deterministic, so reruns give the same files.
 """
 import os
 import subprocess
@@ -18,96 +18,60 @@ import numpy as np
 
 SR = 22050
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "docs", "sounds")
-rng = np.random.default_rng(2301)
 
 
 def t_of(secs):
     return np.arange(int(SR * secs)) / SR
 
 
-def band(x, lo, hi, soft=0.15):
-    """Band-pass in the frequency domain with soft edges."""
-    f = np.fft.rfftfreq(len(x), 1 / SR)
-    m = np.clip((f - lo * (1 - soft)) / (lo * soft * 2 + 1e-9), 0, 1) * np.clip((hi * (1 + soft) - f) / (hi * soft * 2), 0, 1)
-    return np.fft.irfft(np.fft.rfft(x) * m, len(x))
-
-
-def formant(x, peaks):
-    """Sum of resonances (centre, width, gain) - a crude vowel filter."""
-    f = np.fft.rfftfreq(len(x), 1 / SR)
-    m = sum(g / (1 + ((f - c) / w) ** 2) for c, w, g in peaks)
-    return np.fft.irfft(np.fft.rfft(x) * m, len(x))
-
-
-def env(n, attack, release, total):
-    t = np.arange(n) / SR
-    a = np.clip(t / attack, 0, 1)
-    r = np.clip((total - t) / release, 0, 1)
-    return a * r
-
-
-def voice(t, f0, glide=0.0, vib=5.0, onset=0.0):
-    """A buzzy harmonic tone (sawtooth-ish, 12 partials) with vibrato and jitter."""
-    jitter = np.cumsum(rng.normal(0, 1, len(t))) / SR * 4
-    freq = f0 * (1 + glide * t / t[-1]) * (1 + 0.012 * np.sin(2 * np.pi * vib * t + rng.uniform(0, 6))) + jitter
-    ph = 2 * np.pi * np.cumsum(freq) / SR
-    s = sum(np.sin(k * ph) / k for k in range(1, 13))
-    s[t < onset] = 0
-    return s
-
-
 def norm(x, peak=0.8):
-    return x / (np.max(np.abs(x)) + 1e-9) * peak
+    m = np.max(np.abs(x)) or 1.0
+    return x / m * peak
 
 
-def cheer():
-    T = 1.4
-    t = t_of(T)
-    v = sum(voice(t, rng.uniform(170, 480), glide=rng.uniform(0, .12), vib=rng.uniform(4, 7),
-                  onset=rng.uniform(0, .18)) for _ in range(48))
-    v = formant(v, [(700, 160, 1.0), (1150, 220, .7), (2600, 400, .35)])       # "ah"
-    noise = band(rng.normal(0, 1, len(t)), 350, 4200)
-    claps = np.zeros(len(t))
-    for _ in range(26):
-        i = int(rng.uniform(.15, 1.1) * SR)
-        n = int(.012 * SR)
-        claps[i:i + n] += rng.normal(0, 1, n) * np.exp(-np.arange(n) / (n / 4))
-    claps = band(claps, 900, 5000)
-    x = norm(v) * .7 + norm(noise) * .45 + norm(claps) * .35
-    return norm(x * env(len(t), .12, .55, T), .75)
+def bell(f, secs, decay=4.0, attack=0.004):
+    """A bell-ish note: fundamental + a few inharmonic partials, fast attack, exponential decay."""
+    t = t_of(secs)
+    x = (np.sin(2 * np.pi * f * t) + 0.45 * np.sin(2 * np.pi * f * 2.0 * t) * np.exp(-t * 3)
+         + 0.25 * np.sin(2 * np.pi * f * 2.76 * t) * np.exp(-t * 6)
+         + 0.12 * np.sin(2 * np.pi * f * 5.4 * t) * np.exp(-t * 10))
+    e = np.exp(-t * decay) * np.minimum(1, t / attack)
+    return x * e
 
 
-def groan():
-    T = 1.3
-    t = t_of(T)
-    v = sum(voice(t, rng.uniform(110, 260), glide=-rng.uniform(.18, .32), vib=rng.uniform(3, 5),
-                  onset=rng.uniform(0, .1)) for _ in range(40))
-    v = formant(v, [(480, 120, 1.0), (850, 160, .5), (2400, 400, .12)])        # "oh"
-    noise = band(rng.normal(0, 1, len(t)), 200, 1600)
-    x = norm(v) * .85 + norm(noise) * .25
-    return norm(x * env(len(t), .18, .7, T), .7)
+def place(total, parts):
+    x = np.zeros(int(SR * total))
+    for start, sig in parts:
+        i = int(SR * start)
+        n = min(len(sig), len(x) - i)
+        x[i:i + n] += sig[:n]
+    return x
 
 
-def whistle():
-    blasts = [(.0, .26), (.38, .26), (.76, 1.05)]       # start, length
-    T = 1.9
-    t = t_of(T)
-    x = np.zeros(len(t))
-    for start, length in blasts:
-        i, n = int(start * SR), int(length * SR)
-        tt = np.arange(n) / SR
-        trill = 0.5 + 0.5 * np.sin(2 * np.pi * 34 * tt)                     # the pea rattling
-        f = 2950 * (1 + 0.025 * trill) * (1 - 0.01 * tt / length)
-        ph = 2 * np.pi * np.cumsum(f) / SR
-        tone = np.sin(ph) + 0.18 * np.sin(2 * ph)
-        breath = band(rng.normal(0, 1, n), 2400, 3600) * 0.25
-        e = np.clip(tt / .02, 0, 1) * np.clip((length - tt) / .05, 0, 1)
-        x[i:i + n] += (tone * (0.65 + 0.35 * trill) + breath) * e
-    return norm(x, .6)
+def right():
+    return norm(place(0.75, [(0, bell(784, 0.5, 6)), (0.09, bell(1175, 0.66, 5))]), .7)
+
+
+def wrong():
+    t = t_of(0.5)
+    f = 220 * np.exp(-t * 1.6)                      # 220 Hz sliding down
+    ph = 2 * np.pi * np.cumsum(f) / SR
+    x = np.sin(ph) + 0.3 * np.sin(2 * ph) + 0.1 * np.sin(3 * ph)
+    e = np.minimum(1, t / 0.01) * np.exp(-t * 7)
+    return norm(x * e, .6)
+
+
+def finish():
+    notes = [523.25, 659.25, 783.99, 1046.5]
+    parts = [(i * 0.12, bell(f, 0.9 if i == 3 else 0.45, 3 if i == 3 else 6)) for i, f in enumerate(notes)]
+    return norm(place(1.35, parts), .7)
 
 
 def write(name, x):
     os.makedirs(OUT, exist_ok=True)
+    fade = min(len(x), int(SR * 0.02))
+    x = x.copy()
+    x[-fade:] *= np.linspace(1, 0, fade)
     pcm = (np.clip(x, -1, 1) * 32767).astype("<i2").tobytes()
     with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as tmp:
         path = tmp.name
@@ -124,6 +88,6 @@ def write(name, x):
 
 
 if __name__ == "__main__":
-    write("cheer", cheer())
-    write("groan", groan())
-    write("whistle", whistle())
+    write("right", right())
+    write("wrong", wrong())
+    write("finish", finish())
