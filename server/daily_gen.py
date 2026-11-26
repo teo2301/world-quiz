@@ -4,7 +4,8 @@
 Every UK date gets 7 questions: 2 Easy, 3 Medium, 2 Hard (2 Hard a day needs
 at least 121 Hard questions for the 60-day no-repeat rule; the test checks it). Each day is picked
 with mulberry32 seeded by the date as YYYYMMDD, from the questions not used in
-the previous 60 days, walking forward from SEQ_START so the history is the same
+the previous 60 days (each pick preferring a topic the day doesn't have yet, so a
+day covers 6 topics whenever the pools allow), walking forward from SEQ_START so the history is the same
 everywhere. Pools are sorted by id so file order doesn't matter.
 """
 from datetime import date, datetime, timedelta, timezone
@@ -52,6 +53,7 @@ def number(d):
 class DailyPicker:
     def __init__(self, bank):
         self.pools = {k: sorted(q["id"] for q in bank if q["d"] == k) for k in (1, 2, 3)}
+        self.topic = {q["id"]: q["l"] for q in bank}
         self.days = []          # days[i] = ids for SEQ_START + i
 
     def ids(self, d):
@@ -69,10 +71,15 @@ class DailyPicker:
         recent = set()
         for past in self.days[max(0, i - NO_REPEAT):i]:
             recent.update(past)
-        picks = []
+        picks, used = [], set()
         for k in PLAN:
             avail = [q for q in self.pools[k] if q not in recent and q not in picks]
             if not avail:
                 avail = [q for q in self.pools[k] if q not in picks]
-            picks.append(avail[rng() % len(avail)])
+            fresh = [q for q in avail if self.topic[q] not in used]
+            if fresh:
+                avail = fresh
+            pick = avail[rng() % len(avail)]
+            picks.append(pick)
+            used.add(self.topic[pick])
         self.days.append(picks)

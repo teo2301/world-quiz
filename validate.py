@@ -2,12 +2,13 @@
 """Check the game data.  python3 validate.py   (run from the repo root)
 
 questions.json: unique ids, 3 distinct wrong answers, answer not among them, valid topic/difficulty.
-                (topic codes in field `l`: cap flg geo pop lmk gk)
+                (topic codes in field `l`: cap flg geo pop lmk gk); flag images exist.
+countries.json: unique codes/names, a flag file per country, generated cap/flg questions match it.
 stats.json:     higher-or-lower items: unique ids, known category, positive number, a source note.
 clues.json:     mystery-country items: unique ids, exactly 5 clues, the answer not given away in a clue
                 before the last, names/aliases unambiguous (also against the decoys).
 """
-import json, sys, collections, os
+import json, sys, collections, os, re
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "server"))
 import modes  # noqa: E402
 
@@ -17,9 +18,15 @@ bad = []
 Q = json.load(open(sys.argv[1] if len(sys.argv) > 1 else "docs/questions.json"))
 ids = collections.Counter(q["id"] for q in Q)
 bad += [f"duplicate id {i}" for i, n in ids.items() if n > 1]
-texts = collections.Counter(q["q"] for q in Q)
+texts = collections.Counter((q["q"], q.get("img")) for q in Q)     # flag questions share a text, not an image
 bad += [f"duplicate question: {t}" for t, n in texts.items() if n > 1]
 for q in Q:
+    if not re.match(r"^(cap|flg|geo|pop|lmk|gk)(\d{3}|[a-z]{2})$", q["id"]): bad.append(f"{q['id']}: bad id")
+    if q["a"] in q["w"]: bad.append(f"{q['id']}: answer is among the wrong options")
+    if q.get("img"):
+        if q["l"] != "flg" or not re.match(r"^flags/[a-z]{2}\.svg$", q["img"]): bad.append(f"{q['id']}: bad img {q['img']}")
+        elif not os.path.isfile(os.path.join("docs", q["img"])): bad.append(f"{q['id']}: missing flag file {q['img']}")
+    if any(len(o) > 44 for o in [q["a"], *q["w"]]): bad.append(f"{q['id']}: option too long for the buttons")
     opts = [q["a"], *q["w"]]
     if len(q["w"]) != 3: bad.append(f"{q['id']}: needs 3 wrong answers")
     if len({o.casefold() for o in opts}) != 4: bad.append(f"{q['id']}: repeated option")
@@ -27,6 +34,30 @@ for q in Q:
     if not q["id"].startswith(q["l"]): bad.append(f"{q['id']}: id doesn't start with its topic")
     if q["d"] not in (1, 2, 3): bad.append(f"{q['id']}: bad difficulty")
     if not q.get("x"): bad.append(f"{q['id']}: no explanation")
+
+# ---------------------------------------------------------------- countries.json + flags
+K = json.load(open("docs/data/countries.json", encoding="utf-8"))
+kc = collections.Counter(c["iso2"] for c in K)
+bad += [f"countries: duplicate code {i}" for i, n in kc.items() if n > 1]
+names = collections.Counter(n.casefold() for c in K for n in [c["name"], *c["aliases"]])
+bad += [f"countries: name/alias '{n}' used twice" for n, k in names.items() if k > 1]
+conts = {"Africa", "Asia", "Europe", "North America", "South America", "Oceania"}
+for c in K:
+    if c["continent"] not in conts: bad.append(f"countries {c['iso2']}: bad continent")
+    if not os.path.isfile(f"docs/flags/{c['iso2']}.svg"): bad.append(f"countries {c['iso2']}: no flag file")
+    if c["pop_m"] is not None and not (c["pop_m"] > 0 and c["pop_year"]): bad.append(f"countries {c['iso2']}: bad population")
+    if c["area_km2"] is not None and not c["area_km2"] > 0: bad.append(f"countries {c['iso2']}: bad area")
+    if not 1 <= len(c["facts"]) <= 2: bad.append(f"countries {c['iso2']}: needs 1-2 facts")
+    if c["tier"] not in (1, 2, 3): bad.append(f"countries {c['iso2']}: bad tier")
+if not os.path.isfile("docs/flags/LICENSE"): bad.append("flags: LICENSE missing")
+byiso = {c["iso2"]: c for c in K}
+for q in Q:
+    if re.match(r"^(cap|flg)[a-z]{2}$", q["id"]):
+        c = byiso.get(q["id"][3:])
+        if not c: bad.append(f"{q['id']}: no such country"); continue
+        if q["l"] == "flg" and (q["a"] != c["name"] or q.get("img") != f"flags/{c['iso2']}.svg"): bad.append(f"{q['id']}: answer/flag mismatch")
+        if q["l"] == "cap" and q["a"] != c["capital"]: bad.append(f"{q['id']}: capital mismatch")
+        if q["l"] == "flg" and set(q["w"]) - {k["name"] for k in K}: bad.append(f"{q['id']}: wrong option isn't a country")
 
 # ---------------------------------------------------------------- stats (higher or lower)
 S = json.load(open("docs/stats.json", encoding="utf-8"))
@@ -71,6 +102,7 @@ for p in C:
     if not modes.is_match(p["n"], forms[p["id"]], taken): bad.append(f"clues {p['id']}: own name doesn't match")
 
 print("\n".join(bad) or "OK")
+print(len(K), "countries,", sum(1 for q in Q if q.get("img")), "flag questions")
 print(len(Q), "questions:", dict(collections.Counter(q["l"] for q in Q)), "difficulty", dict(sorted(collections.Counter(q["d"] for q in Q).items())))
 print(len(S["items"]), "higher-or-lower items:", dict(per_cat))
 print(len(C), "mystery countries,", len(CD.get("decoys", [])), "decoys")

@@ -327,7 +327,7 @@ mierda cabron pendej gilipoll maricon joder hijoput putamadre
 BAD_WORDS = """ass arse tit tits dick cock fag fags cum rape rapist nazi pedo puta culo cono polla
 zorra figa troia verga chinga porco wanker""".split()
 # Real names that contain a bad substring.
-ALLOW = ["scunthorpe", "penistone", "cockburn", "hitchcock"]
+ALLOW = ["scunthorpe", "penistone", "cockburn", "hitchcock", "gaudi", "twater", "great water"]   # real names in the bank
 LEET = str.maketrans({"0": "o", "1": "i", "3": "e", "4": "a", "5": "s", "7": "t", "8": "b",
                       "9": "g", "@": "a", "$": "s", "!": "i", "|": "i", "€": "e", "+": "t"})
 

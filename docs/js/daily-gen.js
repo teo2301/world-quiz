@@ -1,6 +1,7 @@
 // Daily quiz picker. MUST stay identical to server/daily_gen.py
 // (server/test_leaderboard.py checks both give the same ids).
-// 7 a day: 2 Easy, 3 Medium, 2 Hard, none repeated within 60 days.
+// 7 a day: 2 Easy, 3 Medium, 2 Hard, none repeated within 60 days, and each pick prefers a topic
+// the day doesn't have yet (so a day covers 6 topics whenever the pools allow; never fewer than 4).
 var WQDaily = (function () {
   "use strict";
   var SEQ_START = Date.UTC(2026, 10, 1);   // 2026-11-01: history starts here
@@ -50,7 +51,11 @@ var WQDaily = (function () {
 
   function Picker(bank) {
     this.pools = {1: [], 2: [], 3: []};
-    for (var i = 0; i < bank.length; i++) if (this.pools[bank[i].d]) this.pools[bank[i].d].push(bank[i].id);
+    this.topic = {};
+    for (var i = 0; i < bank.length; i++) {
+      if (this.pools[bank[i].d]) this.pools[bank[i].d].push(bank[i].id);
+      this.topic[bank[i].id] = bank[i].l;
+    }
     for (var k in this.pools) this.pools[k].sort(function (x, y) { return x < y ? -1 : x > y ? 1 : 0; });
     this.days = [];
   }
@@ -63,14 +68,18 @@ var WQDaily = (function () {
   Picker.prototype._next = function () {
     var i = this.days.length, ms = SEQ_START + i * DAY, d = new Date(ms);
     var rng = mulberry32(d.getUTCFullYear() * 10000 + (d.getUTCMonth() + 1) * 100 + d.getUTCDate());
-    var recent = {}, picks = [];
+    var recent = {}, picks = [], used = {}, topic = this.topic;
     for (var j = Math.max(0, i - NO_REPEAT); j < i; j++)
       for (var m = 0; m < this.days[j].length; m++) recent[this.days[j][m]] = 1;
     for (var p = 0; p < PLAN.length; p++) {
       var pool = this.pools[PLAN[p]];
       var avail = pool.filter(function (q) { return !recent[q] && picks.indexOf(q) < 0; });
       if (!avail.length) avail = pool.filter(function (q) { return picks.indexOf(q) < 0; });
-      picks.push(avail[rng() % avail.length]);
+      var fresh = avail.filter(function (q) { return !used[topic[q]]; });
+      if (fresh.length) avail = fresh;
+      var pick = avail[rng() % avail.length];
+      picks.push(pick);
+      used[topic[pick]] = 1;
     }
     this.days.push(picks);
   };

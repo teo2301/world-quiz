@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Tests for leaderboard.py against a throwaway DB.  python3 server/test_leaderboard.py"""
-import json
+import json, re
 import os
 import shutil
 import subprocess
@@ -165,12 +165,13 @@ class Daily(Base):
         days = [p.ids(start + timedelta(days=i)) for i in range(400)]
         for i, ids in enumerate(days):
             self.assertEqual([BY_ID[q]["d"] for q in ids], list(daily_gen.PLAN))
-            # The 60-day rule needs 121+ Hard questions. The Phase 1 placeholder bank (31 Hard) has run
-            # dry before #1 (history starts 2026-11-01), so it falls back to any unpicked question.
-            if len(BANK) >= 1000:
-                window = {q for past in days[max(0, i - 60):i] for q in past}
-                self.assertFalse(window & set(ids), f"repeat on day {i}")
+            window = {q for past in days[max(0, i - 60):i] for q in past}
+            self.assertFalse(window & set(ids), f"repeat on day {i}")
             self.assertEqual(len(set(ids)), 7)
+            topics = {BY_ID[q]["l"] for q in ids}
+            self.assertGreaterEqual(len(topics), 4, f"day {i}: only {topics}")
+        # with the full bank every day should in fact cover all 6 topics
+        self.assertEqual({len({BY_ID[q]["l"] for q in ids}) for ids in days}, {6})
 
     def test_python_and_js_pick_the_same(self):
         node = shutil.which("node")
@@ -1033,22 +1034,30 @@ class Content(unittest.TestCase):
 
     def test_enough_hard_for_two_a_day(self):
         hard = sum(1 for q in BANK if q["d"] == 3)
-        if len(BANK) < 1000:
-            self.skipTest("Phase 1 placeholder bank (%d Hard); Phase 2 brings it to 121+" % hard)
         self.assertGreaterEqual(hard, 2 * daily_gen.NO_REPEAT + 1)
 
     def test_content_shape(self):
-        # Phase 1: a small placeholder bank, every topic at every level, all explained
-        self.assertGreaterEqual(len(BANK), 120)
+        # Phase 2: 1,000+ questions, 120+ per topic, every topic at every level, about 30/50/20, all explained
+        self.assertGreaterEqual(len(BANK), 1000)
         for lg in ("cap", "flg", "geo", "pop", "lmk", "gk"):
+            self.assertGreaterEqual(sum(1 for q in BANK if q["l"] == lg), 120, lg)
             for d in (1, 2, 3):
                 n = sum(1 for q in BANK if q["l"] == lg and q["d"] == d)
-                self.assertGreaterEqual(n, 3, (lg, d, n))
+                self.assertGreaterEqual(n, 10, (lg, d, n))
+        share = {d: sum(1 for q in BANK if q["d"] == d) / len(BANK) for d in (1, 2, 3)}
+        self.assertTrue(0.25 <= share[1] <= 0.35 and 0.42 <= share[2] <= 0.55 and 0.15 <= share[3] <= 0.27, share)
         self.assertEqual([q["id"] for q in BANK if not q.get("x")], [])
-        for lg in ("cap", "flg", "geo", "pop", "lmk", "gk"):   # ids run on per topic with no gaps
-            nums = sorted(int(q["id"][len(lg):]) for q in BANK if q["l"] == lg)
-            self.assertEqual(nums, list(range(1, len(nums) + 1)), lg)
+        for lg in ("cap", "flg", "geo", "pop", "lmk", "gk"):
             self.assertTrue(all(q["id"].startswith(lg) for q in BANK if q["l"] == lg))
+            # hand-written ids run on per topic with no gaps; generated ones are topic + ISO code (capfr, flgfr)
+            nums = sorted(int(q["id"][len(lg):]) for q in BANK if q["l"] == lg and q["id"][len(lg):].isdigit())
+            self.assertEqual(nums, list(range(1, len(nums) + 1)), lg)
+            gen = [q for q in BANK if q["l"] == lg and not q["id"][len(lg):].isdigit()]
+            self.assertTrue(all(re.match(r"^(cap|flg)[a-z]{2}$", q["id"]) for q in gen), lg)
+        flags = [q for q in BANK if q.get("img")]
+        self.assertGreaterEqual(len(flags), 190)
+        for q in flags:
+            self.assertTrue(os.path.exists(os.path.join(ROOT, "docs", q["img"])), q["id"])
 
 if __name__ == "__main__":
     try:
