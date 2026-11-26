@@ -68,19 +68,28 @@ same = collections.Counter((i["c"], i["n"], i["d"]) for i in S["items"])
 bad += [f"stats: duplicate item {k}" for k, n in same.items() if n > 1]
 for i in S["items"]:
     if i["c"] not in cats: bad.append(f"stats {i['id']}: unknown category {i['c']}")
-    if isinstance(i["v"], bool) or not isinstance(i["v"], (int, float)) or i["v"] <= 0: bad.append(f"stats {i['id']}: bad value")
+    yr = cats.get(i["c"], {}).get("year")
+    if isinstance(i["v"], bool) or not isinstance(i["v"], (int, float)) or (i["v"] <= 0 and not yr) or (yr and not -5000 < i["v"] <= 2026):
+        bad.append(f"stats {i['id']}: bad value")
     for k in ("n", "d", "note"):
         if not str(i.get(k) or "").strip(): bad.append(f"stats {i['id']}: missing {k}")
 per_cat = collections.Counter(i["c"] for i in S["items"])
 for c in cats:
-    vals = [i["v"] for i in S["items"] if i["c"] == c]
-    # the game only pairs numbers at least 10% apart; each category needs plenty of those
-    pairs = sum(1 for a in vals for b in vals if a < b and (b - a) / b >= 0.1)
+    its = [i for i in S["items"] if i["c"] == c]
+    # the game only pairs items far enough apart (docs/js/games.js canPair); each category needs plenty
+    def can_pair(a, b, cat=cats[c]):
+        if cat.get("year"):
+            return abs(a["v"] - b["v"]) >= (200 if a.get("ap") or b.get("ap") else 30)
+        return abs(a["v"] - b["v"]) / max(a["v"], b["v"]) >= cat.get("gap", 0.1)
+    pairs = sum(1 for x in range(len(its)) for y in range(x + 1, len(its)) if can_pair(its[x], its[y]))
+    for k in ("name", "unit", "word", "ask", "hi", "lo"):
+        if not cats[c].get(k): bad.append(f"stats: category {c} missing {k}")
     if per_cat[c] < 8 or pairs < 20: bad.append(f"stats: category {c} too small ({per_cat[c]} items, {pairs} pairs)")
 
-# ---------------------------------------------------------------- mystery country (clues.json)
+# ---------------------------------------------------------------- guess the country (clues.json)
 CD = json.load(open("docs/clues.json", encoding="utf-8"))
 C = CD["items"]
+KB = {k["name"]: k for k in K}
 cids = collections.Counter(p["id"] for p in C)
 bad += [f"clues: duplicate id {i}" for i, n in cids.items() if n > 1]
 owner = collections.defaultdict(set)
@@ -89,10 +98,15 @@ for p in C:
         owner[k].add(p["n"])
     if len(p["clues"]) != 5: bad.append(f"clues {p['id']}: needs exactly 5 clues")
     if len(set(p["clues"])) != len(p["clues"]): bad.append(f"clues {p['id']}: repeated clue")
+    # word-based: the name (or an alias, or the capital) as whole words in an early clue.
+    # ("US" must not trip on "famous", but "Ottawa" before the last clue would.)
     names = [p["n"]] + p.get("al", [])
+    cap = KB.get(p["n"], {}).get("capital")
     for c in p["clues"][:-1]:
-        for nm in names:
-            if modes.key(nm) and modes.key(nm) in modes.key(c): bad.append(f"clues {p['id']}: '{nm}' given away in '{c}'")
+        cw = " " + " ".join(modes.words(c)) + " "
+        for nm in names + ([cap] if cap and modes.key(cap) not in {modes.key(x) for x in names} else []):
+            nw = " ".join(modes.words(nm))
+            if nw and " " + nw + " " in cw: bad.append(f"clues {p['id']}: '{nm}' given away in '{c}'")
 bad += [f"clues: '{k}' is a name or alias of {sorted(v)}" for k, v in owner.items() if len(v) > 1]
 for d in CD.get("decoys", []):
     if modes.key(d) in owner: bad.append(f"clues: decoy '{d}' is also an answer")
@@ -105,5 +119,5 @@ print("\n".join(bad) or "OK")
 print(len(K), "countries,", sum(1 for q in Q if q.get("img")), "flag questions")
 print(len(Q), "questions:", dict(collections.Counter(q["l"] for q in Q)), "difficulty", dict(sorted(collections.Counter(q["d"] for q in Q).items())))
 print(len(S["items"]), "higher-or-lower items:", dict(per_cat))
-print(len(C), "mystery countries,", len(CD.get("decoys", [])), "decoys")
+print(len(C), "guess-the-country items,", len(CD.get("decoys", [])), "decoys")
 sys.exit(1 if bad else 0)
