@@ -78,6 +78,9 @@ function ask() {
   renderBoardStrip();
   $("qtag").textContent = CATS[q.l] + " · " + DIFFS[q.d];
   $("qtext").textContent = q.q;
+  var im = $("qimg");
+  if (q.img) { im.src = q.img; im.alt = "A flag"; im.classList.remove("hidden"); }
+  else { im.removeAttribute("src"); im.classList.add("hidden"); }
   $("fact").classList.add("hidden");
   $("next").classList.add("hidden");
   hideReportLink();
@@ -184,7 +187,7 @@ function renderMissed(g) {
   $("missedH").classList.toggle("hidden", !g.missed.length);
   g.missed.forEach(function (m) {
     ul.appendChild(h("li", {className: "tile"},
-      h("div", null, m.q.q),
+      h("div", null, qThumb(m.q), m.q.q),
       h("div", {className: "ans"}, "✓ " + m.q.a),
       m.choice !== null ? h("div", {className: "yours"}, "✗ " + m.choice) : h("div", {className: "yours"}, "✗ Ran out of time")));
   });

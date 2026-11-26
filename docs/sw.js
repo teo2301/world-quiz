@@ -1,7 +1,8 @@
 // Offline support (scope "./" only, so it never touches other apps on teo2301.github.io). Bump VERSION after changing any app file or the file list.
 // The data files (questions, stats, clues) are network-first so new content shows up without a bump.
-const VERSION = "wq-v2";
-const DATA = ["/questions.json", "/stats.json", "/clues.json"];
+const VERSION = "wq-v3";
+const FLAGS = "wq-flags-v1";   // flag SVGs: cached the first time each is shown, never at install; kept across VERSION bumps
+const DATA = ["/questions.json", "/stats.json", "/clues.json", "/data/countries.json"];
 const FILES = ["./", "index.html", "app.css", "privacy.html", "questions.json", "stats.json", "clues.json", "manifest.json",
   "icon-192.png", "icon-512.png", "icon-mono.png", "badge-96.png", "sounds/right.mp3", "sounds/wrong.mp3", "sounds/finish.mp3",
   "js/daily-gen.js", "js/match.js", "js/ach-defs.js", "js/core.js", "js/achievements.js", "js/quiz.js", "js/social.js", "js/report.js", "js/modes.js", "js/games.js", "js/compete.js", "js/board.js", "js/push.js", "js/me.js", "js/app.js",
@@ -12,12 +13,19 @@ self.addEventListener("install", e => {
   e.waitUntil(caches.open(VERSION).then(c => c.addAll(FILES)).then(() => self.skipWaiting()));
 });
 self.addEventListener("activate", e => {
-  e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== VERSION).map(k => caches.delete(k))))
+  e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== VERSION && k !== FLAGS).map(k => caches.delete(k))))
     .then(() => self.clients.claim()));
 });
 self.addEventListener("fetch", e => {
   const url = new URL(e.request.url);
   if (e.request.method !== "GET" || url.origin !== location.origin || url.pathname.indexOf("/api/") >= 0) return;
+  if (url.pathname.indexOf("/flags/") >= 0) {
+    e.respondWith(caches.open(FLAGS).then(c => c.match(e.request).then(hit => hit || fetch(e.request).then(r => {
+      if (r.ok) c.put(e.request, r.clone());
+      return r;
+    }))));
+    return;
+  }
   if (DATA.some(d => url.pathname.endsWith(d))) {
     e.respondWith(fetch(e.request).then(r => {
       const copy = r.clone(); caches.open(VERSION).then(c => c.put(e.request, copy)); return r;

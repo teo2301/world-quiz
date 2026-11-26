@@ -280,7 +280,7 @@ function showVs(r, local) {
     var q = BY_ID[id]; if (!q) return;
     var yo = you.grid.charAt(i) === "1";
     var li = h("li", {className: "tile"},
-      h("div", {className: "qh"}, h("span", {className: "qn"}, String(i + 1)), h("span", {className: "qt"}, q.q),
+      h("div", {className: "qh"}, h("span", {className: "qn"}, String(i + 1)), h("span", {className: "qt"}, qThumb(q), q.q),
         h("span", {className: "mks"}, markIcon(yo), tg ? markIcon(tg.charAt(i) === "1") : h("span", {className: "mk none"}, "·"))),
       h("div", {className: "ans"}, "✓ " + q.a),
       !yo ? h("div", {className: "yours"}, yourChoices[i] == null ? "✗ You ran out of time" : "✗ You said " + yourChoices[i]) : null,

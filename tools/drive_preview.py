@@ -557,6 +557,17 @@ async def run(scheme, name, taken_name=None, shared=None, prof=None):
             await tab.shot("14-me")
             await achievements_and_feel(tab)
             await push_me(tab, scheme)
+            # Flags only (Phase 2): flag image on the question, thumbnails in "What you missed"
+            await tab.js("document.querySelector('[data-tab=home]').click()")
+            await tab.js("document.querySelector('.mode.active').click()")
+            await tab.js("[].slice.call(document.querySelectorAll('#leagues .chip')).filter(function(b){return b.textContent==='Flags'})[0].click()")
+            await tab.js("[].slice.call(document.querySelectorAll('#timers .chip')).filter(function(b){return b.textContent==='Off'})[0].click()")
+            await tab.js("document.getElementById('start').click()")
+            await tab.wait("!!game && game.qs[0].img && document.getElementById('qimg').complete && document.getElementById('qimg').naturalWidth > 0")
+            await play(tab, [True, False, True, False, False, True, True, True, False, True], snap_first="70-flags")
+            await tab.wait("!document.getElementById('done').classList.contains('hidden')")
+            await tab.wait("[].slice.call(document.querySelectorAll('#missed img')).every(function(i){return i.complete && i.naturalWidth > 0})")
+            await tab.shot("71-flags-result")
             await tab.goto(tab.base + "privacy.html")
             await tab.shot("15-privacy")
             # Reload the app: daily must still say done (one attempt) and SW must be active

@@ -23,6 +23,11 @@ var BANK = [], BY_ID = {}, PICKER = null;
 var $ = function (id) { return document.getElementById(id); };
 
 // h("div", {className: "x"}, child, "text", ...)
+// Small flag next to a flag question in review lists (null for text-only questions).
+function qThumb(q) {
+  return q.img ? h("img", {className: "qthumb", src: q.img, alt: "", width: 32, height: 24}) : null;
+}
+
 function h(tag, props) {
   var el = document.createElement(tag);
   if (props) for (var k in props) {

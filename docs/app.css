@@ -143,6 +143,8 @@ h1{font-size:30px;font-weight:700}
 .segs i.now{background:rgba(244,248,252,.55)}
 .qcard .tag{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--ink2);margin-bottom:8px}
 .qcard .q{font-size:19px;font-weight:600;line-height:1.35;margin:0}
+.qflag{display:block;width:100%;max-width:240px;height:auto;margin:14px auto 2px;border-radius:6px;box-shadow:0 0 0 1px rgba(0,0,0,.18),0 4px 14px rgba(0,0,0,.18);background:#fff}
+.qthumb{width:32px;height:24px;margin-right:8px;vertical-align:middle;border-radius:3px;box-shadow:0 0 0 1px rgba(0,0,0,.18)}
 
 /* ---------- answers */
 .opts{margin-top:12px}
