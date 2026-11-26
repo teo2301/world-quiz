@@ -19,7 +19,7 @@ def globe_on(img, cx, cy, r, w, col):
     layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
     globe(ImageDraw.Draw(layer), cx, cy, r, w, col)
     mask = Image.new("L", img.size, 0)
-    o = r + w / 2
+    o = r - 1                      # PIL draws the ring inward, so its outer edge is r
     ImageDraw.Draw(mask).ellipse([cx - o, cy - o, cx + o, cy + o], fill=255)
     img.alpha_composite(Image.composite(layer, Image.new("RGBA", img.size, (0, 0, 0, 0)), mask))
 
