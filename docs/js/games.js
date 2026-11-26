@@ -128,13 +128,13 @@ function canPair(a, b) {
   if (cat.year) return Math.abs(a.v - b.v) >= (a.ap || b.ap ? 200 : 30);
   return Math.abs(a.v - b.v) / Math.max(a.v, b.v) >= (cat.gap || MIN_GAP);
 }
-// "The Shard" reads "the Shard" in the middle of a sentence, and some countries need a "the".
-var THE_NAMES = /^(Bahamas|Netherlands|Philippines|United Arab Emirates|United Kingdom|United States|Dominican Republic|Central African Republic|DR Congo|Republic of the Congo|Gambia|Maldives|Marshall Islands|Solomon Islands|Comoros|Seychelles|Vatican City)$/;
-function midName(n) { return /^The /.test(n) ? "the" + n.slice(3) : THE_NAMES.test(n) ? "the " + n : n; }
-function startName(n) { var m = midName(n); return m.charAt(0).toUpperCase() + m.slice(1); }
+// Sentence form: "The Shard" -> "the Shard"; it.s (from gen_stats.py) adds "the" where it's needed
+// ("the Netherlands", "the Eiffel Tower", "the Nile").
+function midName(it) { var n = it.s || it.n; return /^The /.test(n) ? "the" + n.slice(3) : n; }
+function startName(it) { var m = midName(it); return m.charAt(0).toUpperCase() + m.slice(1); }
 function hiloAskText(a, b) {
   var t = STATS.cats[b.c].ask || "Is {b} higher or lower than {a}?";
-  return t.replace("{b}", midName(b.n)).replace("{a}", midName(a.n)).replace(/^the /, "The ");
+  return t.replace("{b}", midName(b)).replace("{a}", midName(a)).replace(/^the /, "The ");
 }
 
 // A category first (so the 200+ country figures don't crowd out mountains and rivers), then a pair.
@@ -202,9 +202,9 @@ function hiloGuess(g) {
   answerFeel(ok);
   $("hiStreak").textContent = hilo.streak;
   var cat = STATS.cats[b.c];
-  $("hiAsk").textContent = (ok ? "Yes! " : "No. ") + startName(b.n) + ": " + fmtStat(b) + (cat.year ? "" : " " + cat.unit) +
+  $("hiAsk").textContent = (ok ? "Yes! " : "No. ") + startName(b) + ": " + fmtStat(b) + (cat.year ? "" : " " + cat.unit) +
     (b.v === a.v ? ", the same as " : " - " + (b.v > a.v ? cat.hi : cat.lo).toLowerCase() + (cat.year ? " " : " than ")) +
-    midName(a.n) + (cat.year ? " (" + fmtBare(a) + ")." : ".");
+    midName(a) + (cat.year ? " (" + fmtBare(a) + ")." : ".");
   $("hiNote").textContent = b.note + ".";
   $("hiBtns").classList.add("hidden");
   $("hiNext").textContent = ok ? "Next" : "See results";

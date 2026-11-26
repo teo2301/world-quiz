@@ -34,7 +34,7 @@
 "approx": true,
 "word": "length",
 "gap": 0.15,
-"ask": "Is the {b} longer or shorter than the {a}?",
+"ask": "Is {b} longer or shorter than {a}?",
 "hi": "Longer",
 "lo": "Shorter"
 },
@@ -121,7 +121,8 @@
 "n": "DR Congo",
 "v": 109,
 "d": "Africa",
-"note": "UN estimate for 2024, rounded"
+"note": "UN estimate for 2024, rounded",
+"s": "the DR Congo"
 },
 {
 "id": "areacd",
@@ -129,7 +130,8 @@
 "n": "DR Congo",
 "v": 2345000,
 "d": "Africa",
-"note": "Total area, rounded"
+"note": "Total area, rounded",
+"s": "the DR Congo"
 },
 {
 "id": "popeg",
@@ -729,7 +731,8 @@
 "n": "Philippines",
 "v": 116,
 "d": "Asia",
-"note": "UN estimate for 2024, rounded"
+"note": "UN estimate for 2024, rounded",
+"s": "the Philippines"
 },
 {
 "id": "areaph",
@@ -737,7 +740,8 @@
 "n": "Philippines",
 "v": 300000,
 "d": "Asia",
-"note": "Total area, rounded"
+"note": "Total area, rounded",
+"s": "the Philippines"
 },
 {
 "id": "popqa",
@@ -857,7 +861,8 @@
 "n": "United Arab Emirates",
 "v": 11.0,
 "d": "Asia",
-"note": "UN estimate for 2024, rounded"
+"note": "UN estimate for 2024, rounded",
+"s": "the United Arab Emirates"
 },
 {
 "id": "areaae",
@@ -865,7 +870,8 @@
 "n": "United Arab Emirates",
 "v": 83600,
 "d": "Asia",
-"note": "Total area, rounded"
+"note": "Total area, rounded",
+"s": "the United Arab Emirates"
 },
 {
 "id": "popvn",
@@ -1257,7 +1263,8 @@
 "n": "Netherlands",
 "v": 18.0,
 "d": "Europe",
-"note": "UN estimate for 2024, rounded"
+"note": "UN estimate for 2024, rounded",
+"s": "the Netherlands"
 },
 {
 "id": "areanl",
@@ -1265,7 +1272,8 @@
 "n": "Netherlands",
 "v": 41900,
 "d": "Europe",
-"note": "The European part only"
+"note": "The European part only",
+"s": "the Netherlands"
 },
 {
 "id": "popno",
@@ -1441,7 +1449,8 @@
 "n": "United Kingdom",
 "v": 69,
 "d": "Europe",
-"note": "UN estimate for 2024, rounded"
+"note": "UN estimate for 2024, rounded",
+"s": "the United Kingdom"
 },
 {
 "id": "areagb",
@@ -1449,7 +1458,8 @@
 "n": "United Kingdom",
 "v": 243600,
 "d": "Europe",
-"note": "Total area, rounded"
+"note": "Total area, rounded",
+"s": "the United Kingdom"
 },
 {
 "id": "popva",
@@ -1473,7 +1483,8 @@
 "n": "Bahamas",
 "v": 0.4,
 "d": "North America",
-"note": "UN estimate for 2024, rounded"
+"note": "UN estimate for 2024, rounded",
+"s": "the Bahamas"
 },
 {
 "id": "areabs",
@@ -1481,7 +1492,8 @@
 "n": "Bahamas",
 "v": 13900,
 "d": "North America",
-"note": "Total area, rounded"
+"note": "Total area, rounded",
+"s": "the Bahamas"
 },
 {
 "id": "popca",
@@ -1537,7 +1549,8 @@
 "n": "Dominican Republic",
 "v": 11.4,
 "d": "North America",
-"note": "UN estimate for 2024, rounded"
+"note": "UN estimate for 2024, rounded",
+"s": "the Dominican Republic"
 },
 {
 "id": "areado",
@@ -1545,7 +1558,8 @@
 "n": "Dominican Republic",
 "v": 48700,
 "d": "North America",
-"note": "Total area, rounded"
+"note": "Total area, rounded",
+"s": "the Dominican Republic"
 },
 {
 "id": "popgt",
@@ -1649,7 +1663,8 @@
 "n": "United States",
 "v": 345,
 "d": "North America",
-"note": "UN estimate for 2024, rounded"
+"note": "UN estimate for 2024, rounded",
+"s": "the United States"
 },
 {
 "id": "areaus",
@@ -1657,7 +1672,8 @@
 "n": "United States",
 "v": 9834000,
 "d": "North America",
-"note": "Total area, rounded"
+"note": "Total area, rounded",
+"s": "the United States"
 },
 {
 "id": "popar",
@@ -2026,7 +2042,8 @@
 "n": "Matterhorn",
 "v": 4478,
 "d": "Alps, Switzerland and Italy",
-"note": "Standard surveyed height"
+"note": "Standard surveyed height",
+"s": "the Matterhorn"
 },
 {
 "id": "peak20",
@@ -2130,7 +2147,8 @@
 "n": "Nile",
 "v": 6650,
 "d": "Africa",
-"note": "Usually given as the longest river; length estimates vary"
+"note": "Usually given as the longest river; length estimates vary",
+"s": "the Nile"
 },
 {
 "id": "river02",
@@ -2138,7 +2156,8 @@
 "n": "Amazon",
 "v": 6400,
 "d": "South America",
-"note": "Some measurements make it longer than the Nile"
+"note": "Some measurements make it longer than the Nile",
+"s": "the Amazon"
 },
 {
 "id": "river03",
@@ -2146,7 +2165,8 @@
 "n": "Yangtze",
 "v": 6300,
 "d": "China",
-"note": "Longest river in Asia"
+"note": "Longest river in Asia",
+"s": "the Yangtze"
 },
 {
 "id": "river04",
@@ -2154,7 +2174,8 @@
 "n": "Mississippi-Missouri",
 "v": 6275,
 "d": "United States",
-"note": "The combined river system"
+"note": "The combined river system",
+"s": "the Mississippi-Missouri"
 },
 {
 "id": "river05",
@@ -2162,7 +2183,8 @@
 "n": "Yenisei",
 "v": 5539,
 "d": "Russia and Mongolia",
-"note": "Including its headwaters"
+"note": "Including its headwaters",
+"s": "the Yenisei"
 },
 {
 "id": "river06",
@@ -2170,7 +2192,8 @@
 "n": "Yellow River",
 "v": 5464,
 "d": "China",
-"note": "Also called the Huang He"
+"note": "Also called the Huang He",
+"s": "the Yellow River"
 },
 {
 "id": "river07",
@@ -2178,7 +2201,8 @@
 "n": "Ob-Irtysh",
 "v": 5410,
 "d": "Russia, Kazakhstan and China",
-"note": "The combined river system"
+"note": "The combined river system",
+"s": "the Ob-Irtysh"
 },
 {
 "id": "river08",
@@ -2186,7 +2210,8 @@
 "n": "Paraná",
 "v": 4880,
 "d": "Brazil, Paraguay and Argentina",
-"note": "Rounded"
+"note": "Rounded",
+"s": "the Paraná"
 },
 {
 "id": "river09",
@@ -2194,7 +2219,8 @@
 "n": "Congo",
 "v": 4700,
 "d": "Central Africa",
-"note": "The world's deepest river"
+"note": "The world's deepest river",
+"s": "the Congo"
 },
 {
 "id": "river10",
@@ -2202,7 +2228,8 @@
 "n": "Amur",
 "v": 4444,
 "d": "Russia and China",
-"note": "Including its headwaters"
+"note": "Including its headwaters",
+"s": "the Amur"
 },
 {
 "id": "river11",
@@ -2210,7 +2237,8 @@
 "n": "Lena",
 "v": 4400,
 "d": "Russia",
-"note": "Rounded"
+"note": "Rounded",
+"s": "the Lena"
 },
 {
 "id": "river12",
@@ -2218,7 +2246,8 @@
 "n": "Mekong",
 "v": 4350,
 "d": "South-East Asia",
-"note": "Rounded"
+"note": "Rounded",
+"s": "the Mekong"
 },
 {
 "id": "river13",
@@ -2226,7 +2255,8 @@
 "n": "Mackenzie",
 "v": 4241,
 "d": "Canada",
-"note": "The full river system"
+"note": "The full river system",
+"s": "the Mackenzie"
 },
 {
 "id": "river14",
@@ -2234,7 +2264,8 @@
 "n": "Niger",
 "v": 4180,
 "d": "West Africa",
-"note": "Rounded"
+"note": "Rounded",
+"s": "the Niger"
 },
 {
 "id": "river15",
@@ -2242,7 +2273,8 @@
 "n": "Murray-Darling",
 "v": 3672,
 "d": "Australia",
-"note": "The combined river system"
+"note": "The combined river system",
+"s": "the Murray-Darling"
 },
 {
 "id": "river16",
@@ -2250,7 +2282,8 @@
 "n": "Volga",
 "v": 3530,
 "d": "Russia",
-"note": "Longest river in Europe"
+"note": "Longest river in Europe",
+"s": "the Volga"
 },
 {
 "id": "river17",
@@ -2258,7 +2291,8 @@
 "n": "Indus",
 "v": 3180,
 "d": "South Asia",
-"note": "Rounded"
+"note": "Rounded",
+"s": "the Indus"
 },
 {
 "id": "river18",
@@ -2266,7 +2300,8 @@
 "n": "Danube",
 "v": 2850,
 "d": "Central and eastern Europe",
-"note": "Flows through ten countries"
+"note": "Flows through ten countries",
+"s": "the Danube"
 },
 {
 "id": "river19",
@@ -2274,7 +2309,8 @@
 "n": "Zambezi",
 "v": 2574,
 "d": "Southern Africa",
-"note": "Victoria Falls is on it"
+"note": "Victoria Falls is on it",
+"s": "the Zambezi"
 },
 {
 "id": "river20",
@@ -2282,7 +2318,8 @@
 "n": "Ganges",
 "v": 2525,
 "d": "India and Bangladesh",
-"note": "Rounded"
+"note": "Rounded",
+"s": "the Ganges"
 },
 {
 "id": "river21",
@@ -2290,7 +2327,8 @@
 "n": "Dnieper",
 "v": 2200,
 "d": "Russia, Belarus and Ukraine",
-"note": "Rounded"
+"note": "Rounded",
+"s": "the Dnieper"
 },
 {
 "id": "river22",
@@ -2298,7 +2336,8 @@
 "n": "Rhine",
 "v": 1230,
 "d": "Western Europe",
-"note": "Rounded"
+"note": "Rounded",
+"s": "the Rhine"
 },
 {
 "id": "river23",
@@ -2306,7 +2345,8 @@
 "n": "Elbe",
 "v": 1094,
 "d": "Czechia and Germany",
-"note": "Rounded"
+"note": "Rounded",
+"s": "the Elbe"
 },
 {
 "id": "river24",
@@ -2314,7 +2354,8 @@
 "n": "Loire",
 "v": 1006,
 "d": "France",
-"note": "Longest river in France"
+"note": "Longest river in France",
+"s": "the Loire"
 },
 {
 "id": "river25",
@@ -2322,7 +2363,8 @@
 "n": "Seine",
 "v": 777,
 "d": "France",
-"note": "Flows through Paris"
+"note": "Flows through Paris",
+"s": "the Seine"
 },
 {
 "id": "river26",
@@ -2330,7 +2372,8 @@
 "n": "Po",
 "v": 652,
 "d": "Italy",
-"note": "Longest river in Italy"
+"note": "Longest river in Italy",
+"s": "the Po"
 },
 {
 "id": "river27",
@@ -2338,7 +2381,8 @@
 "n": "Tiber",
 "v": 406,
 "d": "Italy",
-"note": "Flows through Rome"
+"note": "Flows through Rome",
+"s": "the Tiber"
 },
 {
 "id": "river28",
@@ -2346,7 +2390,8 @@
 "n": "Shannon",
 "v": 360,
 "d": "Ireland",
-"note": "Longest river in Ireland"
+"note": "Longest river in Ireland",
+"s": "the Shannon"
 },
 {
 "id": "river29",
@@ -2354,7 +2399,8 @@
 "n": "Severn",
 "v": 354,
 "d": "Wales and England",
-"note": "Longest river in Great Britain"
+"note": "Longest river in Great Britain",
+"s": "the Severn"
 },
 {
 "id": "river30",
@@ -2362,7 +2408,8 @@
 "n": "Thames",
 "v": 346,
 "d": "England",
-"note": "Flows through London"
+"note": "Flows through London",
+"s": "the Thames"
 },
 {
 "id": "river31",
@@ -2370,7 +2417,8 @@
 "n": "Jordan",
 "v": 251,
 "d": "Western Asia",
-"note": "Flows into the Dead Sea"
+"note": "Flows into the Dead Sea",
+"s": "the Jordan"
 },
 {
 "id": "tower01",
@@ -2402,7 +2450,8 @@
 "n": "Shanghai Tower",
 "v": 632,
 "d": "Shanghai, 2015",
-"note": "Architectural height"
+"note": "Architectural height",
+"s": "the Shanghai Tower"
 },
 {
 "id": "tower05",
@@ -2410,7 +2459,8 @@
 "n": "Makkah Royal Clock Tower",
 "v": 601,
 "d": "Mecca, 2012",
-"note": "Architectural height"
+"note": "Architectural height",
+"s": "the Makkah Royal Clock Tower"
 },
 {
 "id": "tower06",
@@ -2418,7 +2468,8 @@
 "n": "Ping An Finance Centre",
 "v": 599,
 "d": "Shenzhen, 2017",
-"note": "Architectural height"
+"note": "Architectural height",
+"s": "the Ping An Finance Centre"
 },
 {
 "id": "tower07",
@@ -2426,7 +2477,8 @@
 "n": "Lotte World Tower",
 "v": 555,
 "d": "Seoul, 2017",
-"note": "Architectural height"
+"note": "Architectural height",
+"s": "the Lotte World Tower"
 },
 {
 "id": "tower08",
@@ -2434,7 +2486,8 @@
 "n": "CN Tower",
 "v": 553,
 "d": "Toronto, 1976",
-"note": "A communications tower"
+"note": "A communications tower",
+"s": "the CN Tower"
 },
 {
 "id": "tower09",
@@ -2458,7 +2511,8 @@
 "n": "International Commerce Centre",
 "v": 484,
 "d": "Hong Kong, 2010",
-"note": "Architectural height"
+"note": "Architectural height",
+"s": "the International Commerce Centre"
 },
 {
 "id": "tower12",
@@ -2466,7 +2520,8 @@
 "n": "Lakhta Center",
 "v": 462,
 "d": "St Petersburg, 2019",
-"note": "Tallest building in Europe as of 2026"
+"note": "Tallest building in Europe as of 2026",
+"s": "the Lakhta Center"
 },
 {
 "id": "tower13",
@@ -2474,7 +2529,8 @@
 "n": "Petronas Towers",
 "v": 452,
 "d": "Kuala Lumpur, 1998",
-"note": "World's tallest buildings 1998-2004"
+"note": "World's tallest buildings 1998-2004",
+"s": "the Petronas Towers"
 },
 {
 "id": "tower14",
@@ -2482,7 +2538,8 @@
 "n": "Willis Tower",
 "v": 442,
 "d": "Chicago, 1974",
-"note": "Formerly the Sears Tower"
+"note": "Formerly the Sears Tower",
+"s": "the Willis Tower"
 },
 {
 "id": "tower15",
@@ -2490,7 +2547,8 @@
 "n": "Empire State Building",
 "v": 381,
 "d": "New York, 1931",
-"note": "To the roof; 443 m to the tip of its antenna"
+"note": "To the roof; 443 m to the tip of its antenna",
+"s": "the Empire State Building"
 },
 {
 "id": "tower16",
@@ -2498,7 +2556,8 @@
 "n": "Berlin TV Tower",
 "v": 368,
 "d": "Berlin, 1969",
-"note": "Including its antenna"
+"note": "Including its antenna",
+"s": "the Berlin TV Tower"
 },
 {
 "id": "tower17",
@@ -2507,7 +2566,8 @@
 "v": 330,
 "d": "Paris, 1889",
 "note": "Including antennas; about 300 m when built",
-"ap": true
+"ap": true,
+"s": "the Eiffel Tower"
 },
 {
 "id": "tower18",
@@ -2523,7 +2583,8 @@
 "n": "Space Needle",
 "v": 184,
 "d": "Seattle, 1962",
-"note": "Rounded"
+"note": "Rounded",
+"s": "the Space Needle"
 },
 {
 "id": "tower20",
@@ -2531,7 +2592,8 @@
 "n": "Washington Monument",
 "v": 169,
 "d": "Washington, D.C., 1884",
-"note": "Rounded"
+"note": "Rounded",
+"s": "the Washington Monument"
 },
 {
 "id": "tower21",
@@ -2539,7 +2601,8 @@
 "n": "Blackpool Tower",
 "v": 158,
 "d": "Blackpool, 1894",
-"note": "Rounded"
+"note": "Rounded",
+"s": "the Blackpool Tower"
 },
 {
 "id": "tower22",
@@ -2547,7 +2610,8 @@
 "n": "London Eye",
 "v": 135,
 "d": "London, 2000",
-"note": "A giant observation wheel"
+"note": "A giant observation wheel",
+"s": "the London Eye"
 },
 {
 "id": "tower23",
@@ -2563,7 +2627,8 @@
 "n": "Statue of Liberty",
 "v": 93,
 "d": "New York, 1886",
-"note": "Ground to torch, including the pedestal"
+"note": "Ground to torch, including the pedestal",
+"s": "the Statue of Liberty"
 },
 {
 "id": "tower25",
@@ -2571,7 +2636,8 @@
 "n": "Leaning Tower of Pisa",
 "v": 56,
 "d": "Pisa, 1372",
-"note": "Rounded, measured on the taller side"
+"note": "Rounded, measured on the taller side",
+"s": "the Leaning Tower of Pisa"
 },
 {
 "id": "tower26",
@@ -2587,7 +2653,8 @@
 "n": "Burj Al Arab",
 "v": 321,
 "d": "Dubai, 1999",
-"note": "Height including its mast"
+"note": "Height including its mast",
+"s": "the Burj Al Arab"
 },
 {
 "id": "tower28",
@@ -2595,7 +2662,8 @@
 "n": "Chrysler Building",
 "v": 319,
 "d": "New York, 1930",
-"note": "Height including its spire"
+"note": "Height including its spire",
+"s": "the Chrysler Building"
 },
 {
 "id": "tower29",
@@ -2675,7 +2743,8 @@
 "n": "South Island",
 "v": 150000,
 "d": "New Zealand",
-"note": "Rounded"
+"note": "Rounded",
+"s": "the South Island"
 },
 {
 "id": "isl10",
@@ -2691,7 +2760,8 @@
 "n": "North Island",
 "v": 114000,
 "d": "New Zealand",
-"note": "Rounded"
+"note": "Rounded",
+"s": "the North Island"
 },
 {
 "id": "isl12",
@@ -2835,7 +2905,8 @@
 "n": "Isle of Man",
 "v": 572,
 "d": "Irish Sea",
-"note": "Rounded"
+"note": "Rounded",
+"s": "the Isle of Man"
 },
 {
 "id": "isl30",
@@ -2843,7 +2914,8 @@
 "n": "Isle of Wight",
 "v": 380,
 "d": "England",
-"note": "Rounded"
+"note": "Rounded",
+"s": "the Isle of Wight"
 },
 {
 "id": "isl31",
@@ -2860,7 +2932,8 @@
 "v": -2560,
 "d": "Egypt",
 "note": "Usually dated to about 2560 BC",
-"ap": true
+"ap": true,
+"s": "the Great Pyramid of Giza"
 },
 {
 "id": "blt02",
@@ -2921,7 +2994,8 @@
 "v": 1100,
 "d": "London",
 "note": "Begun around 1078, finished by about 1100",
-"ap": true
+"ap": true,
+"s": "the White Tower, Tower of London"
 },
 {
 "id": "blt09",
@@ -2938,7 +3012,8 @@
 "n": "Leaning Tower of Pisa",
 "v": 1372,
 "d": "Pisa",
-"note": "Its bell chamber was finished in 1372"
+"note": "Its bell chamber was finished in 1372",
+"s": "the Leaning Tower of Pisa"
 },
 {
 "id": "blt11",
@@ -2946,7 +3021,8 @@
 "n": "Forbidden City",
 "v": 1420,
 "d": "Beijing",
-"note": "Completed in 1420"
+"note": "Completed in 1420",
+"s": "the Forbidden City"
 },
 {
 "id": "blt12",
@@ -2996,7 +3072,8 @@
 "n": "Suez Canal",
 "v": 1869,
 "d": "Egypt",
-"note": "Opened in 1869"
+"note": "Opened in 1869",
+"s": "the Suez Canal"
 },
 {
 "id": "blt18",
@@ -3004,7 +3081,8 @@
 "n": "Brooklyn Bridge",
 "v": 1883,
 "d": "New York",
-"note": "Opened in 1883"
+"note": "Opened in 1883",
+"s": "the Brooklyn Bridge"
 },
 {
 "id": "blt19",
@@ -3012,7 +3090,8 @@
 "n": "Statue of Liberty",
 "v": 1886,
 "d": "New York",
-"note": "Dedicated in 1886"
+"note": "Dedicated in 1886",
+"s": "the Statue of Liberty"
 },
 {
 "id": "blt20",
@@ -3020,7 +3099,8 @@
 "n": "Eiffel Tower",
 "v": 1889,
 "d": "Paris",
-"note": "Built for the 1889 World's Fair"
+"note": "Built for the 1889 World's Fair",
+"s": "the Eiffel Tower"
 },
 {
 "id": "blt21",
@@ -3028,7 +3108,8 @@
 "n": "Tower Bridge",
 "v": 1894,
 "d": "London",
-"note": "Opened in 1894"
+"note": "Opened in 1894",
+"s": "the Tower Bridge"
 },
 {
 "id": "blt22",
@@ -3036,7 +3117,8 @@
 "n": "Panama Canal",
 "v": 1914,
 "d": "Panama",
-"note": "Opened in 1914"
+"note": "Opened in 1914",
+"s": "the Panama Canal"
 },
 {
 "id": "blt23",
@@ -3044,7 +3126,8 @@
 "n": "Empire State Building",
 "v": 1931,
 "d": "New York",
-"note": "Opened in 1931"
+"note": "Opened in 1931",
+"s": "the Empire State Building"
 },
 {
 "id": "blt24",
@@ -3060,7 +3143,8 @@
 "n": "Hoover Dam",
 "v": 1936,
 "d": "Nevada and Arizona",
-"note": "Completed in 1936"
+"note": "Completed in 1936",
+"s": "the Hoover Dam"
 },
 {
 "id": "blt26",
@@ -3068,7 +3152,8 @@
 "n": "Golden Gate Bridge",
 "v": 1937,
 "d": "San Francisco",
-"note": "Opened in 1937"
+"note": "Opened in 1937",
+"s": "the Golden Gate Bridge"
 },
 {
 "id": "blt27",
@@ -3084,7 +3169,8 @@
 "n": "Atomium",
 "v": 1958,
 "d": "Brussels",
-"note": "Built for Expo 58"
+"note": "Built for Expo 58",
+"s": "the Atomium"
 },
 {
 "id": "blt29",
@@ -3092,7 +3178,8 @@
 "n": "Sydney Opera House",
 "v": 1973,
 "d": "Sydney",
-"note": "Opened in 1973"
+"note": "Opened in 1973",
+"s": "the Sydney Opera House"
 },
 {
 "id": "blt30",
@@ -3100,7 +3187,8 @@
 "n": "CN Tower",
 "v": 1976,
 "d": "Toronto",
-"note": "Opened in 1976"
+"note": "Opened in 1976",
+"s": "the CN Tower"
 },
 {
 "id": "blt31",
@@ -3108,7 +3196,8 @@
 "n": "Louvre Pyramid",
 "v": 1989,
 "d": "Paris",
-"note": "Opened in 1989"
+"note": "Opened in 1989",
+"s": "the Louvre Pyramid"
 },
 {
 "id": "blt32",
@@ -3132,7 +3221,8 @@
 "n": "Channel Tunnel",
 "v": 1994,
 "d": "England and France",
-"note": "Opened in 1994"
+"note": "Opened in 1994",
+"s": "the Channel Tunnel"
 }
 ]
 }

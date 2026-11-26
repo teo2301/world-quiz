@@ -16,7 +16,7 @@ CATS = {
     "peak": {"name": "Mountain height", "unit": "metres above sea level", "word": "height",
              "ask": "Is {b} higher or lower than {a}?", "hi": "Higher", "lo": "Lower"},
     "river": {"name": "River length", "unit": "km long", "approx": True, "word": "length", "gap": 0.15,
-              "ask": "Is the {b} longer or shorter than the {a}?", "hi": "Longer", "lo": "Shorter"},
+              "ask": "Is {b} longer or shorter than {a}?", "hi": "Longer", "lo": "Shorter"},
     "tower": {"name": "Tall buildings and towers", "unit": "metres tall", "word": "height",
               "ask": "Is {b} taller or shorter than {a}?", "hi": "Taller", "lo": "Shorter"},
     "island": {"name": "Island size", "unit": "km²", "approx": True, "word": "area", "gap": 0.15,
