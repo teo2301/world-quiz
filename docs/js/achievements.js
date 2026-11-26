@@ -16,6 +16,13 @@ function buzz(ok) {
   try { navigator.vibrate(ok ? 25 : [45, 70, 45]); } catch (e) { /* not allowed yet */ }
 }
 
+// A tiny tick on every 3D button press (replaced by the answer buzz when there is one).
+function tick() {
+  if (!feel.haptics || !canVibrate()) return;
+  if (navigator.userActivation && !navigator.userActivation.hasBeenActive) return;
+  try { navigator.vibrate(8); } catch (e) { /* not allowed */ }
+}
+
 var SOUNDS = {right: "sounds/right.mp3", wrong: "sounds/wrong.mp3", finish: "sounds/finish.mp3"};
 var VOLUME = {right: 0.5, wrong: 0.45, finish: 0.5};
 var audioCache = {};
@@ -85,7 +92,7 @@ function standingAchs() {
   return out;
 }
 
-// ev: {k: "daily"|"classic"|"career"|"chal"|"run", ...}
+// ev: {k: "daily"|"classic"|"career"|"chal"|"run"|"duo", ...}
 function achCheck(ev) {
   var ids = standingAchs();
   if (ev) {
@@ -101,6 +108,11 @@ function achCheck(ev) {
       ids.push("chalwin");
       var tr = ev.res.tiers;
       if (tr && tr.them < tr.you) ids.push("giant");
+    }
+    if (ev.k === "duo" && ev.res) {
+      if (ev.res.outcome === "win") ids.push("duowin");
+      if (ev.res.carry) ids.push("carry");
+      if (ev.res.flawless) ids.push("flawless");
     }
   }
   award(ids, false);
