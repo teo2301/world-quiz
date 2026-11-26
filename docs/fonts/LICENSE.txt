@@ -1,0 +1,5 @@
+Inter (Rasmus Andersson) and Space Grotesk (Florian Karsten, The Space Grotesk Project
+Authors) are licensed under the SIL Open Font License 1.1 (https://openfontlicense.org);
+the full Space Grotesk licence text is in OFL-SpaceGrotesk.txt. Latin and Latin-Extended
+subsets, downloaded once and self-hosted so the app works offline and never contacts
+Google or any font CDN at runtime.

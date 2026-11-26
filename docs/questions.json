@@ -1,0 +1,1705 @@
+[
+{
+"id": "cap001",
+"l": "cap",
+"d": 1,
+"q": "What is the capital of Australia?",
+"a": "Canberra",
+"w": [
+"Sydney",
+"Melbourne",
+"Perth"
+],
+"x": "Canberra was purpose-built as a compromise between rivals Sydney and Melbourne; Parliament first sat there in 1927."
+},
+{
+"id": "cap002",
+"l": "cap",
+"d": 1,
+"q": "What is the capital of Canada?",
+"a": "Ottawa",
+"w": [
+"Toronto",
+"Montreal",
+"Vancouver"
+],
+"x": "Queen Victoria chose Ottawa as the capital in 1857. Toronto is Canada's largest city."
+},
+{
+"id": "cap003",
+"l": "cap",
+"d": 1,
+"q": "What is the capital of Japan?",
+"a": "Tokyo",
+"w": [
+"Kyoto",
+"Osaka",
+"Yokohama"
+],
+"x": "Kyoto was the imperial capital for over a thousand years; the emperor moved to Tokyo (then called Edo) in 1868-69."
+},
+{
+"id": "cap004",
+"l": "cap",
+"d": 1,
+"q": "What is the capital of Spain?",
+"a": "Madrid",
+"w": [
+"Barcelona",
+"Seville",
+"Valencia"
+],
+"x": "Madrid sits close to the geographical centre of the Iberian Peninsula."
+},
+{
+"id": "cap005",
+"l": "cap",
+"d": 1,
+"q": "What is the capital of Italy?",
+"a": "Rome",
+"w": [
+"Milan",
+"Naples",
+"Turin"
+],
+"x": "Rome became the capital of a unified Italy in 1871. Turin and then Florence held the title before it."
+},
+{
+"id": "cap006",
+"l": "cap",
+"d": 1,
+"q": "What is the capital of Germany?",
+"a": "Berlin",
+"w": [
+"Munich",
+"Bonn",
+"Frankfurt"
+],
+"x": "Bonn was West Germany's capital. Berlin became the capital of reunified Germany in 1990, and the government moved there in 1999."
+},
+{
+"id": "cap007",
+"l": "cap",
+"d": 2,
+"q": "What is the capital of Brazil?",
+"a": "Brasília",
+"w": [
+"Rio de Janeiro",
+"São Paulo",
+"Salvador"
+],
+"x": "Brasília was built from scratch in the country's interior and replaced Rio de Janeiro as capital in 1960."
+},
+{
+"id": "cap008",
+"l": "cap",
+"d": 2,
+"q": "What is the capital of Turkey?",
+"a": "Ankara",
+"w": [
+"Istanbul",
+"Izmir",
+"Antalya"
+],
+"x": "Atatürk made Ankara the capital of the new republic in 1923. Istanbul is still by far the largest city."
+},
+{
+"id": "cap009",
+"l": "cap",
+"d": 2,
+"q": "What is the capital of New Zealand?",
+"a": "Wellington",
+"w": [
+"Auckland",
+"Christchurch",
+"Queenstown"
+],
+"x": "Wellington has been the capital since 1865 and is the southernmost capital city of any sovereign state."
+},
+{
+"id": "cap010",
+"l": "cap",
+"d": 2,
+"q": "Which city is the seat of Switzerland's federal government?",
+"a": "Bern",
+"w": [
+"Zurich",
+"Geneva",
+"Basel"
+],
+"x": "The Swiss constitution names no capital: Bern is officially the 'federal city'. Zurich is the largest city."
+},
+{
+"id": "cap011",
+"l": "cap",
+"d": 2,
+"q": "What is the capital of Morocco?",
+"a": "Rabat",
+"w": [
+"Casablanca",
+"Marrakesh",
+"Fez"
+],
+"x": "Rabat is on the Atlantic coast; Casablanca, a little further south, is the largest city."
+},
+{
+"id": "cap012",
+"l": "cap",
+"d": 2,
+"q": "What is the capital of Vietnam?",
+"a": "Hanoi",
+"w": [
+"Ho Chi Minh City",
+"Da Nang",
+"Hue"
+],
+"x": "Hanoi is in the north. Ho Chi Minh City in the south, formerly Saigon, has more people."
+},
+{
+"id": "cap013",
+"l": "cap",
+"d": 2,
+"q": "What is the capital of Pakistan?",
+"a": "Islamabad",
+"w": [
+"Karachi",
+"Lahore",
+"Peshawar"
+],
+"x": "Islamabad was built in the 1960s as a planned capital, taking over from Karachi, which is still the largest city."
+},
+{
+"id": "cap014",
+"l": "cap",
+"d": 2,
+"q": "What is the capital of Iceland?",
+"a": "Reykjavík",
+"w": [
+"Akureyri",
+"Keflavík",
+"Selfoss"
+],
+"x": "Reykjavík is the northernmost capital city of any sovereign state."
+},
+{
+"id": "cap015",
+"l": "cap",
+"d": 2,
+"q": "What is the capital of South Korea?",
+"a": "Seoul",
+"w": [
+"Busan",
+"Incheon",
+"Daegu"
+],
+"x": "About half of South Korea's people live in the Seoul metropolitan area."
+},
+{
+"id": "cap016",
+"l": "cap",
+"d": 3,
+"q": "What is the capital of Kazakhstan?",
+"a": "Astana",
+"w": [
+"Almaty",
+"Shymkent",
+"Karaganda"
+],
+"x": "The capital moved from Almaty to Astana in 1997. The city was renamed Nur-Sultan in 2019 and went back to Astana in 2022."
+},
+{
+"id": "cap017",
+"l": "cap",
+"d": 3,
+"q": "What is the capital of Nigeria?",
+"a": "Abuja",
+"w": [
+"Lagos",
+"Kano",
+"Ibadan"
+],
+"x": "Abuja, a planned city in the centre of the country, replaced Lagos as the capital in 1991."
+},
+{
+"id": "cap018",
+"l": "cap",
+"d": 3,
+"q": "What is the capital of Mongolia?",
+"a": "Ulaanbaatar",
+"w": [
+"Erdenet",
+"Darkhan",
+"Kharkhorin"
+],
+"x": "Ulaanbaatar is often called the coldest capital city in the world: its average yearly temperature is below freezing."
+},
+{
+"id": "cap019",
+"l": "cap",
+"d": 3,
+"q": "What is the official capital of Tanzania?",
+"a": "Dodoma",
+"w": [
+"Dar es Salaam",
+"Arusha",
+"Zanzibar City"
+],
+"x": "Dodoma is the official capital and home of the National Assembly; Dar es Salaam is the largest city and main port."
+},
+{
+"id": "cap020",
+"l": "cap",
+"d": 3,
+"q": "What is the official capital of Côte d'Ivoire (Ivory Coast)?",
+"a": "Yamoussoukro",
+"w": [
+"Abidjan",
+"Bouaké",
+"Accra"
+],
+"x": "Yamoussoukro has been the official capital since 1983, but Abidjan is the largest city and economic centre."
+},
+{
+"id": "cap021",
+"l": "cap",
+"d": 3,
+"q": "Which city replaced Yangon as the capital of Myanmar in the 2000s?",
+"a": "Naypyidaw",
+"w": [
+"Mandalay",
+"Bago",
+"Mawlamyine"
+],
+"x": "The government moved to the purpose-built city of Naypyidaw in 2005-06. Yangon is still the largest city."
+},
+{
+"id": "flg001",
+"l": "flg",
+"d": 1,
+"q": "Which country's flag has a red maple leaf in the middle?",
+"a": "Canada",
+"w": [
+"Japan",
+"Switzerland",
+"Austria"
+],
+"x": "The Maple Leaf flag was adopted in 1965, replacing the Canadian Red Ensign."
+},
+{
+"id": "flg002",
+"l": "flg",
+"d": 1,
+"q": "Which country's flag is a red circle on a plain white background?",
+"a": "Japan",
+"w": [
+"Bangladesh",
+"South Korea",
+"China"
+],
+"x": "Japan's flag is called the Hinomaru, 'circle of the sun'. Bangladesh also has a red disc, but on green."
+},
+{
+"id": "flg003",
+"l": "flg",
+"d": 1,
+"q": "Which country's national flag is nicknamed the Union Jack?",
+"a": "United Kingdom",
+"w": [
+"Ireland",
+"Iceland",
+"Norway"
+],
+"x": "The Union Flag combines the crosses of St George (England), St Andrew (Scotland) and St Patrick (Ireland)."
+},
+{
+"id": "flg004",
+"l": "flg",
+"d": 1,
+"q": "How many stars are on the flag of the United States?",
+"a": "50",
+"w": [
+"48",
+"51",
+"52"
+],
+"x": "One star for each state; the 13 stripes stand for the original 13 colonies. The 50-star version dates from 1960."
+},
+{
+"id": "flg005",
+"l": "flg",
+"d": 1,
+"q": "Which three colours make up the flag of Italy?",
+"a": "Green, white and red",
+"w": [
+"Red, white and blue",
+"Green, white and orange",
+"Black, red and gold"
+],
+"x": "Italians call it il Tricolore: three vertical bands, green at the hoist. Green, white and orange is Ireland."
+},
+{
+"id": "flg006",
+"l": "flg",
+"d": 1,
+"q": "Which country's flag has a blue globe and a band of stars inside a yellow diamond on green?",
+"a": "Brazil",
+"w": [
+"Portugal",
+"Jamaica",
+"Colombia"
+],
+"x": "The banner across the globe reads 'Ordem e Progresso' (Order and Progress). Its 27 stars stand for the states and the Federal District."
+},
+{
+"id": "flg007",
+"l": "flg",
+"d": 2,
+"q": "Which country has a square national flag with a white cross on red?",
+"a": "Switzerland",
+"w": [
+"Denmark",
+"Austria",
+"Georgia"
+],
+"x": "Switzerland and Vatican City are the only countries with square national flags. Denmark's white cross on red is rectangular and off-centre."
+},
+{
+"id": "flg008",
+"l": "flg",
+"d": 2,
+"q": "Which tree appears on the flag of Lebanon?",
+"a": "A cedar",
+"w": [
+"A palm",
+"An oak",
+"An olive"
+],
+"x": "A green Lebanon cedar sits on a white band between two red bands."
+},
+{
+"id": "flg009",
+"l": "flg",
+"d": 2,
+"q": "What is shown in the middle of India's flag?",
+"a": "A wheel",
+"w": [
+"A lotus flower",
+"A star",
+"A tiger"
+],
+"x": "The navy-blue Ashoka Chakra, a wheel with 24 spokes, sits on the white band between saffron and green."
+},
+{
+"id": "flg010",
+"l": "flg",
+"d": 2,
+"q": "Which country's flag is a yellow cross on a blue background?",
+"a": "Sweden",
+"w": [
+"Finland",
+"Norway",
+"Denmark"
+],
+"x": "Finland has a blue cross on white, Norway a blue-and-white cross on red, Denmark a white cross on red."
+},
+{
+"id": "flg011",
+"l": "flg",
+"d": 2,
+"q": "Which country's flag shows an eagle eating a snake while perched on a cactus?",
+"a": "Mexico",
+"w": [
+"Peru",
+"Spain",
+"Guatemala"
+],
+"x": "It recalls the Aztec legend of where to found their capital, Tenochtitlan, on the site of today's Mexico City."
+},
+{
+"id": "flg012",
+"l": "flg",
+"d": 2,
+"q": "Which country's flag is red with a white crescent and a white star?",
+"a": "Turkey",
+"w": [
+"Pakistan",
+"Algeria",
+"Malaysia"
+],
+"x": "Pakistan's crescent and star are white on green; Algeria's crescent is red; Malaysia's is yellow on blue."
+},
+{
+"id": "flg013",
+"l": "flg",
+"d": 2,
+"q": "Which country's flag has a white cross on red that is set towards the hoist side?",
+"a": "Denmark",
+"w": [
+"Norway",
+"Switzerland",
+"Finland"
+],
+"x": "The Dannebrog is often said to be the oldest national flag still in use. Its off-centre 'Nordic cross' was copied by its neighbours."
+},
+{
+"id": "flg014",
+"l": "flg",
+"d": 2,
+"q": "Which country's flag has a black, gold and green diagonal cross?",
+"a": "Jamaica",
+"w": [
+"Barbados",
+"Ghana",
+"Trinidad and Tobago"
+],
+"x": "Jamaica adopted the flag, with its gold saltire, at independence in 1962."
+},
+{
+"id": "flg015",
+"l": "flg",
+"d": 2,
+"q": "Which country's national flag is not a rectangle or a square, but two stacked triangles?",
+"a": "Nepal",
+"w": [
+"Bhutan",
+"Sri Lanka",
+"Switzerland"
+],
+"x": "Nepal's flag is made of two pennants, one above the other, with a white moon and sun."
+},
+{
+"id": "flg016",
+"l": "flg",
+"d": 3,
+"q": "Which country's flag shows a white dragon?",
+"a": "Bhutan",
+"w": [
+"China",
+"Nepal",
+"Vietnam"
+],
+"x": "Bhutan's name for itself, Druk Yul, means 'Land of the Thunder Dragon', and the Druk appears on its flag."
+},
+{
+"id": "flg017",
+"l": "flg",
+"d": 3,
+"q": "Which country's flag includes an AK-47 rifle?",
+"a": "Mozambique",
+"w": [
+"Angola",
+"Zimbabwe",
+"Kenya"
+],
+"x": "The rifle is crossed with a hoe on top of an open book. Angola's flag has a half cogwheel and a machete."
+},
+{
+"id": "flg018",
+"l": "flg",
+"d": 3,
+"q": "Which country's flag carries a red-and-white chequered shield?",
+"a": "Croatia",
+"w": [
+"Serbia",
+"Slovenia",
+"Slovakia"
+],
+"x": "The chequerboard (šahovnica) sits in the middle of a red, white and blue tricolour."
+},
+{
+"id": "flg019",
+"l": "flg",
+"d": 3,
+"q": "Which country's flag has 14 red and white stripes?",
+"a": "Malaysia",
+"w": [
+"Liberia",
+"United States",
+"Thailand"
+],
+"x": "The 14 stripes stand for the 13 states and the federal government. The US flag has 13 stripes, Liberia's 11."
+},
+{
+"id": "flg020",
+"l": "flg",
+"d": 3,
+"q": "Which country's flag has a broken trident in the middle?",
+"a": "Barbados",
+"w": [
+"Bahamas",
+"Malta",
+"Jamaica"
+],
+"x": "The trident of Neptune, with its shaft broken off, stands for the island's break from colonial rule at independence in 1966."
+},
+{
+"id": "flg021",
+"l": "flg",
+"d": 3,
+"q": "Which country's flag shows a purple-and-green Sisserou parrot?",
+"a": "Dominica",
+"w": [
+"Grenada",
+"Saint Lucia",
+"Barbados"
+],
+"x": "The Sisserou is Dominica's national bird and is found nowhere else in the world."
+},
+{
+"id": "geo001",
+"l": "geo",
+"d": 1,
+"q": "Which is the largest ocean?",
+"a": "Pacific",
+"w": [
+"Atlantic",
+"Indian",
+"Arctic"
+],
+"x": "The Pacific covers about a third of Earth's surface, more than all the land put together."
+},
+{
+"id": "geo002",
+"l": "geo",
+"d": 1,
+"q": "On which continent is the Sahara Desert?",
+"a": "Africa",
+"w": [
+"Asia",
+"Australia",
+"South America"
+],
+"x": "The Sahara is the largest hot desert in the world, stretching across much of North Africa."
+},
+{
+"id": "geo003",
+"l": "geo",
+"d": 1,
+"q": "Which is the highest mountain above sea level?",
+"a": "Mount Everest",
+"w": [
+"K2",
+"Kangchenjunga",
+"Mont Blanc"
+],
+"x": "A joint China-Nepal survey in 2020 put Everest's height at 8,849 m."
+},
+{
+"id": "geo004",
+"l": "geo",
+"d": 1,
+"q": "Which river flows through London?",
+"a": "Thames",
+"w": [
+"Severn",
+"Trent",
+"Seine"
+],
+"x": "The Thames is about 346 km long. The Severn is the UK's longest river."
+},
+{
+"id": "geo005",
+"l": "geo",
+"d": 1,
+"q": "Which is the smallest continent by land area?",
+"a": "Australia",
+"w": [
+"Europe",
+"Antarctica",
+"South America"
+],
+"x": "Australia covers about 7.7 million km². Europe is the second smallest."
+},
+{
+"id": "geo006",
+"l": "geo",
+"d": 1,
+"q": "On which continent is the Amazon rainforest?",
+"a": "South America",
+"w": [
+"Africa",
+"Asia",
+"North America"
+],
+"x": "Most of it is in Brazil, with the rest in eight other countries and territories."
+},
+{
+"id": "geo007",
+"l": "geo",
+"d": 1,
+"q": "The Strait of Gibraltar links the Atlantic Ocean to which sea?",
+"a": "Mediterranean Sea",
+"w": [
+"Red Sea",
+"Black Sea",
+"Caribbean Sea"
+],
+"x": "At its narrowest, the strait between Spain and Morocco is less than 15 km wide."
+},
+{
+"id": "geo008",
+"l": "geo",
+"d": 2,
+"q": "Which is the longest river in Europe?",
+"a": "Volga",
+"w": [
+"Danube",
+"Rhine",
+"Dnieper"
+],
+"x": "The Volga runs for about 3,500 km through Russia and empties into the Caspian Sea."
+},
+{
+"id": "geo009",
+"l": "geo",
+"d": 2,
+"q": "Which is the deepest lake in the world?",
+"a": "Lake Baikal",
+"w": [
+"Lake Tanganyika",
+"Lake Superior",
+"Caspian Sea"
+],
+"x": "Baikal in Siberia is over 1,600 m deep and holds roughly a fifth of the world's unfrozen surface fresh water."
+},
+{
+"id": "geo010",
+"l": "geo",
+"d": 2,
+"q": "Which mountain range in Russia is usually taken as part of the boundary between Europe and Asia?",
+"a": "Ural Mountains",
+"w": [
+"Carpathians",
+"Pyrenees",
+"Altai Mountains"
+],
+"x": "The Urals run roughly north to south for about 2,500 km, from the Arctic towards Kazakhstan."
+},
+{
+"id": "geo011",
+"l": "geo",
+"d": 2,
+"q": "Which two countries share the longest international border in the world?",
+"a": "Canada and the United States",
+"w": [
+"Russia and Kazakhstan",
+"Chile and Argentina",
+"Russia and China"
+],
+"x": "Including Alaska's border with Canada, it runs for about 8,900 km. Russia and Kazakhstan share the second longest."
+},
+{
+"id": "geo012",
+"l": "geo",
+"d": 2,
+"q": "Not counting Australia, which is the largest island in the world?",
+"a": "Greenland",
+"w": [
+"New Guinea",
+"Borneo",
+"Madagascar"
+],
+"x": "Greenland covers about 2.2 million km². It is an autonomous territory within the Kingdom of Denmark."
+},
+{
+"id": "geo013",
+"l": "geo",
+"d": 2,
+"q": "Which river carries the most water into the sea?",
+"a": "Amazon",
+"w": [
+"Nile",
+"Congo",
+"Yangtze"
+],
+"x": "The Amazon delivers roughly a fifth of all the river water that flows into the world's oceans."
+},
+{
+"id": "geo014",
+"l": "geo",
+"d": 2,
+"q": "Which country lies entirely inside South Africa?",
+"a": "Lesotho",
+"w": [
+"Eswatini",
+"Botswana",
+"Namibia"
+],
+"x": "Only three countries are completely surrounded by another one: Lesotho, and San Marino and Vatican City inside Italy."
+},
+{
+"id": "geo015",
+"l": "geo",
+"d": 2,
+"q": "Victoria Falls is on which river?",
+"a": "Zambezi",
+"w": [
+"Nile",
+"Congo",
+"Limpopo"
+],
+"x": "The falls are on the border between Zambia and Zimbabwe. The local name, Mosi-oa-Tunya, means 'the smoke that thunders'."
+},
+{
+"id": "geo016",
+"l": "geo",
+"d": 2,
+"q": "Mount Kilimanjaro, Africa's highest mountain, is in which country?",
+"a": "Tanzania",
+"w": [
+"Kenya",
+"Uganda",
+"Ethiopia"
+],
+"x": "Kilimanjaro is a dormant volcano close to the Kenyan border, 5,895 m high."
+},
+{
+"id": "geo017",
+"l": "geo",
+"d": 2,
+"q": "Which is the longest mountain range on land?",
+"a": "Andes",
+"w": [
+"Rocky Mountains",
+"Himalayas",
+"Ural Mountains"
+],
+"x": "The Andes run about 7,000 km down the western side of South America, through seven countries."
+},
+{
+"id": "geo018",
+"l": "geo",
+"d": 2,
+"q": "The shore of which body of water is the lowest point on land?",
+"a": "Dead Sea",
+"w": [
+"Caspian Sea",
+"Lake Assal",
+"Death Valley's Badwater Basin"
+],
+"x": "The Dead Sea shore is more than 400 m below sea level, and the water level is still falling."
+},
+{
+"id": "geo019",
+"l": "geo",
+"d": 3,
+"q": "The Atacama, one of the driest places on Earth, is mostly in which country?",
+"a": "Chile",
+"w": [
+"Peru",
+"Argentina",
+"Bolivia"
+],
+"x": "Some weather stations in the Atacama have never recorded rain."
+},
+{
+"id": "geo020",
+"l": "geo",
+"d": 3,
+"q": "Which is the only sea with no land coastline?",
+"a": "Sargasso Sea",
+"w": [
+"Coral Sea",
+"Tasman Sea",
+"Weddell Sea"
+],
+"x": "The Sargasso Sea in the North Atlantic is bounded by ocean currents rather than land, and is named after its floating sargassum seaweed."
+},
+{
+"id": "geo021",
+"l": "geo",
+"d": 3,
+"q": "Counting its overseas territories, which country spans the most time zones?",
+"a": "France",
+"w": [
+"Russia",
+"United States",
+"United Kingdom"
+],
+"x": "Thanks to territories from French Polynesia to Réunion, France spans 12 time zones; Russia, on its own landmass, has 11."
+},
+{
+"id": "geo022",
+"l": "geo",
+"d": 3,
+"q": "Which country has the longest coastline in the world?",
+"a": "Canada",
+"w": [
+"Russia",
+"Australia",
+"Norway"
+],
+"x": "Canada's mainland and its thousands of Arctic islands give it a coastline of over 200,000 km."
+},
+{
+"id": "geo023",
+"l": "geo",
+"d": 3,
+"q": "Which country is often said to hold more than half of the world's lakes?",
+"a": "Canada",
+"w": [
+"Finland",
+"Russia",
+"Sweden"
+],
+"x": "Canada has hundreds of thousands of lakes, many of them scooped out by glaciers during the last ice age."
+},
+{
+"id": "geo024",
+"l": "geo",
+"d": 3,
+"q": "Counting cold deserts, which is the largest desert on Earth?",
+"a": "Antarctica",
+"w": [
+"Sahara",
+"Gobi",
+"Arabian Desert"
+],
+"x": "A desert is defined by how little rain or snow falls, not by heat, and Antarctica gets very little of either."
+},
+{
+"id": "pop001",
+"l": "pop",
+"d": 1,
+"q": "Which is the largest country in the world by area?",
+"a": "Russia",
+"w": [
+"Canada",
+"China",
+"United States"
+],
+"x": "Russia covers about 17.1 million km², roughly 11% of the world's land."
+},
+{
+"id": "pop002",
+"l": "pop",
+"d": 1,
+"q": "According to UN estimates, which country has had the most people since 2023?",
+"a": "India",
+"w": [
+"China",
+"United States",
+"Indonesia"
+],
+"x": "The UN estimates India passed China during 2023. As of 2024 both have about 1.4 billion people."
+},
+{
+"id": "pop003",
+"l": "pop",
+"d": 1,
+"q": "Which is the smallest country in the world by area?",
+"a": "Vatican City",
+"w": [
+"Monaco",
+"San Marino",
+"Liechtenstein"
+],
+"x": "Vatican City covers less than half a square kilometre, entirely inside Rome."
+},
+{
+"id": "pop004",
+"l": "pop",
+"d": 1,
+"q": "Which is the largest country in South America by area?",
+"a": "Brazil",
+"w": [
+"Argentina",
+"Peru",
+"Colombia"
+],
+"x": "Brazil covers nearly half of South America and borders every country on the continent except Chile and Ecuador."
+},
+{
+"id": "pop005",
+"l": "pop",
+"d": 1,
+"q": "Which continent has the most people?",
+"a": "Asia",
+"w": [
+"Africa",
+"Europe",
+"South America"
+],
+"x": "About 60% of the world's people live in Asia."
+},
+{
+"id": "pop006",
+"l": "pop",
+"d": 1,
+"q": "Roughly how much of Earth's surface is covered by water?",
+"a": "About 71%",
+"w": [
+"About 50%",
+"About 60%",
+"About 85%"
+],
+"x": "Almost all of it is ocean; fresh water is only a small share of the total."
+},
+{
+"id": "pop007",
+"l": "pop",
+"d": 2,
+"q": "Which country has the most people in Africa?",
+"a": "Nigeria",
+"w": [
+"Ethiopia",
+"Egypt",
+"DR Congo"
+],
+"x": "As of 2024 Nigeria has over 220 million people; Ethiopia is second."
+},
+{
+"id": "pop008",
+"l": "pop",
+"d": 2,
+"q": "Which is the largest country in Africa by area?",
+"a": "Algeria",
+"w": [
+"DR Congo",
+"Sudan",
+"Libya"
+],
+"x": "Sudan was the largest until South Sudan became independent in 2011; since then it has been Algeria."
+},
+{
+"id": "pop009",
+"l": "pop",
+"d": 2,
+"q": "Which is the second-largest country in the world by area?",
+"a": "Canada",
+"w": [
+"United States",
+"China",
+"Brazil"
+],
+"x": "Canada covers about 10 million km², a little more than the United States or China."
+},
+{
+"id": "pop010",
+"l": "pop",
+"d": 2,
+"q": "Which country in the European Union has the most people?",
+"a": "Germany",
+"w": [
+"France",
+"Italy",
+"Spain"
+],
+"x": "As of 2024 Germany has about 84 million people, France about 68 million."
+},
+{
+"id": "pop011",
+"l": "pop",
+"d": 2,
+"q": "In which year did the world's population reach 8 billion, according to the UN?",
+"a": "2022",
+"w": [
+"2018",
+"2020",
+"2025"
+],
+"x": "The UN marked 15 November 2022 as the 'Day of Eight Billion'. The 7 billion mark was in 2011."
+},
+{
+"id": "pop012",
+"l": "pop",
+"d": 2,
+"q": "Which is the largest US state by area?",
+"a": "Alaska",
+"w": [
+"Texas",
+"California",
+"Montana"
+],
+"x": "Alaska is more than twice the size of Texas, the second largest."
+},
+{
+"id": "pop013",
+"l": "pop",
+"d": 2,
+"q": "Which US state has the most people?",
+"a": "California",
+"w": [
+"Texas",
+"Florida",
+"New York"
+],
+"x": "As of 2024 California has about 39 million people, Texas about 31 million."
+},
+{
+"id": "pop014",
+"l": "pop",
+"d": 2,
+"q": "Which country, made up entirely of islands, has the most people?",
+"a": "Indonesia",
+"w": [
+"Japan",
+"Philippines",
+"United Kingdom"
+],
+"x": "As of 2024 Indonesia has about 280 million people, spread over more than 17,000 islands."
+},
+{
+"id": "pop015",
+"l": "pop",
+"d": 2,
+"q": "Which is the largest country in the European Union by area?",
+"a": "France",
+"w": [
+"Spain",
+"Sweden",
+"Germany"
+],
+"x": "Even without its overseas regions, France (about 550,000 km²) is bigger than second-placed Spain (about 506,000 km²)."
+},
+{
+"id": "pop016",
+"l": "pop",
+"d": 2,
+"q": "According to UN estimates, which country has the third-largest population (as of 2024)?",
+"a": "United States",
+"w": [
+"Indonesia",
+"Pakistan",
+"Brazil"
+],
+"x": "About 340 million people, behind India and China. Indonesia is fourth."
+},
+{
+"id": "pop017",
+"l": "pop",
+"d": 2,
+"q": "Which is the largest lake in the world by surface area?",
+"a": "Caspian Sea",
+"w": [
+"Lake Superior",
+"Lake Victoria",
+"Lake Baikal"
+],
+"x": "The salty Caspian covers about 370,000 km². Lake Superior is the largest freshwater lake by area."
+},
+{
+"id": "pop018",
+"l": "pop",
+"d": 3,
+"q": "Which is the largest landlocked country?",
+"a": "Kazakhstan",
+"w": [
+"Mongolia",
+"Chad",
+"Niger"
+],
+"x": "Kazakhstan covers about 2.7 million km², making it the ninth-largest country of all."
+},
+{
+"id": "pop019",
+"l": "pop",
+"d": 3,
+"q": "Which country is the most densely populated?",
+"a": "Monaco",
+"w": [
+"Singapore",
+"Bangladesh",
+"Malta"
+],
+"x": "Monaco squeezes about 38,000 residents into around 2 km². Singapore leads among countries over 1 million people."
+},
+{
+"id": "pop020",
+"l": "pop",
+"d": 3,
+"q": "About how many people live in Greenland (as of 2024)?",
+"a": "Fewer than 100,000",
+"w": [
+"About 500,000",
+"About 1 million",
+"About 3 million"
+],
+"x": "The world's largest island has around 57,000 inhabitants, about a third of them in the capital, Nuuk."
+},
+{
+"id": "pop021",
+"l": "pop",
+"d": 3,
+"q": "Which is the largest country lying entirely in the Southern Hemisphere?",
+"a": "Australia",
+"w": [
+"Argentina",
+"South Africa",
+"Brazil"
+],
+"x": "Brazil is bigger, but the equator crosses its north, so part of it is in the Northern Hemisphere."
+},
+{
+"id": "lmk001",
+"l": "lmk",
+"d": 1,
+"q": "In which city is the Colosseum?",
+"a": "Rome",
+"w": [
+"Athens",
+"Naples",
+"Istanbul"
+],
+"x": "The amphitheatre was finished in AD 80 and could hold tens of thousands of spectators."
+},
+{
+"id": "lmk002",
+"l": "lmk",
+"d": 1,
+"q": "In which country is Machu Picchu?",
+"a": "Peru",
+"w": [
+"Mexico",
+"Bolivia",
+"Chile"
+],
+"x": "The Inca citadel was built in the 15th century high in the Andes, above the Urubamba valley."
+},
+{
+"id": "lmk003",
+"l": "lmk",
+"d": 1,
+"q": "Which city is overlooked by the Christ the Redeemer statue?",
+"a": "Rio de Janeiro",
+"w": [
+"São Paulo",
+"Lisbon",
+"Buenos Aires"
+],
+"x": "The statue was completed in 1931 on top of Corcovado mountain."
+},
+{
+"id": "lmk004",
+"l": "lmk",
+"d": 1,
+"q": "The Statue of Liberty was a gift to the United States from which country?",
+"a": "France",
+"w": [
+"United Kingdom",
+"Spain",
+"Italy"
+],
+"x": "It was dedicated in New York Harbor in 1886. Gustave Eiffel's company engineered its inner frame."
+},
+{
+"id": "lmk005",
+"l": "lmk",
+"d": 1,
+"q": "In which city is the Sagrada Família?",
+"a": "Barcelona",
+"w": [
+"Madrid",
+"Seville",
+"Valencia"
+],
+"x": "Antoni Gaudí took charge of the basilica in 1883 and worked on it until his death in 1926."
+},
+{
+"id": "lmk006",
+"l": "lmk",
+"d": 1,
+"q": "In which city is the Brandenburg Gate?",
+"a": "Berlin",
+"w": [
+"Munich",
+"Vienna",
+"Hamburg"
+],
+"x": "The gate was completed in 1791. It stood just inside East Berlin while the Wall divided the city."
+},
+{
+"id": "lmk007",
+"l": "lmk",
+"d": 1,
+"q": "Which city is the Golden Gate Bridge in?",
+"a": "San Francisco",
+"w": [
+"Los Angeles",
+"Seattle",
+"New York"
+],
+"x": "When it opened in 1937 it was the longest suspension bridge span in the world. Its colour is called International Orange."
+},
+{
+"id": "lmk008",
+"l": "lmk",
+"d": 2,
+"q": "The Eiffel Tower was built for which event?",
+"a": "The 1889 World's Fair",
+"w": [
+"The 1900 Olympic Games",
+"The coronation of Napoleon III",
+"The end of the First World War"
+],
+"x": "It was the entrance arch to the 1889 Exposition Universelle and was meant to stand for only 20 years."
+},
+{
+"id": "lmk009",
+"l": "lmk",
+"d": 2,
+"q": "In which city is the Taj Mahal?",
+"a": "Agra",
+"w": [
+"Delhi",
+"Jaipur",
+"Mumbai"
+],
+"x": "The Mughal emperor Shah Jahan built it as a tomb for his wife Mumtaz Mahal."
+},
+{
+"id": "lmk010",
+"l": "lmk",
+"d": 2,
+"q": "In which country is the ancient city of Petra?",
+"a": "Jordan",
+"w": [
+"Egypt",
+"Lebanon",
+"Syria"
+],
+"x": "The Nabataeans carved Petra's buildings straight into rose-coloured sandstone cliffs."
+},
+{
+"id": "lmk011",
+"l": "lmk",
+"d": 2,
+"q": "In which country is Angkor Wat?",
+"a": "Cambodia",
+"w": [
+"Thailand",
+"Laos",
+"Vietnam"
+],
+"x": "Built in the 12th century, it is one of the largest religious monuments in the world, and it appears on Cambodia's flag."
+},
+{
+"id": "lmk012",
+"l": "lmk",
+"d": 2,
+"q": "Which of the Seven Wonders of the Ancient World is still standing?",
+"a": "The Great Pyramid of Giza",
+"w": [
+"The Colossus of Rhodes",
+"The Lighthouse of Alexandria",
+"The Hanging Gardens of Babylon"
+],
+"x": "It is also the oldest of the seven, built around 4,500 years ago, and was the tallest human-made structure for over 3,800 years."
+},
+{
+"id": "lmk013",
+"l": "lmk",
+"d": 2,
+"q": "Stonehenge is in which English county?",
+"a": "Wiltshire",
+"w": [
+"Somerset",
+"Dorset",
+"Cornwall"
+],
+"x": "It stands on Salisbury Plain. Its first stage was built around 5,000 years ago."
+},
+{
+"id": "lmk014",
+"l": "lmk",
+"d": 2,
+"q": "As of 2025, which is the tallest building in the world?",
+"a": "Burj Khalifa",
+"w": [
+"Shanghai Tower",
+"Merdeka 118",
+"Taipei 101"
+],
+"x": "The Dubai tower is 828 m tall and has held the record since it opened in 2010."
+},
+{
+"id": "lmk015",
+"l": "lmk",
+"d": 2,
+"q": "In which country is Neuschwanstein Castle?",
+"a": "Germany",
+"w": [
+"Austria",
+"Switzerland",
+"Czech Republic"
+],
+"x": "King Ludwig II of Bavaria had it built from 1869. It is said to have inspired Disney's Sleeping Beauty castle."
+},
+{
+"id": "lmk016",
+"l": "lmk",
+"d": 2,
+"q": "Which city is home to the Hagia Sophia?",
+"a": "Istanbul",
+"w": [
+"Athens",
+"Rome",
+"Cairo"
+],
+"x": "It was completed in 537 under the Byzantine emperor Justinian, and its dome was the largest in the world for centuries."
+},
+{
+"id": "lmk017",
+"l": "lmk",
+"d": 2,
+"q": "The giant stone Moai figures are on which island?",
+"a": "Easter Island",
+"w": [
+"Tahiti",
+"Fiji",
+"Galápagos Islands"
+],
+"x": "The island, called Rapa Nui by its people, is part of Chile, about 3,500 km off its coast."
+},
+{
+"id": "lmk018",
+"l": "lmk",
+"d": 2,
+"q": "Chichén Itzá in Mexico was a great city of which civilisation?",
+"a": "The Maya",
+"w": [
+"The Aztecs",
+"The Incas",
+"The Olmecs"
+],
+"x": "Its step pyramid, El Castillo, has stairways on all four sides."
+},
+{
+"id": "lmk019",
+"l": "lmk",
+"d": 3,
+"q": "In which Spanish city is the Alhambra palace?",
+"a": "Granada",
+"w": [
+"Córdoba",
+"Seville",
+"Toledo"
+],
+"x": "The palace and fortress complex was built mainly in the 13th and 14th centuries by the Nasrid dynasty."
+},
+{
+"id": "lmk020",
+"l": "lmk",
+"d": 3,
+"q": "In which country is Borobudur, the world's largest Buddhist temple?",
+"a": "Indonesia",
+"w": [
+"Thailand",
+"Cambodia",
+"Myanmar"
+],
+"x": "It was built on the island of Java in the 9th century."
+},
+{
+"id": "lmk021",
+"l": "lmk",
+"d": 3,
+"q": "A 2012 Chinese survey measured all the branches of the Great Wall of China. Roughly how long did it find it to be?",
+"a": "About 21,000 km",
+"w": [
+"About 2,100 km",
+"About 6,000 km",
+"About 50,000 km"
+],
+"x": "The survey counted 21,196 km of walls, trenches and natural barriers, built over many dynasties."
+},
+{
+"id": "lmk022",
+"l": "lmk",
+"d": 3,
+"q": "In which country are the ruins of Persepolis, the ancient Persian capital?",
+"a": "Iran",
+"w": [
+"Iraq",
+"Turkey",
+"Egypt"
+],
+"x": "Darius the Great began building it around 518 BC."
+},
+{
+"id": "gk001",
+"l": "gk",
+"d": 1,
+"q": "Which planet is closest to the Sun?",
+"a": "Mercury",
+"w": [
+"Venus",
+"Mars",
+"Earth"
+],
+"x": "Mercury goes round the Sun once every 88 Earth days."
+},
+{
+"id": "gk002",
+"l": "gk",
+"d": 1,
+"q": "Which planet is known as the Red Planet?",
+"a": "Mars",
+"w": [
+"Jupiter",
+"Venus",
+"Mercury"
+],
+"x": "Its red colour comes from iron oxide, essentially rust, in its dust and rocks."
+},
+{
+"id": "gk003",
+"l": "gk",
+"d": 1,
+"q": "Which is the largest planet in the Solar System?",
+"a": "Jupiter",
+"w": [
+"Saturn",
+"Neptune",
+"Uranus"
+],
+"x": "Jupiter is more than twice as massive as all the other planets put together."
+},
+{
+"id": "gk004",
+"l": "gk",
+"d": 1,
+"q": "How many sides does a hexagon have?",
+"a": "6",
+"w": [
+"5",
+"7",
+"8"
+],
+"x": "Honeybees build their combs from hexagonal cells, which use the least wax for the space they enclose."
+},
+{
+"id": "gk005",
+"l": "gk",
+"d": 1,
+"q": "Who painted the Mona Lisa?",
+"a": "Leonardo da Vinci",
+"w": [
+"Michelangelo",
+"Raphael",
+"Sandro Botticelli"
+],
+"x": "It hangs in the Louvre in Paris, behind protective glass."
+},
+{
+"id": "gk006",
+"l": "gk",
+"d": 1,
+"q": "Who wrote the play Romeo and Juliet?",
+"a": "William Shakespeare",
+"w": [
+"Charles Dickens",
+"Christopher Marlowe",
+"Geoffrey Chaucer"
+],
+"x": "It was probably written in the mid-1590s and is set in Verona."
+},
+{
+"id": "gk007",
+"l": "gk",
+"d": 1,
+"q": "Who was the first person to walk on the Moon?",
+"a": "Neil Armstrong",
+"w": [
+"Buzz Aldrin",
+"Yuri Gagarin",
+"John Glenn"
+],
+"x": "Armstrong stepped onto the Moon during Apollo 11 in July 1969; Buzz Aldrin followed about 20 minutes later."
+},
+{
+"id": "gk008",
+"l": "gk",
+"d": 2,
+"q": "What is the chemical symbol for gold?",
+"a": "Au",
+"w": [
+"Ag",
+"Go",
+"Gd"
+],
+"x": "Au comes from the Latin word for gold, aurum. Ag is silver."
+},
+{
+"id": "gk009",
+"l": "gk",
+"d": 2,
+"q": "What is the hardest natural substance?",
+"a": "Diamond",
+"w": [
+"Quartz",
+"Granite",
+"Topaz"
+],
+"x": "Diamond is pure carbon and scores 10, the top of the Mohs hardness scale."
+},
+{
+"id": "gk010",
+"l": "gk",
+"d": 2,
+"q": "Which gas makes up most of Earth's atmosphere?",
+"a": "Nitrogen",
+"w": [
+"Oxygen",
+"Carbon dioxide",
+"Argon"
+],
+"x": "Nitrogen is about 78% of the air and oxygen about 21%."
+},
+{
+"id": "gk011",
+"l": "gk",
+"d": 2,
+"q": "In which year did the Berlin Wall fall?",
+"a": "1989",
+"w": [
+"1987",
+"1991",
+"1985"
+],
+"x": "The border crossings opened on 9 November 1989; Germany was reunified less than a year later."
+},
+{
+"id": "gk012",
+"l": "gk",
+"d": 2,
+"q": "Which element has the atomic number 1?",
+"a": "Hydrogen",
+"w": [
+"Helium",
+"Oxygen",
+"Carbon"
+],
+"x": "Hydrogen is the lightest and most common element in the universe."
+},
+{
+"id": "gk013",
+"l": "gk",
+"d": 2,
+"q": "Who invented the World Wide Web?",
+"a": "Tim Berners-Lee",
+"w": [
+"Vint Cerf",
+"Bill Gates",
+"Alan Turing"
+],
+"x": "He proposed it in 1989 while working at CERN, the physics laboratory near Geneva."
+},
+{
+"id": "gk014",
+"l": "gk",
+"d": 2,
+"q": "What is the smallest prime number?",
+"a": "2",
+"w": [
+"1",
+"3",
+"0"
+],
+"x": "2 is also the only even prime. 1 doesn't count as a prime number."
+},
+{
+"id": "gk015",
+"l": "gk",
+"d": 2,
+"q": "Which language has the most native speakers?",
+"a": "Mandarin Chinese",
+"w": [
+"English",
+"Spanish",
+"Hindi"
+],
+"x": "Mandarin has over 900 million native speakers. English has the most speakers in total once second-language speakers are counted."
+},
+{
+"id": "gk016",
+"l": "gk",
+"d": 2,
+"q": "What is the longest bone in the human body?",
+"a": "The femur",
+"w": [
+"The tibia",
+"The humerus",
+"The fibula"
+],
+"x": "The femur, or thigh bone, is also the strongest bone in the body."
+},
+{
+"id": "gk017",
+"l": "gk",
+"d": 2,
+"q": "Who wrote On the Origin of Species, published in 1859?",
+"a": "Charles Darwin",
+"w": [
+"Gregor Mendel",
+"Isaac Newton",
+"Louis Pasteur"
+],
+"x": "It set out his theory of evolution by natural selection, shaped partly by his voyage on HMS Beagle."
+},
+{
+"id": "gk018",
+"l": "gk",
+"d": 3,
+"q": "How many bones are in the adult human body?",
+"a": "206",
+"w": [
+"186",
+"226",
+"256"
+],
+"x": "Babies are born with more, around 300, and many of them fuse together as they grow."
+},
+{
+"id": "gk019",
+"l": "gk",
+"d": 3,
+"q": "Roughly how fast does light travel in a vacuum?",
+"a": "About 300,000 km per second",
+"w": [
+"About 30,000 km per second",
+"About 3 million km per second",
+"About 3,000 km per second"
+],
+"x": "Exactly 299,792,458 metres per second. Sunlight takes about 8 minutes to reach Earth."
+},
+{
+"id": "gk020",
+"l": "gk",
+"d": 3,
+"q": "Which planet spins on its side, tilted at about 98 degrees?",
+"a": "Uranus",
+"w": [
+"Neptune",
+"Saturn",
+"Venus"
+],
+"x": "One idea is that a huge collision long ago knocked it over."
+},
+{
+"id": "gk021",
+"l": "gk",
+"d": 3,
+"q": "As of 2025, which planet has the most known moons?",
+"a": "Saturn",
+"w": [
+"Jupiter",
+"Uranus",
+"Neptune"
+],
+"x": "In 2025 astronomers announced 128 more small moons of Saturn, taking its count to 274, far ahead of Jupiter."
+},
+{
+"id": "gk022",
+"l": "gk",
+"d": 3,
+"q": "In which country were the first modern Olympic Games held, in 1896?",
+"a": "Greece",
+"w": [
+"France",
+"United Kingdom",
+"United States"
+],
+"x": "Athens hosted them, with athletes from 14 nations."
+}
+]

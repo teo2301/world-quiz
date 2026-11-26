@@ -1,0 +1,16 @@
+{
+  "name": "World Knowledge Quiz",
+  "short_name": "World Quiz",
+  "description": "Capitals, flags, landmarks and more: a daily world quiz plus classic games",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b2a4a",
+  "theme_color": "#0b2a4a",
+  "icons": [
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"},
+    {"src": "icon-mono.png", "sizes": "512x512", "type": "image/png", "purpose": "monochrome"}
+  ]
+}

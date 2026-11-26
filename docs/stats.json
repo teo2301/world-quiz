@@ -1,0 +1,518 @@
+{
+"about": "Higher or lower data (Phase 1 placeholder; Phase 3 builds it properly). Populations are rounded UN 2024 estimates in millions; areas are rounded totals; heights are standard surveyed figures.",
+"cats": {
+"pop": {
+"name": "Population",
+"unit": "people",
+"approx": true,
+"million": true,
+"word": "population"
+},
+"area": {
+"name": "Area",
+"unit": "km²",
+"approx": true,
+"word": "area"
+},
+"peak": {
+"name": "Mountain height",
+"unit": "metres above sea level",
+"word": "height"
+},
+"tower": {
+"name": "Tallest buildings",
+"unit": "metres tall",
+"word": "height"
+}
+},
+"items": [
+{
+"id": "pop01",
+"c": "pop",
+"n": "India",
+"v": 1450,
+"d": "South Asia",
+"note": "UN estimate for 2024, rounded"
+},
+{
+"id": "pop02",
+"c": "pop",
+"n": "China",
+"v": 1420,
+"d": "East Asia",
+"note": "UN estimate for 2024, rounded"
+},
+{
+"id": "pop03",
+"c": "pop",
+"n": "United States",
+"v": 345,
+"d": "North America",
+"note": "UN estimate for 2024, rounded"
+},
+{
+"id": "pop04",
+"c": "pop",
+"n": "Indonesia",
+"v": 280,
+"d": "Southeast Asia",
+"note": "UN estimate for 2024, rounded"
+},
+{
+"id": "pop05",
+"c": "pop",
+"n": "Pakistan",
+"v": 250,
+"d": "South Asia",
+"note": "UN estimate for 2024, rounded"
+},
+{
+"id": "pop06",
+"c": "pop",
+"n": "Nigeria",
+"v": 230,
+"d": "West Africa",
+"note": "UN estimate for 2024, rounded"
+},
+{
+"id": "pop07",
+"c": "pop",
+"n": "Brazil",
+"v": 210,
+"d": "South America",
+"note": "UN estimate for 2024, rounded"
+},
+{
+"id": "pop08",
+"c": "pop",
+"n": "Bangladesh",
+"v": 170,
+"d": "South Asia",
+"note": "UN estimate for 2024, rounded"
+},
+{
+"id": "pop09",
+"c": "pop",
+"n": "Russia",
+"v": 145,
+"d": "Europe and Asia",
+"note": "UN estimate for 2024, rounded"
+},
+{
+"id": "pop10",
+"c": "pop",
+"n": "Japan",
+"v": 124,
+"d": "East Asia",
+"note": "UN estimate for 2024, rounded"
+},
+{
+"id": "pop11",
+"c": "pop",
+"n": "Germany",
+"v": 84,
+"d": "Europe",
+"note": "UN estimate for 2024, rounded"
+},
+{
+"id": "pop12",
+"c": "pop",
+"n": "United Kingdom",
+"v": 69,
+"d": "Europe",
+"note": "UN estimate for 2024, rounded"
+},
+{
+"id": "pop13",
+"c": "pop",
+"n": "Italy",
+"v": 59,
+"d": "Europe",
+"note": "UN estimate for 2024, rounded"
+},
+{
+"id": "pop14",
+"c": "pop",
+"n": "Spain",
+"v": 48,
+"d": "Europe",
+"note": "UN estimate for 2024, rounded"
+},
+{
+"id": "pop15",
+"c": "pop",
+"n": "Canada",
+"v": 40,
+"d": "North America",
+"note": "UN estimate for 2024, rounded"
+},
+{
+"id": "pop16",
+"c": "pop",
+"n": "Australia",
+"v": 27,
+"d": "Oceania",
+"note": "UN estimate for 2024, rounded"
+},
+{
+"id": "pop17",
+"c": "pop",
+"n": "Netherlands",
+"v": 18,
+"d": "Europe",
+"note": "UN estimate for 2024, rounded"
+},
+{
+"id": "pop18",
+"c": "pop",
+"n": "Portugal",
+"v": 10,
+"d": "Europe",
+"note": "UN estimate for 2024, rounded"
+},
+{
+"id": "pop19",
+"c": "pop",
+"n": "New Zealand",
+"v": 5.2,
+"d": "Oceania",
+"note": "UN estimate for 2024, rounded"
+},
+{
+"id": "pop20",
+"c": "pop",
+"n": "Iceland",
+"v": 0.4,
+"d": "Europe",
+"note": "UN estimate for 2024, rounded"
+},
+{
+"id": "area01",
+"c": "area",
+"n": "Russia",
+"v": 17098000,
+"d": "Europe and Asia",
+"note": "Total area including inland water, rounded"
+},
+{
+"id": "area02",
+"c": "area",
+"n": "Canada",
+"v": 9985000,
+"d": "North America",
+"note": "Total area including inland water, rounded"
+},
+{
+"id": "area03",
+"c": "area",
+"n": "Brazil",
+"v": 8516000,
+"d": "South America",
+"note": "Total area including inland water, rounded"
+},
+{
+"id": "area04",
+"c": "area",
+"n": "Australia",
+"v": 7692000,
+"d": "Oceania",
+"note": "Total area including inland water, rounded"
+},
+{
+"id": "area05",
+"c": "area",
+"n": "India",
+"v": 3287000,
+"d": "South Asia",
+"note": "Total area including inland water, rounded"
+},
+{
+"id": "area06",
+"c": "area",
+"n": "Argentina",
+"v": 2780000,
+"d": "South America",
+"note": "Total area including inland water, rounded"
+},
+{
+"id": "area07",
+"c": "area",
+"n": "Algeria",
+"v": 2382000,
+"d": "North Africa",
+"note": "Total area including inland water, rounded"
+},
+{
+"id": "area08",
+"c": "area",
+"n": "Mexico",
+"v": 1964000,
+"d": "North America",
+"note": "Total area including inland water, rounded"
+},
+{
+"id": "area09",
+"c": "area",
+"n": "Egypt",
+"v": 1002000,
+"d": "North Africa",
+"note": "Total area including inland water, rounded"
+},
+{
+"id": "area10",
+"c": "area",
+"n": "Spain",
+"v": 506000,
+"d": "Europe",
+"note": "Total area including inland water, rounded"
+},
+{
+"id": "area11",
+"c": "area",
+"n": "Sweden",
+"v": 450000,
+"d": "Europe",
+"note": "Total area including inland water, rounded"
+},
+{
+"id": "area12",
+"c": "area",
+"n": "Japan",
+"v": 378000,
+"d": "East Asia",
+"note": "Total area including inland water, rounded"
+},
+{
+"id": "area13",
+"c": "area",
+"n": "Italy",
+"v": 301000,
+"d": "Europe",
+"note": "Total area including inland water, rounded"
+},
+{
+"id": "area14",
+"c": "area",
+"n": "United Kingdom",
+"v": 242000,
+"d": "Europe",
+"note": "Total area including inland water, rounded"
+},
+{
+"id": "area15",
+"c": "area",
+"n": "Iceland",
+"v": 103000,
+"d": "Europe",
+"note": "Total area including inland water, rounded"
+},
+{
+"id": "area16",
+"c": "area",
+"n": "Ireland",
+"v": 70000,
+"d": "Europe",
+"note": "Total area including inland water, rounded"
+},
+{
+"id": "area17",
+"c": "area",
+"n": "Belgium",
+"v": 30500,
+"d": "Europe",
+"note": "Total area including inland water, rounded"
+},
+{
+"id": "area18",
+"c": "area",
+"n": "Singapore",
+"v": 730,
+"d": "Southeast Asia",
+"note": "Total area including inland water, rounded"
+},
+{
+"id": "peak01",
+"c": "peak",
+"n": "Mount Everest",
+"v": 8849,
+"d": "Nepal and China",
+"note": "2020 survey"
+},
+{
+"id": "peak02",
+"c": "peak",
+"n": "K2",
+"v": 8611,
+"d": "Pakistan and China",
+"note": "Second highest on Earth"
+},
+{
+"id": "peak03",
+"c": "peak",
+"n": "Aconcagua",
+"v": 6961,
+"d": "Argentina",
+"note": "Highest in the Americas"
+},
+{
+"id": "peak04",
+"c": "peak",
+"n": "Denali",
+"v": 6190,
+"d": "Alaska, United States",
+"note": "Highest in North America"
+},
+{
+"id": "peak05",
+"c": "peak",
+"n": "Kilimanjaro",
+"v": 5895,
+"d": "Tanzania",
+"note": "Highest in Africa"
+},
+{
+"id": "peak06",
+"c": "peak",
+"n": "Mount Elbrus",
+"v": 5642,
+"d": "Russia",
+"note": "Highest in Europe by most definitions"
+},
+{
+"id": "peak07",
+"c": "peak",
+"n": "Matterhorn",
+"v": 4478,
+"d": "Switzerland and Italy",
+"note": "Standard surveyed height"
+},
+{
+"id": "peak08",
+"c": "peak",
+"n": "Mount Fuji",
+"v": 3776,
+"d": "Japan",
+"note": "Japan's highest"
+},
+{
+"id": "peak09",
+"c": "peak",
+"n": "Mount Olympus",
+"v": 2918,
+"d": "Greece",
+"note": "Greece's highest"
+},
+{
+"id": "peak10",
+"c": "peak",
+"n": "Mount Kosciuszko",
+"v": 2228,
+"d": "Australia",
+"note": "Highest on the Australian mainland"
+},
+{
+"id": "peak11",
+"c": "peak",
+"n": "Ben Nevis",
+"v": 1345,
+"d": "Scotland",
+"note": "Highest in the UK"
+},
+{
+"id": "peak12",
+"c": "peak",
+"n": "Snowdon (Yr Wyddfa)",
+"v": 1085,
+"d": "Wales",
+"note": "Highest in Wales"
+},
+{
+"id": "peak13",
+"c": "peak",
+"n": "Scafell Pike",
+"v": 978,
+"d": "England",
+"note": "Highest in England"
+},
+{
+"id": "tower01",
+"c": "tower",
+"n": "Burj Khalifa",
+"v": 828,
+"d": "Dubai, 2010",
+"note": "Tallest in the world as of 2025"
+},
+{
+"id": "tower02",
+"c": "tower",
+"n": "Shanghai Tower",
+"v": 632,
+"d": "Shanghai, 2015",
+"note": "Architectural height"
+},
+{
+"id": "tower03",
+"c": "tower",
+"n": "One World Trade Center",
+"v": 541,
+"d": "New York, 2014",
+"note": "Height including its spire"
+},
+{
+"id": "tower04",
+"c": "tower",
+"n": "Taipei 101",
+"v": 508,
+"d": "Taipei, 2004",
+"note": "World's tallest 2004-2010"
+},
+{
+"id": "tower05",
+"c": "tower",
+"n": "Petronas Towers",
+"v": 452,
+"d": "Kuala Lumpur, 1998",
+"note": "World's tallest 1998-2004"
+},
+{
+"id": "tower06",
+"c": "tower",
+"n": "Willis Tower",
+"v": 442,
+"d": "Chicago, 1974",
+"note": "Formerly the Sears Tower"
+},
+{
+"id": "tower07",
+"c": "tower",
+"n": "The Shard",
+"v": 310,
+"d": "London, 2012",
+"note": "Tallest building in the UK as of 2025"
+},
+{
+"id": "tower08",
+"c": "tower",
+"n": "Chrysler Building",
+"v": 319,
+"d": "New York, 1930",
+"note": "Height including its spire"
+},
+{
+"id": "tower09",
+"c": "tower",
+"n": "Big Ben's Elizabeth Tower",
+"v": 96,
+"d": "London, 1859",
+"note": "Rounded"
+},
+{
+"id": "tower10",
+"c": "tower",
+"n": "Leaning Tower of Pisa",
+"v": 56,
+"d": "Pisa, 1372",
+"note": "Rounded, measured on the taller side"
+}
+]
+}
