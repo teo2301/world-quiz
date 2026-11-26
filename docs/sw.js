@@ -1,6 +1,6 @@
 // Offline support (scope "./" only, so it never touches other apps on teo2301.github.io). Bump VERSION after changing any app file or the file list.
 // The data files (questions, stats, clues) are network-first so new content shows up without a bump.
-const VERSION = "wq-v1";
+const VERSION = "wq-v2";
 const DATA = ["/questions.json", "/stats.json", "/clues.json"];
 const FILES = ["./", "index.html", "app.css", "privacy.html", "questions.json", "stats.json", "clues.json", "manifest.json",
   "icon-192.png", "icon-512.png", "icon-mono.png", "badge-96.png", "sounds/right.mp3", "sounds/wrong.mp3", "sounds/finish.mp3",

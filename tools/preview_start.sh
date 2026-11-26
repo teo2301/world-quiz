@@ -5,6 +5,7 @@
 cd "$(dirname "$0")/.." || exit 1
 pkill -f "wq-preview-marker" 2>/dev/null
 sleep 1
+rm -f /tmp/wq-test.db /tmp/wq-test.db-wal /tmp/wq-test.db-shm   # fresh test DB each start (the server creates it)
 # The venv (gitignored) has pywebpush, so the test server can send pushes; plain python3
 # still runs it, just without sending. VAPID key: ~/keys/world-quiz-vapid.json (outside git).
 # PUSH_EXTRA_HOSTS lets drive_preview's fake push service (127.0.0.1:8199) receive them.

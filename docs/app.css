@@ -111,7 +111,7 @@ h1{font-size:30px;font-weight:700}
   display:block;vertical-align:top;padding:12px 14px 14px}
 .mode .ic{display:block;width:28px;height:28px;margin-bottom:8px;opacity:.9}
 .mode .ic svg{display:block}
-.mode b{font-family:var(--head);font-weight:600;font-size:19px;text-transform:uppercase;letter-spacing:.04em;display:block}
+.mode b{font-family:var(--head);font-weight:700;font-size:16.5px;line-height:1.2;text-transform:uppercase;letter-spacing:.02em;display:block}
 .mode span{font-size:12.5px;color:var(--chalk2);display:block;margin-top:1px}
 .mode.active{border-color:rgba(246,195,68,.7)}
 .mode.active .ic{color:var(--yellow);opacity:1}
@@ -436,7 +436,7 @@ input.code::placeholder{letter-spacing:.18em}
   background-image:repeating-linear-gradient(0deg,rgba(244,248,252,.4) 0,rgba(244,248,252,.4) 2px,transparent 2px,transparent 37px),
                    repeating-linear-gradient(90deg,rgba(244,248,252,.4) 0,rgba(244,248,252,.4) 2px,transparent 2px,transparent 37px)}
 .goal .gtx{position:relative;text-align:center}
-.goal .gtx b{display:block;font-family:var(--head);font-weight:700;font-size:76px;line-height:1;letter-spacing:.06em;
+.goal .gtx b{display:block;font-family:var(--head);font-weight:700;font-size:50px;line-height:1;letter-spacing:.02em;
   text-transform:uppercase;color:var(--yellow);text-shadow:0 4px 0 rgba(0,0,0,.25),0 0 30px rgba(246,195,68,.35)}
 .goal .gtx span{display:block;margin-top:10px;font-family:var(--head);font-weight:600;font-size:18px;letter-spacing:.14em;
   text-transform:uppercase;color:var(--chalk)}

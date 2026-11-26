@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Drive the preview (:8197) in headless Chromium at 390x844, light + dark,
+"""Drive the World Quiz preview (:8198) in headless Chromium at 390x844, light + dark,
 and save screenshots to preview-shots/. Prints console errors.
 
     python3 tools/drive_preview.py [light|dark|both]
@@ -20,7 +20,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import threading
 
 CHROME = os.path.expanduser("~/.cache/ms-playwright/chromium-1228/chrome-linux64/chrome")
-URL = "http://127.0.0.1:8197/"
+URL = "http://127.0.0.1:8198/"
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "preview-shots")
 PORT = 9333
 
@@ -92,9 +92,9 @@ class Tab:
 
 # ---------------------------------------------------------------- push (Phase 6)
 # Headless Chromium has no push service (pushManager.subscribe hangs), so the page gets a fake
-# PushSubscription pointing at a local fake push service on :8196 (preview_start.sh allows it via
+# PushSubscription pointing at a local fake push service on :8199 (preview_start.sh allows it via
 # PUSH_EXTRA_HOSTS). The keys are real, so the server's pywebpush encrypts to it as usual.
-PUSH_PORT = 8196
+PUSH_PORT = 8199
 PUSHED = []
 
 
@@ -280,7 +280,7 @@ async def wait_posted(tab):
 
 
 async def new_modes(tab):
-    """Survival, Blitz, Higher or lower, Career path; each ends on its result screen and posts."""
+    """Survival, Blitz, Higher or lower, Mystery country (mode id career); each ends on its result screen and posts."""
     tile = "document.querySelector('[data-mode=%s]').click()"
     await tab.js("document.getElementById('menu').click()")
     # Survival: 4 right then out
@@ -316,14 +316,14 @@ async def new_modes(tab):
     await tab.wait("!document.getElementById('done').classList.contains('hidden')")
     await wait_posted(tab)
     await tab.shot("27-hilo-result")
-    # Career path: wrong guess, then right; clue+right; give up; typo'd right; right at once
+    # Mystery country: wrong guess, then right; clue+right; give up; typo'd right; right at once
     await tab.js("document.getElementById('menu').click()")
     await tab.js(tile % "career")
     await tab.wait("!!career && !document.getElementById('career').classList.contains('hidden')")
     await tab.shot("28-career-clue1", full=False)
     name = "career.players[career.i].n"
     guess = "(function(g){var i=document.getElementById('cGuess');i.value=g;document.getElementById('cGuessBtn').click();return true})(%s)"
-    await tab.js(guess % "'Nobody Atall'")
+    await tab.js(guess % "'Atlantis'")
     await tab.shot("29-career-wrong", full=False)
     await tab.js(guess % name)
     await tab.shot("30-career-right")
@@ -334,7 +334,7 @@ async def new_modes(tab):
     await tab.js("document.getElementById('cGiveUp').click()")
     await tab.shot("31-career-gaveup")
     await tab.js("document.getElementById('cNext').click()")
-    await tab.js(guess % (name + ".split(' ').slice(-1)[0]"))
+    await tab.js(guess % ("(function(n){return n.length > 5 ? n.slice(0, -2) + n.slice(-1) : n})(%s)" % name))   # one letter dropped
     await tab.js("document.getElementById('cNext').click()")
     await tab.js(guess % name)
     await tab.js("document.getElementById('cNext').click()")
@@ -344,7 +344,7 @@ async def new_modes(tab):
 
 
 async def achievements_and_feel(tab):
-    """Phase 4: haptics/sound settings, a perfect Classic (goal celebration + achievement toast),
+    """Phase 4: haptics/sound settings, a perfect Classic (globe celebration + achievement toast),
     the Me grid, badges on the board, the reduced-motion celebration."""
     # record vibrations instead of buzzing
     await tab.js("window.__buzz=[];navigator.vibrate=function(p){window.__buzz.push(p);return true};true")
@@ -357,7 +357,7 @@ async def achievements_and_feel(tab):
     assert await tab.js("feel.sound === true && feel.haptics === true"), "sound toggle / haptics default"
     await tab.js("window.scrollTo(0, document.getElementById('setSound').getBoundingClientRect().top + scrollY - 500)")
     await tab.shot("50-me-settings", full=False)
-    for f in ("cheer", "groan", "whistle"):
+    for f in ("right", "wrong", "finish"):
         st = await tab.js("fetch('sounds/%s.mp3').then(function(r){return r.status + ' ' + r.headers.get('content-type')})" % f)
         print(tab.tag, "sound", f, st)
     # a perfect Classic: 10 from 10
@@ -390,7 +390,7 @@ async def achievements_and_feel(tab):
     await tab.shot("54-board-badges")
     await tab.send("Emulation.setEmulatedMedia", {"features": [
         {"name": "prefers-color-scheme", "value": tab.tag}, {"name": "prefers-reduced-motion", "value": "reduce"}]})
-    await tab.js("celebrate('Goal!', '7 out of 7'); true")
+    await tab.js("celebrate('Perfect!', '7 out of 7'); true")
     await tab.shot("55-goal-reduced-motion", full=False)
     n = await tab.js("document.querySelectorAll('#confetti i').length")
     print(tab.tag, "reduced motion confetti pieces:", n)
