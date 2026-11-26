@@ -3616,7 +3616,7 @@
 {
 "id": "pop055",
 "l": "pop",
-"d": 1,
+"d": 2,
 "q": "Which is the second-largest city in Greece by population?",
 "a": "Thessaloniki",
 "w": [
@@ -4235,7 +4235,7 @@
 "Liverpool",
 "Leeds"
 ],
-"x": "Birmingham City Council covers about 1.1 million people, the largest local council area in the UK."
+"x": "Birmingham City Council covers about 1.1 million people, the most populous local council area in the UK."
 },
 {
 "id": "pop103",
@@ -4248,7 +4248,7 @@
 "Bern",
 "Basel"
 ],
-"x": "Zurich has about 420,000 people. Bern is the seat of the federal government."
+"x": "Zurich has about 440,000 people. Bern is the seat of the federal government."
 },
 {
 "id": "pop104",
@@ -4332,7 +4332,7 @@
 "id": "pop110",
 "l": "pop",
 "d": 2,
-"q": "Which is Japan's second-largest city by population?",
+"q": "Within city limits, which is Japan's second-largest city by population?",
 "a": "Yokohama",
 "w": [
 "Osaka",
@@ -4638,7 +4638,7 @@
 "Lake Maggiore",
 "Lake Trasimeno"
 ],
-"x": "Lake Garda covers about 370 km² and is shared by three regions: Lombardy, Veneto and Trentino."
+"x": "Lake Garda covers about 370 km² and is shared by three regions: Lombardy, Veneto and Trentino-Alto Adige."
 },
 {
 "id": "pop134",
@@ -4917,7 +4917,7 @@
 "id": "pop155",
 "l": "pop",
 "d": 3,
-"q": "Which is the largest city in Florida by population?",
+"q": "Within city limits, which is the largest city in Florida by population?",
 "a": "Jacksonville",
 "w": [
 "Miami",
@@ -5210,7 +5210,7 @@
 "São Tomé and Príncipe",
 "Comoros"
 ],
-"x": "The Seychelles' islands add up to about 460 km² and about 120,000 people."
+"x": "The Seychelles' islands add up to about 460 km², and its 2022 census counted about 120,000 people."
 },
 {
 "id": "pop178",
@@ -9370,7 +9370,7 @@
 "They are the same size",
 "Neither, both are tiny"
 ],
-"x": "Russia is about 17.1 million km², close to twice the size of the United States."
+"x": "Russia is about 17.1 million km², roughly 1.7 times the size of the United States."
 },
 {
 "id": "pop216",
@@ -9383,7 +9383,7 @@
 "Kyoto",
 "Hiroshima"
 ],
-"x": "Greater Tokyo, with about 37 million people as of 2024, is often counted as the largest urban area in the world."
+"x": "Greater Tokyo has about 37 million people as of 2024, making it one of the largest urban areas in the world."
 },
 {
 "id": "lmk153",
