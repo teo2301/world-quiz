@@ -7,15 +7,17 @@ var ICONS = {
   blitz: '<circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9.5 2.5h5"/>',
   hilo: '<path d="M7 20V5M3.5 8.5L7 5l3.5 3.5M17 4v15M13.5 15.5L17 19l3.5-3.5"/>',
   career: '<circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/><path d="M11 8v3.5M11 14.5v.01"/>',
+  flags: '<path d="M5 21V4"/><path d="M5 4h11l-2 4 2 4H5"/>',
   challenge: '<path d="M14.5 4l5.5 5.5-9 9H5.5V13z"/><path d="M4 20l3-3"/>'
 };
 // `go` names a function so modes defined in later files (games.js) can be wired here.
 var MODES = [
   {id: "classic", name: "Classic", desc: "Pick a topic, level and timer", go: "openSetup"},
+  {id: "flags", name: "Flags", desc: "Name the country from its flag", go: "openFlags"},
   {id: "survival", name: "Survival", desc: "One wrong and you're out", go: "startSurvival"},
   {id: "blitz", name: "Blitz", desc: "60 seconds, as many as you can", go: "startBlitz"},
-  {id: "hilo", name: "Higher or lower", desc: "Populations, areas and heights", go: "startHilo"},
-  {id: "career", name: "Mystery country", desc: "Name it from as few clues as you can", go: "startCareer"},
+  {id: "hilo", name: "Higher or lower", desc: "Which is bigger? Countries, peaks, rivers", go: "startHilo"},
+  {id: "career", name: "Guess the country", desc: "Five clues, hardest first. Fewer = more points", go: "startCareer"},
   {id: "challenge", name: "Challenge", desc: "Send a mate your exact quiz", go: "openChallengeHub"}
 ];
 var lastStart = null;       // what "Play again" on the result screen does
@@ -205,6 +207,8 @@ function renderSetup() {
 }
 
 function openSetup() { renderSetup(); show("setup"); }
+// The Flags tile is Classic with the topic set to flags (still changeable on the setup screen).
+function openFlags() { settings.league = "flg"; store.set("settings", settings); openSetup(); }
 
 function startClassic() {
   var seen = {};

@@ -482,3 +482,5 @@ input.code::placeholder{letter-spacing:.18em}
 .getapp{display:block;margin-top:12px;text-decoration:none;border-color:var(--chalk2)}
 .getapp b{display:block;font-family:var(--head);font-weight:600;text-transform:uppercase;letter-spacing:.04em;font-size:17px;color:#f6c344}
 .getapp span{display:block;font-size:13px;color:var(--chalk2);margin-top:2px}
+/* odd number of Play tiles: the last one spans the row */
+.mode:last-child:nth-child(odd){width:calc(100% - 10px);min-height:0}

@@ -3,7 +3,7 @@
 // switches live on the Me tab. The browser permission prompt only ever follows a tap.
 "use strict";
 var PUSH_TYPES = [
-  {id: "daily", name: "Today's quiz is up", desc: "Once a day, around 9am"},
+  {id: "daily", name: "Today's world quiz is up", desc: "Once a day, around 9am"},
   {id: "challenge", name: "A mate beat your challenge", desc: "Straight away, so you can hit back"},
   {id: "division", name: "Promotion and relegation", desc: "Mondays: how your week ended"}
 ];

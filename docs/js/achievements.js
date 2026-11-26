@@ -67,7 +67,9 @@ function standingAchs() {
   var out = [], s = Math.max(store.get("dbest", 0), dailyStreak());
   [[3, "streak3"], [7, "streak7"], [30, "streak30"], [100, "streak100"]].forEach(function (x) { if (s >= x[0]) out.push(x[1]); });
   var t = tallies();
-  ["cap", "flg", "geo", "pop", "lmk", "gk"].forEach(function (l) { if ((t[l] || 0) >= TOPIC_GOAL) out.push("cat_" + l); });
+  var topics = ["cap", "flg", "geo", "pop", "lmk", "gk"], allTopics = true;
+  topics.forEach(function (l) { if ((t[l] || 0) >= TOPIC_GOAL) out.push("cat_" + l); else allTopics = false; });
+  if (allTopics) out.push("world");
   if ((t.all || 0) >= 500) out.push("correct500");
   if (store.get("seen", []).length >= 500) out.push("seen500");
   var b = bests();

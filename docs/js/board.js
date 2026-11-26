@@ -2,7 +2,7 @@
 // and one board per mode (week / all time).
 "use strict";
 var boardState = {kind: "daily", dperiod: "today", period: "week", len: "10"};
-var KINDS = {daily: "Daily", classic: "Classic", survival: "Survival", blitz: "Blitz", hilo: "Higher or lower", career: "Mystery country"};
+var KINDS = {daily: "Daily", classic: "Classic", survival: "Survival", blitz: "Blitz", hilo: "Higher or lower", career: "Guess the country"};
 var RUN_NOTES = {
   survival: "Best run per player: correct answers in a row before the first miss.",
   blitz: "Best run per player: correct answers in 60 seconds. A wrong answer costs 3 seconds.",

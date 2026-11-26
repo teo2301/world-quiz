@@ -1,4 +1,4 @@
-// Survival, Blitz, Higher or lower and Mystery country (internally still the "career" mode).
+// Survival, Blitz, Higher or lower ("Which is bigger?") and Guess the country (internally still the "career" mode).
 "use strict";
 var STATS = null, CAREERS = null, CAREER_FORMS = null, CAREER_TAKEN = null;
 var hilo = null, career = null;
@@ -97,28 +97,53 @@ function finishBlitz(g) {
   postRun("blitz", g.answers, function (r) { return r.score + " correct"; });
 }
 
-// ---------------------------------------------------------------- higher or lower
+// ---------------------------------------------------------------- higher or lower ("Which is bigger?")
 
-// Category fields: unit (shown under the number), approx (prefix "about"),
-// million (v is in millions: "1,450 million"), word (what the question asks about, e.g. "population").
+// Category fields (docs/stats.json, written by tools/content/gen_stats.py): name, unit (under the
+// number), approx ("about"), million (v in millions), year (v is a year, < 0 = BC), gap (minimum
+// relative difference to pair, default 10%), ask ("{a}"/"{b}" = names), hi / lo (button labels).
+// Items with `ap` are approximate whatever their category says.
 function fmtNum(v) {
   var p = String(v).split(".");
   return p[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",") + (p[1] ? "." + p[1] : "");
 }
+function isApprox(it) { return !!(it.ap || STATS.cats[it.c].approx); }
+function fmtBare(it) {
+  var cat = STATS.cats[it.c], v = it.v;
+  if (cat.year) return v < 0 ? -v + " BC" : v < 1000 ? "AD " + v : String(v);
+  if (cat.million) {
+    if (v >= 1) return fmtNum(v) + " million";
+    return fmtNum(Math.round(v * 1000) * 1000 || Math.round(v * 1e6));
+  }
+  return fmtNum(v);
+}
 function fmtStat(it, hidden) {
-  var cat = STATS.cats[it.c];
   if (hidden) return "?";
-  return (cat.approx ? "about " : "") + fmtNum(it.v) + (cat.million ? " million" : "");
+  return (isApprox(it) ? "about " : "") + fmtBare(it);
 }
 function unitOf(it) { return STATS.cats[it.c].unit; }
+function canPair(a, b) {
+  var cat = STATS.cats[a.c];
+  if (b.c !== a.c || b === a) return false;
+  if (cat.year) return Math.abs(a.v - b.v) >= (a.ap || b.ap ? 200 : 30);
+  return Math.abs(a.v - b.v) / Math.max(a.v, b.v) >= (cat.gap || MIN_GAP);
+}
+// "The Shard" reads "the Shard" in the middle of a sentence.
+function midName(n) { return /^The /.test(n) ? "the" + n.slice(3) : n; }
+function hiloAskText(a, b) {
+  var t = STATS.cats[b.c].ask || "Is {b} higher or lower than {a}?";
+  return t.replace("{b}", midName(b.n)).replace("{a}", midName(a.n)).replace(/^the /, "The ");
+}
 
+// A category first (so the 200+ country figures don't crowd out mountains and rivers), then a pair.
 function hiloPair() {
-  var items = STATS.items;
+  var items = STATS.items, cats = Object.keys(STATS.cats);
   for (var tries = 0; tries < 200; tries++) {
-    var a = items[Math.floor(Math.random() * items.length)];
-    var cands = items.filter(function (b) {
-      return b.c === a.c && b !== a && !hilo.used[b.id] && Math.abs(a.v - b.v) / Math.max(a.v, b.v) >= MIN_GAP;
-    });
+    var c = cats[Math.floor(Math.random() * cats.length)];
+    var inCat = items.filter(function (x) { return x.c === c; });
+    var a = inCat[Math.floor(Math.random() * inCat.length)];
+    if (!a) continue;
+    var cands = inCat.filter(function (b) { return !hilo.used[b.id] && canPair(a, b); });
     if (cands.length) return {a: a, b: cands[Math.floor(Math.random() * cands.length)]};
   }
   return null;
@@ -139,9 +164,9 @@ function statCard(it, el, hidden, cls) {
   el.appendChild(h("span", {className: "tag"}, STATS.cats[it.c].name));
   el.appendChild(h("p", {className: "who"}, it.n));
   el.appendChild(h("p", {className: "sub"}, it.d));
-  var approx = !hidden && STATS.cats[it.c].approx;
-  el.appendChild(h("p", {className: "num"}, approx ? h("small", null, "about") : null, approx ? fmtStat(it).replace(/^about /, "") : fmtStat(it, hidden)));
-  el.appendChild(h("p", {className: "unit"}, hidden ? "Higher or lower?" : unitOf(it)));
+  var approx = !hidden && isApprox(it);
+  el.appendChild(h("p", {className: "num"}, approx ? h("small", null, "about") : null, hidden ? "?" : fmtBare(it)));
+  el.appendChild(h("p", {className: "unit"}, hidden ? STATS.cats[it.c].hi + " or " + STATS.cats[it.c].lo.toLowerCase() + "?" : unitOf(it)));
 }
 
 function hiloAsk() {
@@ -153,7 +178,9 @@ function hiloAsk() {
   $("hiCat").textContent = STATS.cats[p.a.c].name;
   statCard(p.a, $("hiA"), false);
   statCard(p.b, $("hiB"), true);
-  $("hiAsk").textContent = "Is " + p.b.n + "'s " + (STATS.cats[p.b.c].word || "number") + " higher or lower?";
+  $("hiAsk").textContent = hiloAskText(p.a, p.b);
+  $("hiBtnT").textContent = STATS.cats[p.b.c].hi;
+  $("loBtnT").textContent = STATS.cats[p.b.c].lo;
   $("hiBtns").classList.remove("hidden");
   $("hiNext").classList.add("hidden");
   $("hiNote").textContent = "";
@@ -172,7 +199,10 @@ function hiloGuess(g) {
   statCard(b, $("hiB"), false, ok ? "good" : "bad");
   answerFeel(ok);
   $("hiStreak").textContent = hilo.streak;
-  $("hiAsk").textContent = (ok ? "Yes! " : "No. ") + b.n + ": " + fmtStat(b) + (b.v > a.v ? ", higher than " : ", lower than ") + fmtStat(a) + ".";
+  var cat = STATS.cats[b.c];
+  $("hiAsk").textContent = (ok ? "Yes! " : "No. ") + b.n + ": " + fmtStat(b) + (cat.year ? "" : " " + cat.unit) +
+    (b.v === a.v ? ", the same as " : b.v > a.v ? " - " + cat.hi.toLowerCase() + " than " : " - " + cat.lo.toLowerCase() + " than ") +
+    midName(a.n) + (cat.year ? " (" + fmtBare(a) + ")." : ".");
   $("hiNote").textContent = b.note + ".";
   $("hiBtns").classList.add("hidden");
   $("hiNext").textContent = ok ? "Next" : "See results";
@@ -199,14 +229,14 @@ function finishHilo() {
   if (miss) ul.appendChild(h("li", {className: "tile"},
     h("div", null, miss.b.n + " (" + miss.b.d + ") vs " + miss.a.n + " (" + miss.a.d + ")"),
     h("div", {className: "ans"}, "✓ " + fmtStat(miss.b) + " vs " + fmtStat(miss.a) + " · " + STATS.cats[miss.b.c].name),
-    h("div", {className: "yours"}, "✗ You said " + (miss.b.v > miss.a.v ? "lower" : "higher"))));
+    h("div", {className: "yours"}, "✗ You said " + (miss.b.v > miss.a.v ? STATS.cats[miss.b.c].lo : STATS.cats[miss.b.c].hi).toLowerCase())));
   show("done");
   achCheck({k: "run"});
   if (!hl.answers.length) return;
   postRun("hilo", hl.answers, function (r) { return r.score + " in a row"; });
 }
 
-// ---------------------------------------------------------------- mystery country (mode id "career")
+// ---------------------------------------------------------------- guess the country (mode id "career")
 
 function careerClues(p) {
   return p.clues.map(function (c) { return {k: "club", t: c}; });
@@ -300,8 +330,8 @@ function careerNext() {
   career = null;
   sfx("finish");
   var best = saveBest("career", c.points), right = c.log.filter(function (x) { return x.pts; }).length;
-  runResult("Mystery country", c.points + "/" + CAREER_LEN * 5, right + " of " + CAREER_LEN + " countries named." +
-    (c.points >= 20 ? " Master detective." : c.points >= 12 ? " Sharp eye." : ""), best);
+  runResult("Guess the country", c.points + "/" + CAREER_LEN * 5, right + " of " + CAREER_LEN + " countries named." +
+    (c.points >= 20 ? " World detective." : c.points >= 12 ? " Sharp eye." : ""), best);
   var ul = $("missed"); ul.innerHTML = "";
   $("missedH").textContent = "Your countries";
   $("missedH").classList.remove("hidden");

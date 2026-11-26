@@ -11,7 +11,7 @@ LIST = [
     ("streak3", 1), ("streak7", 2), ("streak30", 3), ("streak100", 3), ("cleansheet", 2),
     ("perfect10", 1), ("perfect20", 2), ("perfect50", 3), ("icecool", 2),
     ("surv15", 2), ("surv30", 3), ("blitz10", 1), ("blitz20", 3), ("hilo10", 2), ("spotted", 1), ("scout", 3),
-    ("cat_cap", 2), ("cat_flg", 2), ("cat_geo", 2), ("cat_pop", 2), ("cat_lmk", 2), ("cat_gk", 2),
+    ("cat_cap", 2), ("cat_flg", 2), ("cat_geo", 2), ("cat_pop", 2), ("cat_lmk", 2), ("cat_gk", 2), ("world", 3),
     ("chalwin", 1), ("giant", 3), ("promoted", 2), ("topflight", 3),
     ("correct500", 2), ("seen500", 2),
 ]

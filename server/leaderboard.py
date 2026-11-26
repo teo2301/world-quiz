@@ -5,7 +5,7 @@ The quiz itself is static (GitHub Pages); this tiny service stores scores so
 everyone sees the same board. It runs in the `world-quiz-scores` container
 on 127.0.0.1:8195 and (once published) is reached through the Tailscale Funnel
 path :10000/wq (Funnel strips the /wq prefix, so routes stay /api/...).
-The mystery-country mode keeps the football app's internal id "career".
+The Guess the country mode keeps the football app's internal id "career".
 
     POST /api/scores   classic quiz. New shape:
                        {name, player_id, total, league, diff, timer, answers: [{id, choice, fifty?}]}

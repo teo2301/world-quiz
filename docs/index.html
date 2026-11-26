@@ -142,23 +142,23 @@
   <div class="card statcard" id="hiB"></div>
   <p class="hiask" id="hiAsk"></p>
   <div class="hibtns" id="hiBtns">
-    <button class="btn" id="hiBtn"><span aria-hidden="true">▲ </span>Higher</button>
-    <button class="btn" id="loBtn"><span aria-hidden="true">▼ </span>Lower</button>
+    <button class="btn" id="hiBtn"><span aria-hidden="true">▲ </span><span id="hiBtnT">Higher</span></button>
+    <button class="btn" id="loBtn"><span aria-hidden="true">▼ </span><span id="loBtnT">Lower</span></button>
   </div>
   <button class="btn hidden" id="hiNext">Next</button>
   <p class="small center" id="hiNote"></p>
 </section>
 
-<!-- ============ Mystery country (internal mode id "career") ============ -->
+<!-- ============ Guess the country (internal mode id "career") ============ -->
 <section id="career" class="hidden">
-  <div class="playtop"><span class="mname">Mystery country</span><button class="iconbtn" id="cQuit">Quit</button></div>
+  <div class="playtop"><span class="mname">Guess the country</span><button class="iconbtn" id="cQuit">Quit</button></div>
   <div class="scoreboard">
     <div><span>Country</span><b id="cNum">1/5</b></div>
     <div><span>Points</span><b id="cPts">0</b></div>
     <div><span>Worth</span><b id="cWorth">5</b></div>
   </div>
   <div class="card ccard">
-    <span class="tag">Clues, hardest first</span>
+    <span class="tag">Clues, hardest first · capital last</span>
     <ol class="path" id="cPath"></ol>
     <p class="left" id="cLeft"></p>
   </div>
@@ -291,7 +291,7 @@
     <p class="cmeta" id="dvLine"></p>
   </div>
   <ul class="lb divtable" id="dvTable"></ul>
-  <p class="small" id="dvNote">Every game you post earns points: Classic, daily and mystery-country points as scored, 1 per correct answer in Survival, Blitz and Higher or lower. Tables of 20; every Monday at midnight the top 3 go up and the bottom 3 go down.</p>
+  <p class="small" id="dvNote">Every game you post earns points: Classic, daily and Guess the country points as scored, 1 per correct answer in Survival, Blitz and Higher or lower. Tables of 20; every Monday at midnight the top 3 go up and the bottom 3 go down.</p>
 
   <h2 class="sec">Private leagues</h2>
   <ul class="lb" id="lgList"></ul>
@@ -375,7 +375,7 @@
     <div class="stat tile"><b id="bSurvival">–</b><span>survival</span></div>
     <div class="stat tile"><b id="bBlitz">–</b><span>blitz</span></div>
     <div class="stat tile"><b id="bHilo">–</b><span>hi-lo</span></div>
-    <div class="stat tile"><b id="bCareer">–</b><span>mystery</span></div>
+    <div class="stat tile"><b id="bCareer">–</b><span>guess</span></div>
   </div>
   <div class="achhead"><h2 class="sec">Achievements</h2><span id="achCount"></span></div>
   <div class="achgrid" id="achGrid"></div>

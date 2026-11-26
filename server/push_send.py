@@ -62,8 +62,10 @@ def daily(force=False, dry=False):
                 continue
             streak = lb.streak_for(c, pid, today - timedelta(days=1))
             body = ("Keep your %d-day streak going." % streak if streak >= 2
-                    else "7 questions, the same for everyone. How many can you get?")
-            jobs.append((pid, {"title": "World Quiz #%d is up" % number if number >= 1 else "Today's quiz is up",
+                    else "7 questions on capitals, flags and the rest of the planet. How many can you get?")
+            if number >= 1:
+                body = "World Quiz #%d · %s" % (number, body)
+            jobs.append((pid, {"title": "Today's world quiz is up",
                                "body": body, "url": "./#daily", "tag": "daily"}, 10 * 3600))
     return _deliver("daily", today.isoformat(), jobs, dry)
 

@@ -1,4 +1,4 @@
-// Mystery-country guess matching. MUST stay identical to server/modes.py
+// Guess-the-country answer matching. MUST stay identical to server/modes.py
 // (server/test_leaderboard.py runs both over the same guesses).
 var WQMatch = (function () {
   "use strict";

@@ -290,6 +290,17 @@ class Runs(Base):
         with self.assertRaises(ValueError):    # different categories
             self.post_run("hilo", [{"a": pairs[0][0]["id"], "b": other["id"], "g": "hi"}])
 
+    def test_hilo_years_and_new_categories(self):
+        cats = {i["c"] for i in STATS["items"]}
+        self.assertTrue({"pop", "area", "peak", "river", "tower", "island", "built"} <= cats)
+        self.assertGreaterEqual(len(STATS["items"]), 200)
+        built = sorted((i for i in STATS["items"] if i["c"] == "built"), key=lambda i: i["v"])
+        bc, modern = built[0], built[-1]
+        self.assertLess(bc["v"], 0)                     # BC years are negative
+        r = self.post_run("hilo", [{"a": bc["id"], "b": modern["id"], "g": "hi"},     # later = "hi"
+                                   {"a": modern["id"], "b": built[1]["id"], "g": "lo"}])
+        self.assertEqual(r["score"], 2)
+
     def test_hilo_equal_values_count_either_way(self):
         items = [{"id": "t1", "c": "peak", "n": "A", "v": 100}, {"id": "t2", "c": "peak", "n": "B", "v": 100}]
         path = os.path.join(TMP, "stats-equal.json")
@@ -328,6 +339,21 @@ class Runs(Base):
         self.assertTrue(ok("Mexico", "México"))            # accents ignored
         self.assertFalse(ok("Peru", "Pero"))               # 4 letters: exact only
         self.assertFalse(ok("Kenya", ""))
+        self.assertTrue(ok("United States", "USA"))
+        self.assertTrue(ok("United States", "u.s.a."))
+        self.assertTrue(ok("United Kingdom", "UK"))
+        self.assertFalse(ok("United Kingdom", "England"))  # a decoy: part of the UK, not the answer
+        self.assertTrue(ok("Czechia", "Czech Republic"))
+        self.assertTrue(ok("Turkey", "Türkiye"))
+        self.assertTrue(ok("Turkey", "turkiye"))
+        self.assertTrue(ok("Côte d'Ivoire", "Ivory Coast"))
+        self.assertTrue(ok("Côte d'Ivoire", "cote divoire"))
+        self.assertTrue(ok("Netherlands", "Holland"))
+        self.assertTrue(ok("Philippines", "Phillipines"))   # long name: two slips allowed
+        self.assertFalse(ok("Nigeria", "Niger"))
+        self.assertFalse(ok("Slovakia", "Slovenia"))
+        self.assertFalse(ok("Iraq", "Iran"))
+        self.assertGreaterEqual(len(CAREERS), 120)
         for p in CAREERS:                                  # every answer and alias matches itself
             for n in [p["n"]] + p.get("al", []):
                 self.assertTrue(M.is_match(n, forms[p["id"]], taken), n)
@@ -339,7 +365,8 @@ class Runs(Base):
             self.skipTest("node not installed")
         probes = ["Japan", "nippon", "Austria", "Austrailia", "australia", "Ireland", "Icelnd", "México", "Peru",
                   "pero", "Bharat", "india", "Brasil", "brazil", "Egipt", "canada", "Kanada", "Norway", "Norwey",
-                  "Italia", "italy", "Kenya", "Kenia", "  "]
+                  "Italia", "italy", "Kenya", "Kenia", "  ", "Türkiye", "U.S.A.", "UK", "England", "Côte d'Ivoire",
+                  "ivory coast", "Czech Republic", "Phillipines", "Niger", "Holland", "Eire", "Kazakstan"]
         players = [p for p in CAREERS]
         forms = M.build_forms(players)
         py = {p["id"]: [M.is_match(g, forms[p["id"]]) for g in probes] for p in players}
@@ -885,8 +912,8 @@ class Push(Base):
         r = PS.daily()
         self.assertEqual((r["players"], r["ok"], r["gone"]), (2, 1, 1))
         msg = self.fake.decrypt([g[0][:3] for g in self.fake.got].index("/ok"), s_keen)
-        self.assertEqual(msg["title"], "World Quiz #%d is up" % daily_gen.number(d))
-        self.assertEqual(msg["body"], "Keep your 2-day streak going.")
+        self.assertEqual(msg["title"], "Today's world quiz is up")
+        self.assertEqual(msg["body"], "World Quiz #%d · Keep your 2-day streak going." % daily_gen.number(d))
         self.assertEqual(msg["url"], "./#daily")
         with L.db() as c:
             self.assertFalse(c.execute("SELECT 1 FROM push_subs WHERE endpoint = ?", (dsub["endpoint"],)).fetchone())

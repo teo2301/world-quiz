@@ -1,5 +1,5 @@
 """Server-side marking for the Phase 2 modes: survival, blitz, higher or lower
-and mystery country (mode id "career", data docs/clues.json). Classic and daily stay in leaderboard.py.
+and Guess the country (mode id "career", data docs/clues.json). Classic and daily stay in leaderboard.py.
 
 The guess matcher MUST stay identical to docs/js/match.js
 (server/test_leaderboard.py runs both over the same guesses).
@@ -165,7 +165,7 @@ def careers_index(doc):
 
 
 def career(answers, careers_path):
-    """Mystery country: [{id, guess, clues}] for 5 different items -> points 5..1 per right guess."""
+    """Guess the country: [{id, guess, clues}] for 5 different items -> points 5..1 per right guess."""
     idx = load(careers_path, careers_index)
     as_list(answers, CAREER_LEN, CAREER_LEN)
     seen, marks, points = set(), [], 0
