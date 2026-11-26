@@ -1,11 +1,11 @@
 // Offline support (scope "./" only, so it never touches other apps on teo2301.github.io). Bump VERSION after changing any app file or the file list.
 // The data files (questions, stats, clues) are network-first so new content shows up without a bump.
-const VERSION = "wq-v7";
+const VERSION = "wq-v8";
 const FLAGS = "wq-flags-v1";   // flag SVGs: cached the first time each is shown, never at install; kept across VERSION bumps
 const DATA = ["/questions.json", "/stats.json", "/clues.json", "/data/countries.json"];
 const FILES = ["./", "index.html", "app.css", "privacy.html", "questions.json", "stats.json", "clues.json", "manifest.json",
   "icon-192.png", "icon-512.png", "icon-mono.png", "badge-96.png", "sounds/right.mp3", "sounds/wrong.mp3", "sounds/finish.mp3",
-  "js/daily-gen.js", "js/match.js", "js/ach-defs.js", "js/core.js", "js/achievements.js", "js/quiz.js", "js/social.js", "js/report.js", "js/modes.js", "js/games.js", "js/compete.js", "js/board.js", "js/push.js", "js/me.js", "js/app.js",
+  "js/daily-gen.js", "js/match.js", "js/ach-defs.js", "js/core.js", "js/achievements.js", "js/quiz.js", "js/social.js", "js/report.js", "js/modes.js", "js/games.js", "js/compete.js", "js/live.js", "js/board.js", "js/push.js", "js/me.js", "js/app.js",
   "fonts/inter-latin.woff2", "fonts/inter-latin-ext.woff2", "fonts/space-grotesk-latin-600.woff2", "fonts/space-grotesk-latin-700.woff2",
   "fonts/space-grotesk-latin-ext-600.woff2", "fonts/space-grotesk-latin-ext-700.woff2"];
 
