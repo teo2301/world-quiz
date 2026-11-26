@@ -1022,6 +1022,26 @@ class Http(Base):
         with urllib.request.urlopen(req) as r:
             self.assertEqual(r.headers.get("Access-Control-Allow-Origin"), "https://teo2301.github.io")
 
+    def test_wq_prefix_live_routes(self):
+        # live 1v1 + 2v2 rooms also answer under /wq/api (the public Funnel path)
+        a, b = pid(), pid()
+        st, r = self.call("/live/room/create", {"player_id": a, "name": "Prefix A"}, prefix="/wq/api")
+        self.assertEqual((st, r["seat"]), (200, 0))
+        code = r["code"]
+        st, j = self.call("/live/room/join", {"player_id": b, "name": "Prefix B", "code": code}, prefix="/wq/api")
+        self.assertEqual(st, 200)
+        st, s = self.call("/live/room?code=%s&player_id=%s" % (code, a), prefix="/wq/api")
+        self.assertEqual((st, s["phase"]), (200, "lobby"))
+        self.assertEqual(s, self.call("/live/room?code=%s&player_id=%s" % (code, a))[1])
+        st, m = self.call("/live/create", {"player_id": a, "name": "Prefix A"}, prefix="/wq/api")
+        self.assertEqual(st, 200)
+        self.assertEqual(self.call("/live/state?code=%s&player_id=%s" % (m["code"], a), prefix="/wq/api")[0], 200)
+        self.assertEqual(self.call("/live/league?period=week&player_id=" + a, prefix="/wq/api")[0], 200)
+        self.assertEqual(self.call("/live/room/leave", {"player_id": b, "code": code}, prefix="/wq/api")[0], 200)
+
+    def test_bots_wear_the_globe(self):
+        self.assertEqual(L.LIVE_BOT_TAG, "Bot \U0001F30D")
+
     def test_badges_route_has_its_own_limit(self):
         me = pid()
         for _ in range(L.RATE[0]):          # use up the score budget

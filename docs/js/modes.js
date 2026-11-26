@@ -9,10 +9,12 @@ var ICONS = {
   career: '<circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/><path d="M11 8v3.5M11 14.5v.01"/>',
   flags: '<path d="M5 21V4"/><path d="M5 4h11l-2 4 2 4H5"/>',
   live: '<path d="M13 2L4 14h7l-1 8 9-12h-7z"/>',
+  duo: '<circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M2.5 20c.6-3.4 2.8-5.5 5.5-5.5s4.9 2.1 5.5 5.5M10.5 20c.6-3.4 2.8-5.5 5.5-5.5s4.9 2.1 5.5 5.5"/>',
   challenge: '<path d="M14.5 4l5.5 5.5-9 9H5.5V13z"/><path d="M4 20l3-3"/>'
 };
 // `go` names a function so modes defined in later files (games.js) can be wired here.
 var MODES = [
+  {id: "duo", name: "2v2 Online", desc: "Team up with a mate and take on two more, live", go: "openDuo", hot: true},
   {id: "classic", name: "Classic", desc: "Pick a topic, level and timer", go: "openSetup"},
   {id: "flags", name: "Flags", desc: "Name the country from its flag", go: "openFlags"},
   {id: "survival", name: "Survival", desc: "One wrong and you're out", go: "startSurvival"},
@@ -32,7 +34,8 @@ function renderModes() {
   var box = $("modes"); if (box.children.length) return;
   MODES.forEach(function (m) {
     var on = !!m.go;
-    var b = h("button", {className: "mode tile" + (on ? " active" : ""), disabled: !on},
+    var b = h("button", {className: "mode tile" + (on ? " active" : "") + (m.hot ? " hot" : ""), disabled: !on},
+      m.hot ? h("span", {className: "new"}, "New") : null,
       h("span", {className: "ic", innerHTML: '<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' + ICONS[m.id] + "</svg>"}),
       on ? null : h("span", {className: "soon"}, "Soon"),
       h("b", null, m.name), h("span", null, m.desc));
