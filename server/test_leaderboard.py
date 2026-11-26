@@ -974,10 +974,10 @@ class Http(Base):
         super().setUp()
         L._hits.clear()
 
-    def call(self, path, body=None, ip="10.0.0.1"):
+    def call(self, path, body=None, ip="10.0.0.1", prefix="/api"):
         import urllib.request
         import urllib.error
-        req = urllib.request.Request("http://127.0.0.1:%d/api%s" % (self.port, path),
+        req = urllib.request.Request("http://127.0.0.1:%d%s%s" % (self.port, prefix, path),
                                      data=json.dumps(body).encode() if body is not None else None,
                                      headers={"X-Forwarded-For": ip, "Content-Type": "application/json"})
         try:
@@ -1007,6 +1007,20 @@ class Http(Base):
         st, e = self.call("/challenge/play", {"code": ch["code"], "name": "Web", "player_id": me,
                                               "answers": body["answers"]})
         self.assertEqual(st, 409)
+
+    def test_wq_prefix_works_too(self):
+        # Funnel path /wq may or may not strip the prefix: /wq/api/... must behave like /api/...
+        import urllib.request
+        me = pid()
+        st, h = self.call("/health", prefix="/wq/api")
+        self.assertEqual((st, h), self.call("/health"))
+        self.assertEqual(self.call("/name", {"name": "Prefixed", "player_id": me}, prefix="/wq/api")[0], 200)
+        self.assertEqual(self.call("/division?player_id=" + me, prefix="/wq/api")[1]["tier_name"], "Tourist")
+        self.assertEqual(self.call("/nope", prefix="/wq/api")[0], 404)
+        req = urllib.request.Request("http://127.0.0.1:%d/wq/api/scores" % self.port, method="OPTIONS",
+                                     headers={"Origin": "https://teo2301.github.io"})
+        with urllib.request.urlopen(req) as r:
+            self.assertEqual(r.headers.get("Access-Control-Allow-Origin"), "https://teo2301.github.io")
 
     def test_badges_route_has_its_own_limit(self):
         me = pid()
