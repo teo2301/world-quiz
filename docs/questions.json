@@ -10794,7 +10794,7 @@
 "Tripoli",
 "Yamoussoukro"
 ],
-"x": "Juba is the capital of South Sudan. South Sudan: the newest UN member state (as of 2025), independent since 2011."
+"x": "Juba is the capital of South Sudan. South Sudan: Independent since 2011, and still the newest UN member state as of 2026."
 },
 {
 "id": "flgss",
@@ -10808,7 +10808,7 @@
 "Angola",
 "Ghana"
 ],
-"x": "That's the flag of South Sudan. South Sudan: the newest UN member state (as of 2025), independent since 2011."
+"x": "That's the flag of South Sudan. South Sudan: Independent since 2011, and still the newest UN member state as of 2026."
 },
 {
 "id": "capsd",
@@ -11327,14 +11327,14 @@
 "id": "capid",
 "l": "cap",
 "d": 1,
-"q": "As of 2025, which city is the capital of Indonesia?",
+"q": "Indonesia is building a new capital, Nusantara, on Borneo. Which city has long been its capital?",
 "a": "Jakarta",
 "w": [
 "Surabaya",
 "Bandung",
 "Denpasar"
 ],
-"x": "Jakarta is the capital as of 2025, but a new capital called Nusantara is being built on the island of Borneo."
+"x": "Jakarta, on the island of Java, has been the capital since independence. It is sinking and crowded, which is why Nusantara is being built to take over."
 },
 {
 "id": "flgid",
