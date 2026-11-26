@@ -633,9 +633,9 @@ body{overflow-x:hidden}
 @keyframes sheetUp{0%{transform:translateY(60%)}100%{transform:none}}
 
 /* ---------- 2v2 Online (live.js; identical in every quiz) */
-body{--tA:var(--yellow);--tB:#3fd4bf}
+body{--tA:var(--yellow);--tB:#4fb3ff}
 .mode.hot{width:calc(100% - 10px);min-height:92px;padding-left:80px;padding-right:64px;border-color:var(--yellow);
-  background:linear-gradient(120deg,rgba(246,195,68,.3) 0,rgba(63,212,191,.22) 100%),var(--tile);
+  background:linear-gradient(120deg,rgba(246,195,68,.3) 0,rgba(79,179,255,.24) 100%),var(--tile);
   box-shadow:0 5px 0 var(--btn-edge),inset 0 1px 0 var(--btn-hi)}
 .mode.hot:active{box-shadow:0 1px 0 var(--btn-edge),inset 0 1px 0 var(--btn-hi)}
 .mode.hot .ic{position:absolute;left:18px;top:50%;width:46px;height:46px;margin:-23px 0 0;color:var(--yellow)}
@@ -710,7 +710,7 @@ body{--tA:var(--yellow);--tB:#3fd4bf}
 .dures.win .big{color:var(--right)}
 .dures.loss .big{color:var(--wrong)}
 .dures .vsrow .tA b{color:#a77a0c}
-.dures .vsrow .tB b{color:#12867a}
+.dures .vsrow .tB b{color:#1f6fb2}
 .duscores{margin-top:14px}
 .duline.tA{border-left:5px solid var(--tA)}
 .duline.tB{border-left:5px solid var(--tB)}
