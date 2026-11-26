@@ -31,4 +31,4 @@ preview (docs/ on :8198, /api proxied). Open http://192.168.0.69:8198.
 `/data/world-quiz.db`, reads the content from `/docs`, VAPID key at `/keys/vapid.json`
 (host: ~/keys/world-quiz-vapid.json). Env overrides: QUIZ_DB, QUESTIONS_PATH, STATS_PATH,
 CLUES_PATH, VAPID_PATH, QUIZ_ORIGINS, QUIZ_HOST, QUIZ_PORT. CORS: https://teo2301.github.io + the preview.
-`docker-compose.yml` is prepared but not started.
+`docker-compose.yml` is prepared but not started. Going live: follow `tools/PUBLISH.md`.
