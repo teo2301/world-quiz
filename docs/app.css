@@ -484,3 +484,4 @@ input.code::placeholder{letter-spacing:.18em}
 .getapp span{display:block;font-size:13px;color:var(--chalk2);margin-top:2px}
 /* odd number of Play tiles: the last one spans the row */
 .mode:last-child:nth-child(odd){width:calc(100% - 10px);min-height:0}
+#career .ccard{margin-top:12px}

@@ -280,7 +280,7 @@ async def wait_posted(tab):
 
 
 async def new_modes(tab):
-    """Survival, Blitz, Higher or lower, Mystery country (mode id career); each ends on its result screen and posts."""
+    """Survival, Blitz, Higher or lower, Guess the country (mode id career); each ends on its result screen and posts."""
     tile = "document.querySelector('[data-mode=%s]').click()"
     await tab.js("document.getElementById('menu').click()")
     # Survival: 4 right then out
@@ -316,7 +316,23 @@ async def new_modes(tab):
     await tab.wait("!document.getElementById('done').classList.contains('hidden')")
     await wait_posted(tab)
     await tab.shot("27-hilo-result")
-    # Mystery country: wrong guess, then right; clue+right; give up; typo'd right; right at once
+    # One question from every category (pairs forced), to see each wording, then quit
+    await tab.js("document.getElementById('menu').click()")
+    await tab.js(tile % "hilo")
+    await tab.wait("!!hilo && !!hilo.pair")
+    await tab.js("window._realPair = hiloPair; true")
+    for cat in ("pop", "area", "peak", "river", "tower", "island", "built"):
+        await tab.js("""hiloPair = function () {
+            var its = STATS.items.filter(function (x) { return x.c === %s && !hilo.used[x.id]; });
+            var a = its[Math.floor(Math.random() * its.length)];
+            var bs = its.filter(function (b) { return canPair(a, b); });
+            return {a: a, b: bs[Math.floor(Math.random() * bs.length)]};
+        }; hilo.locked = false; hiloAsk(); true""" % json.dumps(cat))
+        await tab.shot("27%s-hilo-q" % cat, full=False)
+        await tab.js("document.getElementById(%s).click()" % right)
+        await tab.shot("27%s-hilo-a" % cat, full=False)
+    await tab.js("hiloPair = window._realPair; document.getElementById('hiQuit').click(); true")
+    # Guess the country: wrong guess, then right; clue+right; give up; typo'd right; right at once
     await tab.js("document.getElementById('menu').click()")
     await tab.js(tile % "career")
     await tab.wait("!!career && !document.getElementById('career').classList.contains('hidden')")
@@ -483,6 +499,7 @@ async def run(scheme, name, taken_name=None, shared=None, prof=None):
             fonts = await tab.js("Array.from(document.fonts).filter(function(f){return f.status==='loaded'}).map(function(f){return f.family+' '+f.weight})")
             print(scheme, "fonts loaded:", fonts)
             await tab.shot("01-home")
+            await tab.shot("01b-home-top", full=False)
             if scheme == "dark":    # before having a name: hub + the name sheet
                 await tab.js("document.querySelector('[data-mode=challenge]').click()")
                 await tab.wait(LOADED % "h2hMsg")
@@ -558,9 +575,11 @@ async def run(scheme, name, taken_name=None, shared=None, prof=None):
             await achievements_and_feel(tab)
             await push_me(tab, scheme)
             # Flags only (Phase 2): flag image on the question, thumbnails in "What you missed"
+            # (Phase 3: through the Flags tile, which opens Classic with Flags picked)
             await tab.js("document.querySelector('[data-tab=home]').click()")
-            await tab.js("document.querySelector('.mode.active').click()")
-            await tab.js("[].slice.call(document.querySelectorAll('#leagues .chip')).filter(function(b){return b.textContent==='Flags'})[0].click()")
+            await tab.js("document.querySelector('[data-mode=flags]').click()")
+            assert await tab.js("[].slice.call(document.querySelectorAll('#leagues .chip')).filter(function(b){return b.textContent==='Flags'})[0].getAttribute('aria-pressed') === 'true'"), "flags tile"
+            await tab.shot("70a-flags-setup", full=False)
             await tab.js("[].slice.call(document.querySelectorAll('#timers .chip')).filter(function(b){return b.textContent==='Off'})[0].click()")
             await tab.js("document.getElementById('start').click()")
             await tab.wait("!!game && game.qs[0].img && document.getElementById('qimg').complete && document.getElementById('qimg').naturalWidth > 0")
@@ -568,6 +587,15 @@ async def run(scheme, name, taken_name=None, shared=None, prof=None):
             await tab.wait("!document.getElementById('done').classList.contains('hidden')")
             await tab.wait("[].slice.call(document.querySelectorAll('#missed img')).every(function(i){return i.complete && i.naturalWidth > 0})")
             await tab.shot("71-flags-result")
+            await tab.js("settings.league = 'all'; store.set('settings', settings); true")
+            # "Get the app" tiles: Android browser and iPhone Safari visitors only
+            for ua, shot in (("Mozilla/5.0 (Linux; Android 15; SM-F966B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Mobile Safari/537.36", "72-home-android-tile"),
+                             ("Mozilla/5.0 (iPhone; CPU iPhone OS 12_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1 Mobile/15E148 Safari/604.1", "73-home-iphone-tile")):
+                await tab.send("Emulation.setUserAgentOverride", {"userAgent": ua})
+                await tab.goto(tab.base)
+                await tab.wait("BANK.length > 0")
+                await tab.shot(shot)
+            await tab.send("Emulation.setUserAgentOverride", {"userAgent": ""})
             await tab.goto(tab.base + "privacy.html")
             await tab.shot("15-privacy")
             # Reload the app: daily must still say done (one attempt) and SW must be active

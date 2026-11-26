@@ -201,7 +201,7 @@ function hiloGuess(g) {
   $("hiStreak").textContent = hilo.streak;
   var cat = STATS.cats[b.c];
   $("hiAsk").textContent = (ok ? "Yes! " : "No. ") + b.n + ": " + fmtStat(b) + (cat.year ? "" : " " + cat.unit) +
-    (b.v === a.v ? ", the same as " : b.v > a.v ? " - " + cat.hi.toLowerCase() + " than " : " - " + cat.lo.toLowerCase() + " than ") +
+    (b.v === a.v ? ", the same as " : " - " + (b.v > a.v ? cat.hi : cat.lo).toLowerCase() + (cat.year ? " " : " than ")) +
     midName(a.n) + (cat.year ? " (" + fmtBare(a) + ")." : ".");
   $("hiNote").textContent = b.note + ".";
   $("hiBtns").classList.add("hidden");
