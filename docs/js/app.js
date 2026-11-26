@@ -52,5 +52,28 @@
     $("subtitle").textContent = "Couldn't load the questions. Check your connection and reload.";
     handleHash();
   });
-  if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(function () {});
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js").catch(function () {});
+    warmFlags();
+  }
 })();
+
+// Once the bank is in, ask the service worker to fetch every flag in the background, so the flag
+// questions still show their flag offline. The SW skips the ones it already has.
+function warmFlags() {
+  Promise.all([navigator.serviceWorker.ready, loadBankOnce()]).then(function (r) {
+    var seen = {}, urls = [];
+    for (var i = 0; i < BANK.length; i++) {
+      var u = BANK[i].img;
+      if (u && !seen[u]) { seen[u] = 1; urls.push(u); }
+    }
+    if (urls.length && r[0].active) r[0].active.postMessage({type: "warm-flags", urls: urls});
+  }).catch(function () {});
+}
+function loadBankOnce() {
+  return BANK.length ? Promise.resolve() : new Promise(function (ok, no) {
+    var n = 0, t = setInterval(function () {
+      if (BANK.length) { clearInterval(t); ok(); } else if (++n > 60) { clearInterval(t); no(); }
+    }, 500);
+  });
+}

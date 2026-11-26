@@ -925,7 +925,7 @@
 "continent": "Europe",
 "pop_m": 1.4,
 "pop_year": 2024,
-"area_km2": 9250,
+"area_km2": null,
 "tier": 3,
 "facts": [
 "The third-largest island in the Mediterranean."
@@ -1821,7 +1821,7 @@
 "continent": "Europe",
 "pop_m": 3.0,
 "pop_year": 2024,
-"area_km2": 33800,
+"area_km2": null,
 "tier": 3,
 "facts": [
 "Lies between Romania and Ukraine."
@@ -1964,7 +1964,7 @@
 "aliases": [],
 "capital": "San Marino",
 "continent": "Europe",
-"pop_m": 0.03,
+"pop_m": 0.034,
 "pop_year": 2024,
 "area_km2": 61,
 "tier": 3,
@@ -2212,7 +2212,7 @@
 "aliases": [],
 "capital": "Roseau",
 "continent": "North America",
-"pop_m": 0.07,
+"pop_m": 0.066,
 "pop_year": 2024,
 "area_km2": 750,
 "tier": 3,
@@ -2367,7 +2367,7 @@
 "aliases": [],
 "capital": "Basseterre",
 "continent": "North America",
-"pop_m": 0.05,
+"pop_m": 0.047,
 "pop_year": 2024,
 "area_km2": 261,
 "tier": 3,
@@ -2516,7 +2516,7 @@
 "continent": "South America",
 "pop_m": 18.1,
 "pop_year": 2024,
-"area_km2": 256000,
+"area_km2": null,
 "tier": 2,
 "facts": [
 "Named after the Equator.",
@@ -2656,7 +2656,7 @@
 "aliases": [],
 "capital": "Majuro",
 "continent": "Oceania",
-"pop_m": 0.04,
+"pop_m": 0.038,
 "pop_year": 2024,
 "area_km2": 181,
 "tier": 3,

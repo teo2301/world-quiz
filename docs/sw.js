@@ -1,6 +1,6 @@
 // Offline support (scope "./" only, so it never touches other apps on teo2301.github.io). Bump VERSION after changing any app file or the file list.
 // The data files (questions, stats, clues) are network-first so new content shows up without a bump.
-const VERSION = "wq-v4";
+const VERSION = "wq-v5";
 const FLAGS = "wq-flags-v1";   // flag SVGs: cached the first time each is shown, never at install; kept across VERSION bumps
 const DATA = ["/questions.json", "/stats.json", "/clues.json", "/data/countries.json"];
 const FILES = ["./", "index.html", "app.css", "privacy.html", "questions.json", "stats.json", "clues.json", "manifest.json",
@@ -33,6 +33,18 @@ self.addEventListener("fetch", e => {
     return;
   }
   e.respondWith(caches.match(e.request, {ignoreSearch: true}).then(hit => hit || fetch(e.request)));
+});
+
+// The app sends the list of flag images once the questions have loaded; fetch the missing ones
+// quietly so the flag questions work offline (about 0.4 MB compressed the first time, then nothing).
+self.addEventListener("message", e => {
+  const d = e.data || {};
+  if (d.type !== "warm-flags" || !Array.isArray(d.urls)) return;
+  e.waitUntil(caches.open(FLAGS).then(c => d.urls.reduce((p, u) => p.then(() => {
+    const url = new URL(u, self.registration.scope);
+    if (url.origin !== location.origin || url.pathname.indexOf("/flags/") < 0) return null;
+    return c.match(url.href).then(hit => hit || fetch(url.href).then(r => (r.ok ? c.put(url.href, r) : null)));
+  }).catch(() => null), Promise.resolve())));
 });
 
 // Push notifications (Phase 6). Payload: {title, body, url, tag} from server/push.py.

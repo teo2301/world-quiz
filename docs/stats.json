@@ -1748,14 +1748,6 @@
 "note": "UN estimate for 2024, rounded"
 },
 {
-"id": "areaec",
-"c": "area",
-"n": "Ecuador",
-"v": 256000,
-"d": "South America",
-"note": "Total area, rounded"
-},
-{
 "id": "poppy",
 "c": "pop",
 "n": "Paraguay",

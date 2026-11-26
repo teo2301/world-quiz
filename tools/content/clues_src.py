@@ -502,7 +502,7 @@ C = [
         "Both French and English are official languages here.",
         "Its national football team are the Indomitable Lions."], None),
     ("Mali", [], [
-        "Mansa Musa, often called the richest person in history, ruled an empire from here.",
+        "It is named after the medieval empire of Mansa Musa, often called the richest person in history.",
         "It is a landlocked country in West Africa. Its neighbours include Algeria, Niger, Burkina Faso and Senegal.",
         "The Great Mosque of Djenné is the largest mud-brick building in the world.",
         "The legendary desert city of Timbuktu is here."], None),

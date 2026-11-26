@@ -1030,7 +1030,7 @@
 "id": "lmk014",
 "l": "lmk",
 "d": 2,
-"q": "As of 2025, which is the tallest building in the world?",
+"q": "As of 2026, which is the tallest building in the world?",
 "a": "Burj Khalifa",
 "w": [
 "Shanghai Tower",
@@ -1063,7 +1063,7 @@
 "Rome",
 "Cairo"
 ],
-"x": "It was completed in 537 under the Byzantine emperor Justinian, and its dome was the largest in the world for centuries."
+"x": "It was completed in 537 under the Byzantine emperor Justinian, and was the largest church in the world for nearly 1,000 years."
 },
 {
 "id": "lmk017",
@@ -2415,7 +2415,7 @@
 "Sweden",
 "United Kingdom"
 ],
-"x": "The Faroes lie roughly halfway between Scotland and Iceland and are home to about 55,000 people (as of 2024)."
+"x": "The Faroes lie roughly halfway between Norway and Iceland, north-west of Scotland, and are home to about 55,000 people (as of 2024)."
 },
 {
 "id": "geo101",
@@ -5788,7 +5788,7 @@
 "id": "lmk035",
 "l": "lmk",
 "d": 1,
-"q": "Buckingham Palace is the London home of whom?",
+"q": "Buckingham Palace is the official London residence of whom?",
 "a": "The British monarch",
 "w": [
 "The Prime Minister",
@@ -6562,7 +6562,7 @@
 "Durham",
 "Middlesbrough"
 ],
-"x": "Antony Gormley's steel angel was put up in 1998. Its wings are 54 m across, wider than a jumbo jet's."
+"x": "Antony Gormley's steel angel was put up in 1998. Its wings are 54 m across, almost as wide as a jumbo jet's."
 },
 {
 "id": "lmk095",
@@ -7010,7 +7010,7 @@
 "id": "lmk129",
 "l": "lmk",
 "d": 3,
-"q": "As of 2025, the world's tallest statue, the Statue of Unity, is in which country?",
+"q": "As of 2026, the world's tallest statue, the Statue of Unity, is in which country?",
 "a": "India",
 "w": [
 "China",
@@ -7062,7 +7062,7 @@
 "id": "lmk133",
 "l": "lmk",
 "d": 3,
-"q": "As of 2025, the world's tallest broadcasting tower rises over which city?",
+"q": "As of 2026, the world's tallest broadcasting tower rises over which city?",
 "a": "Tokyo",
 "w": [
 "Toronto",
@@ -7121,7 +7121,7 @@
 "Richard Rogers",
 "Zaha Hadid"
 ],
-"x": "Finished in 2012, the 310 m tower is the tallest building in the UK as of 2025."
+"x": "Finished in 2012, the 310 m tower is the tallest building in the UK as of 2026."
 },
 {
 "id": "lmk138",
@@ -7270,7 +7270,7 @@
 "id": "lmk149",
 "l": "lmk",
 "d": 3,
-"q": "As of 2025, the world's longest suspension bridge span is the 1915 Çanakkale Bridge. What does it cross?",
+"q": "As of 2026, the world's longest suspension bridge span is the 1915 Çanakkale Bridge. What does it cross?",
 "a": "The Dardanelles",
 "w": [
 "The Bosporus",
