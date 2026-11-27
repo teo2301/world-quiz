@@ -1375,6 +1375,7 @@ class Handler(BaseHTTPRequestHandler):
 
 
 LIVE_BOT_TAG = "Bot \U0001F30D"  # 2v2 bots: "Bot 🌍 Nova"
+LIVE_BOT_NAMES = ['Magellan', 'Battuta', 'Earhart', 'Shackleton', 'Amundsen', 'Tasman', 'Humboldt', 'Nansen', 'Tenzing', 'Bly', 'Cook', 'Polo', 'Livingstone', 'Lima', 'Oslo', 'Kyoto']  # bot names (vs-bots games + 2v2 fillers)
 live.bind(sys.modules[__name__])
 
 if __name__ == "__main__":

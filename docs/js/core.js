@@ -20,6 +20,9 @@ var store = {
 
 var settings = Object.assign({league: "all", diff: "0", len: "10", timer: "0"}, store.get("settings", {}));
 var BANK = [], BY_ID = {}, PICKER = null;
+// bots in live.js games (same names as leaderboard.LIVE_BOT_NAMES)
+var LIVE_BOT_TAG = "Bot 🌍";
+var LIVE_BOT_NAMES = ["Magellan", "Battuta", "Earhart", "Shackleton", "Amundsen", "Tasman", "Humboldt", "Nansen", "Tenzing", "Bly", "Cook", "Polo", "Livingstone", "Lima", "Oslo", "Kyoto"];
 var $ = function (id) { return document.getElementById(id); };
 
 // h("div", {className: "x"}, child, "text", ...)

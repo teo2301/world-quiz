@@ -725,3 +725,11 @@ body{--tA:var(--yellow);--tB:#4fb3ff}
 /* the hot 2v2 tile has its own row: count the pairs after it */
 .mode.hot ~ .mode:last-child:nth-child(odd){width:calc(50% - 10px);min-height:118px}
 .mode.hot ~ .mode:last-child:nth-child(even){width:calc(100% - 10px);min-height:0}
+
+/* Play vs bots (live.js) */
+.lvbots .seg{margin:12px 0}
+.lvbotbtns{display:flex;gap:10px}
+.lvbotbtns .btn{-webkit-box-flex:1;flex:1;margin:0}
+.lvbots.hot{outline:2px solid var(--yellow);outline-offset:2px}
+#lvBotOff{margin:8px 0 0}
+#duBots{margin-top:12px}
