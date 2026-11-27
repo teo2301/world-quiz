@@ -251,12 +251,15 @@ function lvDone(st) {
   r.review.forEach(function (q, i) {
     var pick = function (who, a) { return h("div", {className: "pk " + (a.pts ? "ok" : "no")}, who + ": " + (a.choice == null ? "no answer" : a.choice) + (a.pts ? " +" + a.pts : "")); };
     ul.appendChild(h("li", {className: "rev"},
-      h("div", {className: "qh"}, h("span", {className: "qn"}, String(i + 1)), h("span", {className: "qt"}, q.q)),
+      h("div", {className: "qh"}, h("span", {className: "qn"}, String(i + 1)), h("span", {className: "qt"}, lvThumb(q), q.q)),
       h("div", {className: "ans"}, "Answer: " + q.a),
       pick("You", q.you), pick(st.opp.name, q.opp)));
   });
   lv = null;
 }
+
+// flag thumbnail for picture questions in the reviews (quizzes without pictures have no qThumb)
+function lvThumb(q) { return typeof qThumb === "function" ? qThumb(q) : null; }
 
 function lvQuit() {
   if (!lv) return openLive();
@@ -414,8 +417,7 @@ function duLobby(st) {
       if (s) {
         col.appendChild(h("div", {className: "duseat" + (s.you ? " you" : "") + (s.bot ? " bot" : "")},
           h("span", {className: "av"}, s.bot ? "🤖" : s.name.charAt(0).toUpperCase()),
-          h("span", {className: "nm"}, s.name),
-          s.host ? h("span", {className: "hs"}, "Host") : null));
+          h("span", {className: "nm"}, s.name, s.host ? h("small", null, "Host") : null)));
       } else {
         var b = h("button", {className: "duseat empty", type: "button"}, h("span", {className: "av"}, "+"),
           h("span", {className: "nm"}, st.team === t ? "Empty seat" : "Move here"));
@@ -610,7 +612,7 @@ function duDone(st) {
   var rv = $("duReview"); rv.innerHTML = "";
   r.review.forEach(function (q, n) {
     var li = h("li", {className: "rev"},
-      h("div", {className: "qh"}, h("span", {className: "qn"}, String(n + 1)), h("span", {className: "qt"}, q.q)),
+      h("div", {className: "qh"}, h("span", {className: "qn"}, String(n + 1)), h("span", {className: "qt"}, lvThumb(q), q.q)),
       h("div", {className: "ans"}, "Answer: " + q.a));
     sides.mine.concat(sides.them).forEach(function (i) {
       var s = st.seats[i], a = q.picks[i]; if (!s) return;

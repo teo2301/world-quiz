@@ -922,8 +922,8 @@ async def one_v_one(a, b):
         await asyncio.gather(*[p.wait("lv && lv.phase === 'question' && lv.q && document.getElementById('lvQN').textContent.indexOf('Question %d ') === 0" % (i + 1), 25) for p in (a, b)])
         for p, ok in ((a, True), (b, i % 3 == 0)):
             await p.js("""(function () {
-              var bs = document.querySelectorAll('#lvOpts .opt'), q = document.getElementById('lvQText').textContent, a = null;
-              for (var k = 0; k < BANK.length; k++) if (BANK[k].q === q) { a = BANK[k].a; break; }
+              var bs = document.querySelectorAll('#lvOpts .opt'), q = lv.q, a = null;
+              for (var k = 0; k < BANK.length; k++) if (BANK[k].id === q) { a = BANK[k].a; break; }
               for (var i = 0; i < bs.length; i++) if ((bs[i].getAttribute('data-v') === a) === %s) { bs[i].click(); return; }
             })()""" % ("true" if ok else "false"))
             await asyncio.sleep(0.5)
