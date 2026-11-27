@@ -1,11 +1,26 @@
 # World Knowledge Quiz
 
+## Get the app
+
+**[Install page: Android + iPhone](https://teo2301.github.io/world-quiz/install.html)** · [Play in your browser](https://teo2301.github.io/world-quiz/)
+
+**Android:** [Download the APK (latest release)](https://github.com/teo2301/world-quiz/releases/latest).
+Open it, allow "Install unknown apps" for your browser if asked, then tap Install.
+Updates arrive automatically because the app loads the live site.
+
+**iPhone / iPad:**
+1. Open https://teo2301.github.io/world-quiz/ in **Safari** (not Chrome or an in-app browser).
+2. Tap **Share**, then **Add to Home Screen**, then **Add**.
+3. Open World Quiz from your home screen. Notifications need iOS 16.4+ and only work from the home-screen app.
+
+## About
+
 Sister app to Football Quiz: capitals, flags, geography, population & size, landmarks and general
 knowledge. Same shell (daily quiz, classic, survival, blitz, higher or lower, mystery country,
 50:50, challenges, private leagues, weekly divisions, achievements, push) with a globe theme.
 No build step: vanilla JS (iOS 12 / ES2017 safe) + a stdlib Python server.
 
-- `docs/` is the whole site (GitHub Pages folder, future URL https://teo2301.github.io/world-quiz/)
+- `docs/` is the whole site (GitHub Pages folder, live at https://teo2301.github.io/world-quiz/)
 - `docs/questions.json`: `id` (topic prefix + number, e.g. `cap001`), `l` (cap/flg/geo/pop/lmk/gk),
   `d` (1-3), `q`, `a` (right answer), `w` (3 wrong), `x` (fact shown afterwards; changing figures
   carry an "as of" year).
